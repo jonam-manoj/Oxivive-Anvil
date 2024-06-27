@@ -19,7 +19,7 @@ class login(loginTemplate):
             
             if user:
                 if user['oxi_usertype'] =='service provider':
-                  user_id.user_id = user['id']
+                  user_id.user_id = user['oxi_id']
                   open_form('servicers.servicers_dashboard')
                 else:
                   open_form('dashboard')

@@ -19,33 +19,33 @@ components:
     - name: file_loader_1
       properties:
         role: null
-        show_state: false
-        align: center
-        tooltip: ''
-        border: ''
+        bold: false
         file_types: null
-        enabled: true
-        files: []
-        foreground: ''
-        visible: true
-        text: ''
-        font_size: null
-        font: ''
+        align: center
         spacing_above: small
-        icon_align: left
-        spacing_below: small
-        italic: false
         file: null
         background: ''
-        bold: false
-        underline: false
-        multiple: false
         icon: fa:camera
+        multiple: false
+        underline: false
+        font: ''
+        icon_align: left
+        foreground: ''
+        show_state: false
+        files: []
+        spacing_below: small
+        visible: true
+        border: ''
+        italic: false
+        enabled: true
+        font_size: null
+        tooltip: ''
+        text: ''
       type: FileLoader
       layout_properties: {x: 504.95002365112305, y: 166.58750915527344, width: 37.7875}
       event_bindings: {change: file_loader_1_change}
     - name: image_1
-      properties: {role: image, vertical_align: center, height: 190, tooltip: '', border: '', foreground: '', visible: true, display_mode: shrink_to_fit, alt_text: profile, spacing_above: small, source: _/theme/hospital-building.jpg, spacing_below: small, background: '', horizontal_align: center}
+      properties: {role: image, vertical_align: center, alt_text: profile, spacing_above: small, background: '', horizontal_align: center, source: _/theme/hospital-building.jpg, foreground: '', display_mode: shrink_to_fit, spacing_below: small, visible: true, border: '', tooltip: '', height: 190}
       type: Image
       layout_properties: {x: 352.0500152595341, y: 13.387496948242188, width: 182}
 - name: c_id

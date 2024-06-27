@@ -26,7 +26,7 @@ class service_navigation_bar(service_navigation_barTemplate):
 
   def link_3_click(self, **event_args):
     
-    data = app_tables.users.get(id=self.id)
+    data = app_tables.oxi_users.get(oxi_id=self.id)
    
     """This method is called when the link is clicked"""
     open_form('servicers.servicers_dashboard.profile', user_data = data)

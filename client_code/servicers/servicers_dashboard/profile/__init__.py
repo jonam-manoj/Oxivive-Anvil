@@ -10,12 +10,12 @@ class profile(profileTemplate):
   def __init__(self,user_data, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.c_id.text=user_data['id']
-    self.name.text=user_data['username']
-    self.email.text=user_data['email']
-    self.phone.text=user_data['phone']
-    self.address.text=user_data['address']
-    self.image_1.source=user_data['profile']
+    self.c_id.text=user_data['oxi_id']
+    self.name.text=user_data['oxi_username']
+    self.email.text=user_data['oxi_email']
+    self.phone.text=user_data['oxi_phone']
+    self.address.text=user_data['oxi_address']
+    self.image_1.source=user_data['oxi_profile']
     
     
 

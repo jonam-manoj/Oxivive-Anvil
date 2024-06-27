@@ -26,25 +26,25 @@ class oxigym_documents(oxigym_documentsTemplate):
     if not self.first_file_name and not self.second_file_name:
       Notification('Upload Documents.' ).show()
     else:
-      user_details = app_tables.users.get(id=self.user_id)
+      user_details = app_tables.oxi_users.get(oxi_id=self.user_id)
       print(user_details)
       oxigym_details = self.oxigym_details
       print(oxigym_details)
-      app_tables.oxigyms.add_row(id=str(user_details['id']),
-                                   name=user_details['username'],
-                                   email=user_details['email'],
-                                   password=user_details['password'],
-                                   phone=int(user_details['phone']),
-                                   pincode=int(oxigym_details[4]),
-                                   Oxigyms_Name=oxigym_details[0],
-                                   established_year=str(oxigym_details[1]),
-                                   State=oxigym_details[2],
-                                   District=oxigym_details[3],
-                                   address_2=oxigym_details[5],
-                                   capsules=int(oxigym_details[6]),
-                                   building_licence=oxigym_details[7],
-                                   gym_licence=oxigym_details[8],
-                                  oxigym_id=self.generate_unique_random_code())
+      app_tables.oxigyms.add_row(oxi_id=str(user_details['oxi_id']),
+                                   oxi_name=user_details['oxi_username'],
+                                   oxi_email=user_details['oxi_email'],
+                                   oxi_password=user_details['oxi_password'],
+                                   oxi_phone=int(user_details['oxi_phone']),
+                                   oxigyms_pincode=int(oxigym_details[4]),
+                                   oxigyms_Name=oxigym_details[0],
+                                   oxigyms_established_year=str(oxigym_details[1]),
+                                   oxigyms_State=oxigym_details[2],
+                                   oxigyms_District=oxigym_details[3],
+                                   oxigyms_address=oxigym_details[5],
+                                   oxigyms_capsules=int(oxigym_details[6]),
+                                   oxigyms_building_licence=oxigym_details[7],
+                                   oxigyms_licence=oxigym_details[8],
+                                  oxigyms_id=self.generate_unique_random_code())
                                   
       alert("You added oxigym successfully.")
       open_form('servicers_registration_form.services_register_add_service',id=self.user_id)
@@ -70,7 +70,7 @@ class oxigym_documents(oxigym_documentsTemplate):
         code = prefix + random_numbers
         
         # Check if the code already exists in the data table
-        existing_rows = app_tables.oxigyms.get(oxigym_id=code)
+        existing_rows = app_tables.oxigyms.get(oxigyms_id=code)
         if not existing_rows:
             # If the code does not exist, return it
             return code

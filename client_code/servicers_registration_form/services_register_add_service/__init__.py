@@ -37,9 +37,9 @@ class services_register_add_service(services_register_add_serviceTemplate):
 
   def servicers_register_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    oxiclinic = app_tables.oxiclinics.search(id=str(self.user_id))
-    oxiwheel = app_tables.oxiwheels.search(id =str( self.user_id))
-    oxigym = app_tables.oxigyms.search(id =str( self.user_id))
+    oxiclinic = app_tables.oxiclinics.search(oxi_id=str(self.user_id))
+    oxiwheel = app_tables.oxiwheels.search(oxi_id =str( self.user_id))
+    oxigym = app_tables.oxigyms.search(oxi_id =str( self.user_id))
 
     if oxiclinic or oxiwheel or oxigym:
 

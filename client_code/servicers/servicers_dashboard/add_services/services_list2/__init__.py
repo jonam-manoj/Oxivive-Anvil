@@ -18,7 +18,7 @@ class services_list2(services_list2Template):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
 
-    rows = app_tables.oxiclinics.search(id=str(self.user_id))
+    rows = app_tables.oxiclinics.search(oxi_id=str(self.user_id))
 
     List_oxiclinics = []
     for i, row in enumerate(rows, start=1):
@@ -27,9 +27,9 @@ class services_list2(services_list2Template):
 
       # Assign data to dictionary keys
       user_info["serial_no"] = i  # Assuming you want to include a serial number
-      user_info["clinic_id"] = row["oxiclinic_id"]
-      user_info["Oxiclinics_Name"] = row["Oxiclinics_Name"]
-      user_info["State"] = row["State"]
+      user_info["clinic_id"] = row["oxiclinics_id"]
+      user_info["Oxiclinics_Name"] = row["oxiclinics_Name"]
+      user_info["State"] = row["oxiclinics_State"]
 
       # Append dictionary to list
       List_oxiclinics.append(user_info)
@@ -39,7 +39,7 @@ class services_list2(services_list2Template):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    rows = app_tables.oxiwheels.search(id=str(self.user_id))
+    rows = app_tables.oxiwheels.search(oxi_id=str(self.user_id))
     List_oxiclinics = []
     for i, row in enumerate(rows, start=1):
       # Initialize dictionary to store row data
@@ -47,9 +47,9 @@ class services_list2(services_list2Template):
 
       # Assign data to dictionary keys
       user_info["serial_no"] = i  # Assuming you want to include a serial number
-      user_info["clinic_id"] = row["oxywheel_id"]
-      user_info["Oxiclinics_Name"] = row["Oxiwheels_Name"]
-      user_info["State"] = row["State"]
+      user_info["clinic_id"] = row["oxiwheels_id"]
+      user_info["Oxiclinics_Name"] = row["oxiwheels_Name"]
+      user_info["State"] = row["oxiwheels_State"]
 
       # Append dictionary to list
       List_oxiclinics.append(user_info)
@@ -59,7 +59,7 @@ class services_list2(services_list2Template):
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
-    rows = app_tables.oxigyms.search(id=str(self.user_id))
+    rows = app_tables.oxigyms.search(oxi_id=str(self.user_id))
 
     List_oxiclinics = []
     for i, row in enumerate(rows, start=1):
@@ -68,9 +68,9 @@ class services_list2(services_list2Template):
 
       # Assign data to dictionary keys
       user_info["serial_no"] = i  # Assuming you want to include a serial number
-      user_info["clinic_id"] = row["oxigym_id"]
-      user_info["Oxiclinics_Name"] = row["Oxigyms_Name"]
-      user_info["State"] = row["State"]
+      user_info["clinic_id"] = row["oxigyms_id"]
+      user_info["Oxiclinics_Name"] = row["oxigyms_Name"]
+      user_info["State"] = row["oxigyms_State"]
 
       # Append dictionary to list
       List_oxiclinics.append(user_info)

@@ -43,24 +43,24 @@ class oxiwheel(oxiwheelTemplate):
     ):
       Notification('All "Fields" and "Documents"  are required.').show()
     else:
-      user_details = app_tables.users.get(id=self.user_id)
+      user_details = app_tables.oxi_users.get(oxiid=self.user_id)
       print(user_details)
       app_tables.oxiwheels.add_row(
-        id=str(user_details["id"]),
-        name=user_details["username"],
-        email=user_details["email"],
-        password=user_details["password"],
-        phone=int(user_details["phone"]),
-        pincode=int(pincode),
-        Oxiwheels_Name=vehicle_no,
-        model_year=str(model_year),
-        State=state,
-        District=district,
-        address_2=address,
-        capsules=int(capsule),
-        vehicle_rc=self.file1,
-        driving_licence=self.file2,
-        oxywheel_id=self.generate_unique_random_code()
+        oxi_id=str(user_details["oxi_id"]),
+        oxi_name=user_details["oxi_username"],
+        oxi_email=user_details["oxi_email"],
+        oxi_password=user_details["oxi_password"],
+        oxi_phone=int(user_details["oxi_phone"]),
+        oxiwheels_pincode=int(pincode),
+        oxiwheels_Name=vehicle_no,
+        oxiwheels_model_year=str(model_year),
+        oxiwheels_State=state,
+        oxiwheels_District=district,
+        oxiwheels_address=address,
+        oxiwheels_capsules=int(capsule),
+        oxiwheels_vehicle_rc=self.file1,
+        oxiwheels_driving_licence=self.file2,
+        oxiwheels_id=self.generate_unique_random_code()
       )
 
       alert("You added oxiwheel successfully.")
@@ -88,7 +88,7 @@ class oxiwheel(oxiwheelTemplate):
         code = prefix + random_numbers
         
         # Check if the code already exists in the data table
-        existing_rows = app_tables.oxiwheels.get(oxywheel_id=code)
+        existing_rows = app_tables.oxiwheels.get(oxiwheels_id=code)
         if not existing_rows:
             # If the code does not exist, return it
             return code

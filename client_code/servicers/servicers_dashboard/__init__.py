@@ -23,7 +23,7 @@ class servicers_dashboard(servicers_dashboardTemplate):
     # Any code you write here will run before the form opens.
   def customers (self,date):
     # self.date_picker_1.pick_time = True
-    data = app_tables.book_slot.search(book_date=date,serviceProvider_id =self.id)
+    data = app_tables.oxi_book_slot.search(book_date=date,serviceProvider_id =self.id)
     if not data:
         alert("No bookings yet on this date")
 

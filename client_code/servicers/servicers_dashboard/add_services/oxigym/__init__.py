@@ -49,24 +49,24 @@ class oxigym(oxigymTemplate):
     ):
       Notification('All "Fields" and "Documents"  are required.').show()
     else:
-      user_details = app_tables.users.get(id=self.user_id)
+      user_details = app_tables.oxi_users.get(oxi_id=self.user_id)
       print(user_details)
       app_tables.oxigyms.add_row(
-        id=str(user_details["id"]),
-        name=user_details["username"],
-        email=user_details["email"],
-        password=user_details["password"],
-        phone=int(user_details["phone"]),
-        pincode=int(pincode),
-        Oxigyms_Name=gym_name,
-        established_year=str(establised_year),
-        State=state,
-        District=district,
-        address_2=address,
-        capsules=int(capsule),
-        gym_licence=self.file1,
-        building_licence=self.file2,
-        oxigym_id=self.generate_unique_random_code()
+        oxi_id=str(user_details["oxi_id"]),
+        oxi_name=user_details["oxi_username"],
+        oxi_email=user_details["oxi_email"],
+        oxi_password=user_details["oxi_password"],
+        oxi_phone=int(user_details["oxi_phone"]),
+        oxigyms_pincode=int(pincode),
+        oxigyms_Name=gym_name,
+        oxigyms_established_year=str(establised_year),
+        oxigyms_State=state,
+        oxigyms_District=district,
+        oxigyms_address=address,
+        oxigyms_capsules=int(capsule),
+        oxigyms_licence=self.file1,
+        oxigyms_building_licence=self.file2,
+        oxigyms_id=self.generate_unique_random_code()
       )
 
       alert("You added oxigym successfully.")
@@ -94,7 +94,7 @@ class oxigym(oxigymTemplate):
         code = prefix + random_numbers
         
         # Check if the code already exists in the data table
-        existing_rows = app_tables.oxigyms.get(oxigym_id=code)
+        existing_rows = app_tables.oxigyms.get(oxigyms_id=code)
         if not existing_rows:
             # If the code does not exist, return it
             return code

@@ -53,7 +53,7 @@ class servicers_registration_form_main(servicers_registration_form_mainTemplate)
         app_tables.oxi_users.add_row(oxi_id = oxi_id, oxi_username = name, oxi_email = email, oxi_password = password, oxi_phone = int(phone),oxi_address=address,oxi_usertype='service provider',oxi_gst=gst,oxi_pan=pan)
         """This method is called when the button is clicked"""
         servicer_id.id=oxi_id
-        open_form('servicers_registration_form.services_register_add_service',id=id)
+        open_form('servicers_registration_form.services_register_add_service',id=oxi_id)
       except Exception as e:
         print(e)
         pass

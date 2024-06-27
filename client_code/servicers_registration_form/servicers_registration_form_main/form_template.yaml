@@ -105,12 +105,12 @@ components:
       layout_properties: {x: 12, y: 402.6000099182129, width: 380}
       event_bindings: {change: servicers_address_text_box_change, focus: servicers_address_text_box_focus, lost_focus: servicers_address_text_box_lost_focus}
     - name: servicers_next_button_1
-      properties: {role: raised, align: full, foreground: 'theme:White', text: Next, font_size: 15, icon_align: right, background: '#fa1900', bold: true, icon: 'fa:angle-double-right'}
+      properties: {role: raised, bold: true, align: full, background: '#fa1900', icon: 'fa:angle-double-right', icon_align: right, foreground: 'theme:White', font_size: 15, text: Next}
       type: Button
       layout_properties: {x: 207.2249877937138, y: 479.57500076293945, width: 185.08750915527344}
       event_bindings: {click: servicers_next_button_1_click}
     - name: servicers_prev_button_1
-      properties: {role: raised, align: full, border: '', foreground: 'theme:White', text: Preview, font_size: 15, background: '#fa1900', bold: true, icon: 'fa:angle-double-left'}
+      properties: {role: raised, bold: true, align: full, background: '#fa1900', icon: 'fa:angle-double-left', foreground: 'theme:White', border: '', font_size: 15, text: Preview}
       type: Button
       layout_properties: {x: 11.250012207776308, y: 479.57500076293945, width: 180}
       data_bindings: []

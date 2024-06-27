@@ -50,23 +50,23 @@ class oxiclinic(oxiclinicTemplate):
     ):
       Notification('All "Fields" and "Documents"  are required.').show()
     else:
-      user_details = app_tables.users.get(id=self.user_id)
+      user_details = app_tables.oxi_users.get(oxi_id=self.user_id)
       print(user_details)
-      app_tables.oxiclinics.add_row(id=str(user_details['id']),
-                                   name=user_details['username'],
-                                   email=user_details['email'],
-                                   password=user_details['password'],
-                                   phone=int(user_details['phone']),
-                                   pincode=int(pincode),
-                                   Oxiclinics_Name=hospital_name,
-                                   established_year=str(establised_year),
-                                   State=state,
-                                   District=district,
-                                   address_2=address,
-                                   capsules=int(capsule),
-                                   medical_licence=self.file1,
-                                   building_licence=self.file2,
-                                   oxiclinic_id=self.generate_unique_random_code())
+      app_tables.oxiclinics.add_row(oxi_id=str(user_details['oxi_id']),
+                                   oxi_name=user_details['oxi_username'],
+                                   oxi_email=user_details['oxi_email'],
+                                   oxi_password=user_details['oxi_password'],
+                                   oxi_phone=int(user_details['oxi_phone']),
+                                   oxiclinics_pincode=int(pincode),
+                                   oxiclinics_Name=hospital_name,
+                                   oxiclinics_established_year=str(establised_year),
+                                   oxiclinics_State=state,
+                                   oxiclinics_District=district,
+                                   oxiclinics_address=address,
+                                   oxiclinics_capsules=int(capsule),
+                                   oxiclinics_medical_licence=self.file1,
+                                   oxiclinics_building_licence=self.file2,
+                                   oxiclinics_id=self.generate_unique_random_code())
                                    
 
                                   
@@ -96,7 +96,7 @@ class oxiclinic(oxiclinicTemplate):
         code = prefix + random_numbers
         
         # Check if the code already exists in the data table
-        existing_rows = app_tables.oxiclinics.get(oxiclinic_id=code)
+        existing_rows = app_tables.oxiclinics.get(oxiclinics_id=code)
         if not existing_rows:
             # If the code does not exist, return it
             return code

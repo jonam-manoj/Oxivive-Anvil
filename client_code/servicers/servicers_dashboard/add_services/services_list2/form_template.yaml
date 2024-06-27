@@ -26,23 +26,23 @@ components:
 - name: data_grid_1
   properties:
     role: null
+    spacing_above: small
     columns:
     - {id: JKSDUP, title: S No., data_key: column_1, $$hashKey: 'object:22098'}
     - {id: VJQQOR, title: Organization Id, data_key: column_2, $$hashKey: 'object:22099'}
     - {id: OJLQEN, title: Organization Name, data_key: column_3, $$hashKey: 'object:22100'}
     - {id: ZYQNVH, title: City, data_key: column_4, $$hashKey: 'object:22144'}
     - {id: PYNXEH, data_key: column_1, title: Action}
-    auto_header: true
-    tooltip: ''
-    border: ''
-    foreground: ''
-    rows_per_page: 20
-    visible: true
-    wrap_on: never
-    show_page_controls: true
-    spacing_above: small
-    spacing_below: small
     background: ''
+    rows_per_page: 20
+    wrap_on: never
+    foreground: ''
+    show_page_controls: true
+    auto_header: true
+    spacing_below: small
+    visible: true
+    border: ''
+    tooltip: ''
   type: DataGrid
   components:
   - name: repeating_panel_1
