@@ -72,7 +72,7 @@ components:
           type: Label
           layout_properties: {grid_position: 'BOZIBU,NBYHDT'}
         - name: text_box_2
-          properties: {role: dense, align: left, hide_text: false, border: '', enabled: true, type: number, italic: true, bold: true, underline: false}
+          properties: {role: dense, bold: true, align: left, type: number, underline: false, hide_text: false, border: '', italic: true, enabled: true}
           type: TextBox
           layout_properties: {grid_position: 'UZQIDW,KCSYHF'}
           data_bindings:

@@ -1,6 +1,8 @@
 from ._anvil_designer import dashboardTemplate
 from anvil import *
 import anvil.server
+from anvil.tables import app_tables
+
 
 class dashboard(dashboardTemplate):
   def __init__(self, **properties):
@@ -13,20 +15,24 @@ class dashboard(dashboardTemplate):
     self.text_box_2.set_event_handler('x-click', self.text_box_2_focus)
     # Make text_box_2 initially invisible
     self.text_box_2.visible = False
+    self.card_3.visible = False
+    self.card_4.visible = False
+    self.card_5.visible = False
 
-    # Any code you write here will run before the form opens.
 
   def primary_color_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('dashboard.aviailable_Hospital_Address')
+    # open_form('dashboard.aviailable_Hospital_Address')
+    open_form('slot_book')
 
   def primary_color_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('dashboard.availabe_vehical_services')
-
+    open_form('slot_book')
+    
   def primary_color_1_copy_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('dashboard.available_zym_address')
+    # open_form('dashboard.available_zym_address')
+    open_form('slot_book')
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -46,19 +52,31 @@ class dashboard(dashboardTemplate):
               self.repeating_panel_1.items = result['results']
 
   def text_box_2_focus(self, **event_args):
+      # Alert message when text_box_2 is clicked
+  
       # Make text_box_2 invisible and text_box_1 visible
       self.text_box_2.visible = False
       self.text_box_1.visible = True
 
+  
   def update_text_boxes(self, address):
-      # Update text_box_2 with the selected address
-      self.text_box_2.text = address
-      self.text_box_2.visible = True
-      self.text_box_1.visible = False
-      # Store the selected address in the variable
-      self.selected_address = address
-      print(self.selected_address)
+        self.text_box_2.text = address
+        self.text_box_2.visible = True
+        self.text_box_1.visible = False
+        
+        # Extract the location name (we assume it's the first part of the address)
+        location_name = address.split(",")[0].strip()
+        
+        # Call the server function to check the pin code in the tables
+        result = anvil.server.call('check_pincode_in_tables', location_name)
+        
+        # Show or hide cards based on the results
+        self.card_3.visible = result['oxiclinics_exists']
+        self.card_4.visible = result['oxigyms_exists']
+        self.card_5.visible = result['oxiwheels_exists']
 
-  def primary_color_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form("h")
+
+
+
+    
+    
