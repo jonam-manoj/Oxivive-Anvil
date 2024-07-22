@@ -75,6 +75,10 @@ class dashboard(dashboardTemplate):
         self.card_4.visible = result['oxigyms_exists']
         self.card_5.visible = result['oxiwheels_exists']
 
+  def primary_color_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('home')
+
 
 
 
