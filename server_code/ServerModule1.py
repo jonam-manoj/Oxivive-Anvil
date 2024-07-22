@@ -8,6 +8,7 @@ import base64
 import requests
 import random
 import string
+import bcrypt
 
 @anvil.server.callable
 def user(oxi_id,oxusername,email,password,phone,pincode,wallet_balance):
@@ -119,3 +120,12 @@ def check_pincode_in_tables(location_name):
                 break
     
     return results
+
+@anvil.server.callable
+def hash_password(password):
+    hashed = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+    return hashed.decode('utf-8')
+
+@anvil.server.callable
+def check_password(password, hashed):
+    return bcrypt.checkpw(password.encode('utf-8'), hashed.encode('utf-8'))

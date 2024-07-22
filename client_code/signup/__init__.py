@@ -23,16 +23,29 @@ class signup(signupTemplate):
     # app_tables.users.add_row(username, email, password, phone, pincode)
     # anvil.server.call('add_info',username, email, password, phone, pincode)
     try: 
-      # If not present, proceed to insert the new user
+      # Hash the password by calling the server function
+      hashed_password = anvil.server.call('hash_password', password)
+
+      # Generate a new user ID
       rows = app_tables.oxi_users.search()
-      id = f"C{len(rows):04d}"
-      app_tables.oxi_users.add_row(oxi_id = id, oxi_username =username, oxi_email = email, oxi_password = password, oxi_phone = int(phone),oxi_pincode=pincode,oxi_pan=pan)
-      """This method is called when the button is clicked"""
-      alert (self.text_box_2.text + ' added')
+      user_id = f"C{len(rows):04d}"
+
+      # Add new user to the database
+      app_tables.oxi_users.add_row(
+        oxi_id=user_id,
+        oxi_username=username,
+        oxi_email=email,
+        oxi_password=hashed_password,
+        oxi_phone=int(phone),
+        oxi_pincode=pincode,
+        oxi_pan=pan
+      )
+
+      alert(f"{email} added")
       open_form('login')
     except Exception as e:
       print(e)
-      pass
+      alert("An error occurred while signing up. Please try again.")
 
     """This method is called when the button is clicked"""
     
@@ -40,7 +53,11 @@ class signup(signupTemplate):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("login")
-
+    
+  def text_box_1_pressed_enter(self, **event_args):
+    # Define what happens when enter is pressed in text_box_1
+    pass
+    
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("servicers_registration_form.servicers_registration_form_main")
@@ -52,6 +69,7 @@ class signup(signupTemplate):
   def text_box_1_lost_focus(self, **event_args):
     """This method is called when the TextBox loses focus"""
     self.text_box_1.border="1px solid black"
+    
 
   def text_box_2_focus(self, **event_args):
     """This method is called when the TextBox gets focus"""
