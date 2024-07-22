@@ -43,7 +43,7 @@ class oxiwheel(oxiwheelTemplate):
     ):
       Notification('All "Fields" and "Documents"  are required.').show()
     else:
-      user_details = app_tables.oxi_users.get(oxiid=self.user_id)
+      user_details = app_tables.oxi_users.get(oxi_id=self.user_id)
       print(user_details)
       app_tables.oxiwheels.add_row(
         oxi_id=str(user_details["oxi_id"]),
