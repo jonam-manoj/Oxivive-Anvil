@@ -235,6 +235,9 @@ db_schema:
     - name: oxi_pan
       admin_ui: {width: 200, order: 10}
       type: string
+    - name: oxi_pan_card_no
+      admin_ui: {width: 200, order: 11}
+      type: string
   oxi_wallet:
     title: oxi_wallet
     client: full

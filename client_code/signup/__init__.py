@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import re
 
+
 class signup(signupTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -22,29 +23,28 @@ class signup(signupTemplate):
         pan = self.pan_text_box.text
 
         try:
-            # Hash the password by calling the server function
+            # Hash the password using server function
             hashed_password = anvil.server.call('hash_password', password)
-            
-            # Generate a new user ID
-            rows = app_tables.oxi_users.search()
-            user_id = f"C{len(rows):04d}"
 
-            # Add new user to the database
+            if app_tables.oxi_users.get(oxi_email=email):
+                alert("User with this email already exists.")
+                return
+
+            id = f"C{len(app_tables.oxi_users.search()):04d}"
             app_tables.oxi_users.add_row(
-                oxi_id=user_id,
+                oxi_id=id,
                 oxi_username=username,
                 oxi_email=email,
-                oxi_password=hashed_password,
+                oxi_password=hashed_password,  # Store hashed password
                 oxi_phone=int(phone),
                 oxi_pincode=pincode,
                 oxi_pan=pan
             )
-
-            alert(f"{email} added")
+            alert(f"{email} added successfully")
             open_form('login')
         except Exception as e:
             print(e)
-            alert("An error occurred while signing up. Please try again.")
+            alert("An error occurred. Please try again.")
     
 
   def link_1_click(self, **event_args):

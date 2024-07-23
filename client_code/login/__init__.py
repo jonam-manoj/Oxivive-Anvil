@@ -1,8 +1,9 @@
 from ._anvil_designer import loginTemplate
 from anvil import alert, open_form
 from anvil.tables import app_tables
-from ..servicers import user_id
 import anvil.server
+from ..servicers import user_id
+
 
 class login(loginTemplate):
     def __init__(self, **properties):
@@ -12,16 +13,13 @@ class login(loginTemplate):
     def primary_color_1_click(self, **event_args):
         email = self.text_box_1.text
         password = self.text_box_2.text
-        
+
         try:
             user = app_tables.oxi_users.get(oxi_email=email)
-            print(f"User found: {user}")  # Log the user details
-            
+
             if user:
-                password_check = anvil.server.call('check_password', password, user['oxi_password'])
-                print(f"Password check result: {password_check}")  # Log the password check result
-                
-                if password_check:
+                hashed_password = user['oxi_password']
+                if anvil.server.call('check_password', password, hashed_password):
                     if user['oxi_usertype'] == 'service provider':
                         user_id.user_id = user['oxi_id']
                         open_form('servicers.servicers_dashboard')
@@ -31,9 +29,9 @@ class login(loginTemplate):
                     alert("Invalid email or password. Please try again.")
             else:
                 alert("Invalid email or password. Please try again.")
+        
         except Exception as e:
             alert(f"Error: {e}")
-
 
     def back_click(self, **event_args):
         open_form("home")
