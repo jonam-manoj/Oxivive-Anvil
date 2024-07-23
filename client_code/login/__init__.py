@@ -14,17 +14,23 @@ class login(loginTemplate):
         password = self.text_box_2.text
         
         try:
-            # Search for the user in the Data Table
             user = app_tables.oxi_users.get(oxi_email=email)
-      
-            if user and anvil.server.call('check_password', password, user['oxi_password']):
-              if user['oxi_usertype'] == 'service provider':
-                user_id.user_id = user['oxi_id']
-                open_form('servicers.servicers_dashboard')
-              else:
-                open_form('dashboard')
+            print(f"User found: {user}")  # Log the user details
+            
+            if user:
+                password_check = anvil.server.call('check_password', password, user['oxi_password'])
+                print(f"Password check result: {password_check}")  # Log the password check result
+                
+                if password_check:
+                    if user['oxi_usertype'] == 'service provider':
+                        user_id.user_id = user['oxi_id']
+                        open_form('servicers.servicers_dashboard')
+                    else:
+                        open_form('dashboard')
+                else:
+                    alert("Invalid email or password. Please try again.")
             else:
-              alert("Invalid email or password. Please try again.")
+                alert("Invalid email or password. Please try again.")
         except Exception as e:
             alert(f"Error: {e}")
 
@@ -55,3 +61,7 @@ class login(loginTemplate):
     def link_4_click(self, **event_args):
       """This method is called when the link is clicked"""
       open_form("login")
+
+    def link_9_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      pass

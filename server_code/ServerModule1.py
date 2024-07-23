@@ -8,7 +8,9 @@ import base64
 import requests
 import random
 import string
-import bcrypt
+
+import hashlib
+import os
 
 @anvil.server.callable
 def user(oxi_id,oxusername,email,password,phone,pincode,wallet_balance):
@@ -121,11 +123,37 @@ def check_pincode_in_tables(location_name):
     
     return results
 
-@anvil.server.callable
-def hash_password(password):
-    hashed = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-    return hashed.decode('utf-8')
+
+def custom_hash_function(password, salt):
+    password_bytes = bytearray(password.encode('utf-8'))
+    salt_bytes = bytearray(salt)
+    mixed_bytes = bytearray(len(password_bytes) + len(salt_bytes))
+    
+    for i in range(len(password_bytes)):
+        mixed_bytes[i] = password_bytes[i] ^ salt_bytes[i % len(salt_bytes)]
+    
+    for _ in range(100000):
+        for i in range(len(mixed_bytes)):
+            mixed_bytes[i] = (mixed_bytes[i] + i + mixed_bytes[i-1]) % 256
+    
+    hashed_password = mixed_bytes.hex()
+    return hashed_password
 
 @anvil.server.callable
-def check_password(password, hashed):
-    return bcrypt.checkpw(password.encode('utf-8'), hashed.encode('utf-8'))
+def hash_password(password):
+    salt = bytearray(os.urandom(16))  # Generate a random salt
+    hashed_password = custom_hash_function(password, salt)
+    return salt.hex() + hashed_password  # Return the salt and hashed password
+
+@anvil.server.callable
+def check_password(password, stored_hash):
+    salt = bytes.fromhex(stored_hash[:32])
+    stored_password = stored_hash[32:]
+    hashed_password = custom_hash_function(password, salt)
+    
+    is_correct = stored_password == hashed_password
+    print(f"Check password: {is_correct}")  # Log the result
+    print(f"Stored hash: {stored_password}")  # Log the stored hash
+    print(f"Hashed password: {hashed_password}")  # Log the newly hashed password
+    return is_correct
+
