@@ -22,31 +22,27 @@ class signup(signupTemplate):
         pincode = self.text_box_5.text
         pan = self.pan_text_box.text
 
-        try:
-            # Hash the password using server function
-            hashed_password = anvil.server.call('hash_password', password)
-
-            if app_tables.oxi_users.get(oxi_email=email):
-                alert("User with this email already exists.")
-                return
-
-            id = f"C{len(app_tables.oxi_users.search()):04d}"
-            app_tables.oxi_users.add_row(
-                oxi_id=id,
-                oxi_username=username,
-                oxi_email=email,
-                oxi_password=hashed_password,  # Store hashed password
-                oxi_phone=int(phone),
-                oxi_pincode=pincode,
-                oxi_pan=pan
-            )
-            alert(f"{email} added successfully")
-            open_form('login')
-        except Exception as e:
-            print(e)
-            alert("An error occurred. Please try again.")
+        # Hash the password using server function
+        hashed_password = anvil.server.call('hash_password', password)
     
-
+        try:
+          rows = app_tables.oxi_users.search()
+          id = f"C{len(rows):04d}"
+          app_tables.oxi_users.add_row(
+            oxi_id=id,
+            oxi_username=username,
+            oxi_email=email,
+            oxi_password=hashed_password,  # Store hashed password
+            oxi_phone=int(phone),
+            oxi_pincode=pincode,
+            oxi_pan=pan
+          )
+          alert(self.text_box_2.text + ' added')
+          open_form('login')
+        except Exception as e:
+          print(e)
+          alert(f"Error: {e}")
+    
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("login")
