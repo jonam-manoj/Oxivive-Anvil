@@ -12,8 +12,6 @@ print(user_id)
 #
 #    Module1.say_hello()
 
-#
-
 
 def say_hello():
   print("Hello, world")
