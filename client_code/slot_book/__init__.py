@@ -2,6 +2,9 @@ from ._anvil_designer import slot_bookTemplate
 from anvil import *
 import anvil.server
 from datetime import datetime, timedelta
+import random
+import string
+from datetime import datetime, date
 
 class slot_book(slot_bookTemplate):
     def __init__(self, **properties):
