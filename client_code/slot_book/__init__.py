@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import random
 import string
 from datetime import datetime, date
-import global_vars
+# import global_vars
 
 class slot_book(slot_bookTemplate):
     def __init__(self, **properties):

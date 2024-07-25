@@ -42,6 +42,7 @@ unique_ids:
     servicers_registration_form.oxigym_documents: 6ZCAVH3GOG6STWLKQGPJK5OJTHTLKRIK
     servicers_registration_form.servicers_registration_form_main: '1713240235053300522602261.4747'
   modules:
+    Module1: '1721896283498540006956332.7305'
     servicers_registration_form: 27G5MWNGDBQRI2CCV274XTJYESSWZYTU
     servicers_registration_form.servicer_id: '1714447913683132688530669.16763'
     servicers: '1713784754129909004768059.6565'
