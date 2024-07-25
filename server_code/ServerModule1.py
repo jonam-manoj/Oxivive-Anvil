@@ -151,4 +151,23 @@ def check_password(password, hashed_password):
     return bcrypt.checkpw(password.encode('utf-8'), hashed_password.encode('utf-8'))
 
 
+@anvil.server.callable
+def insert_booking_data(oxi_book_date, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id):
+    try:
+        # Insert logic here to insert data into 'oxi_book_slot' table
+        app_tables.oxi_book_slot.add_row(
+            oxi_book_date=oxi_book_date,
+            oxi_servicer_id=oxi_servicer_id,
+            oxi_book_id=oxi_book_id,
+            # oxi_id='generated_oxi_id_here',  # Generate or fetch this as per your application logic
+            oxi_book_time=oxi_book_time,
+            oxi_date_time=oxi_date_time,
+            oxi_payment_id=oxi_payment_id
+        )
+        return True  # Indicate success if needed
+    except Exception as e:
+        print(f"Error inserting booking data: {e}")
+        return False  # Return False or handle error as per your application logic
+
+
 

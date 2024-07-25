@@ -3,7 +3,8 @@ from anvil import alert, open_form
 from anvil.tables import app_tables
 import anvil.server
 from ..servicers import user_id
-
+from anvil import session
+import global_vars
 
 class login(loginTemplate):
     def __init__(self, **properties):
@@ -20,8 +21,9 @@ class login(loginTemplate):
             
             if user and anvil.server.call('check_password', password, user['oxi_password']):
                 user.update(active='TRUE')
-                self.user_id = user['oxi_id']
-                
+                global_vars.user_id = user['oxi_id']
+              
+              
                 if user['oxi_usertype'] == 'service provider':
                     open_form('servicers.servicers_dashboard')
                 else:

@@ -6,7 +6,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {custom_smtp: true}
-startup: {type: form, module: Activity}
+startup: {type: form, module: slot_book}
 package_name: jo_Oxyvive
 allow_embedding: false
 name: jo_Oxyvive
@@ -274,8 +274,8 @@ db_schema:
     client: full
     server: full
     columns:
-    - name: book_time
-      admin_ui: {width: 200}
+    - name: oxi_date_time
+      admin_ui: {order: 0, width: 200}
       type: string
     - name: service_type
       admin_ui: {width: 200, order: 5}
@@ -286,8 +286,8 @@ db_schema:
     - name: book_date
       admin_ui: {width: 200, order: 8}
       type: date
-    - name: serviceProvider_id
-      admin_ui: {width: 200, order: 9}
+    - name: oxi_servicer_id
+      admin_ui: {order: 7, width: 200}
       type: string
     - name: slot_id
       admin_ui: {width: 200}
@@ -296,6 +296,21 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: oxi_book_date
-      admin_ui: {width: 200, order: 4.5}
-      type: date
+      admin_ui: {width: 200, order: 8}
+      type: string
+    - name: oxi_book_id
+      admin_ui: {width: 200, order: 9}
+      type: string
+    - name: oxi_id
+      admin_ui: {width: 200, order: 10}
+      type: string
+    - name: oxi_book_time
+      admin_ui: {width: 200, order: 11}
+      type: string
+    - name: oxi_date_time_2
+      admin_ui: {width: 200, order: 12}
+      type: string
+    - name: oxi_payment_id
+      admin_ui: {width: 200, order: 13}
+      type: string
 uplink_visible: true
