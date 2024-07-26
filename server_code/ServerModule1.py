@@ -100,7 +100,8 @@ def check_pincode_in_tables(location_name):
     results = {
         'oxiclinics_exists': False,
         'oxigyms_exists': False,
-        'oxiwheels_exists': False
+        'oxiwheels_exists': False,
+        'id_of_serviceprovider': None  # Add to store the oxi_id
     }
     
     if nearby_pincodes:
@@ -108,18 +109,21 @@ def check_pincode_in_tables(location_name):
         for record in app_tables.oxiclinics.search():
             if record['oxiclinics_pincode'] in nearby_pincodes:
                 results['oxiclinics_exists'] = True
+                results['id_of_serviceprovider'] = record['oxi_id']  # Store the oxi_id
                 break
 
         # Check oxigyms
         for record in app_tables.oxigyms.search():
             if record['oxigyms_pincode'] in nearby_pincodes:
                 results['oxigyms_exists'] = True
+                results['id_of_serviceprovider'] = record['oxi_id']
                 break
 
         # Check oxiwheels
         for record in app_tables.oxiwheels.search():
             if record['oxiwheels_pincode'] in nearby_pincodes:
                 results['oxiwheels_exists'] = True
+                results['id_of_serviceprovider'] = record['oxi_id']  # Store the oxi_id
                 break
     
     return results
