@@ -14,20 +14,18 @@ class login(loginTemplate):
     def primary_color_1_click(self, **event_args):
         email = self.text_box_1.text
         password = self.text_box_2.text
-    
+        
         try:
+            # Search for the user in the Data Table
             users_table = app_tables.oxi_users
-            user = users_table.get(oxi_email=email)
+            user = users_table.get(oxi_email=email, oxi_password=password)
             
-            if user and anvil.server.call('check_password', password, user['oxi_password']):
-                user.update(active='TRUE')
-                global_vars.user_id = user['oxi_id']
-              
-              
+            if user:
                 if user['oxi_usertype'] == 'service provider':
-                    open_form('servicers.servicers_dashboard')
+                  user_id.user_id = user['oxi_id']
+                  open_form('servicers.servicers_dashboard')
                 else:
-                    open_form('dashboard')
+                  open_form('dashboard')
             else:
                 alert("Invalid email or password. Please try again.")
         
