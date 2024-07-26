@@ -92,30 +92,23 @@ class slot_book(slot_bookTemplate):
             button.visible = True
 
     def primary_color_1_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      try:
-            # Get the logged-in user ID from the global variable
-            # self.user_id = global_vars.user_id
-            
-            if not self.user_id:
-                raise Exception("User is not logged in.")
+        try:
             # Get current datetime
             current_datetime = datetime.now()
 
             oxi_book_date = current_datetime.strftime("%d-%m-%Y")                                                   
             oxi_book_time = current_datetime.strftime("%H:%M:%S")
             oxi_date_time = current_datetime.strftime("%d-%m-%Y %H:%M:%S")
-            oxi_servicer_id = "SP1234"
-            oxi_id= "jonam"
+            oxi_servicer_id = 'jonam'
             oxi_book_id = 'BOOK001'
             oxi_payment_id = 'PAY001'
             
             # Insert into the database
-            anvil.server.call('insert_booking_data', oxi_book_date, oxi_id, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id)
-            open_form('wallet')
+            anvil.server.call('insert_booking_data', oxi_book_date, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id)
+            
             print("Booking data inserted successfully.")
             
-      except Exception as e:
+        except Exception as e:
             print(f"Error inserting booking data: {e}")
             print("Failed to insert booking data.")
       
