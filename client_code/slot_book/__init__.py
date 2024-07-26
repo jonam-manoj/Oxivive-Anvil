@@ -8,9 +8,11 @@ from datetime import datetime, date
 # import global_vars
 
 class slot_book(slot_bookTemplate):
-    def __init__(self, **properties):
+    def __init__(self, oxi_id=None, **properties):
         self.init_components(**properties)
         self.set_button_date()
+        self.oxi_id = oxi_id  # Store the oxi_id
+        print(f"Slot booking for user ID: {self.oxi_id}")
         
    
     def set_button_date(self):
@@ -101,10 +103,11 @@ class slot_book(slot_bookTemplate):
             oxi_date_time = current_datetime.strftime("%d-%m-%Y %H:%M:%S")
             oxi_servicer_id = 'jonam'
             oxi_book_id = 'BOOK001'
+            oxi_id =  ''
             oxi_payment_id = 'PAY001'
             
             # Insert into the database
-            anvil.server.call('insert_booking_data', oxi_book_date, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id)
+            anvil.server.call('insert_booking_data', oxi_id ,oxi_book_date, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id)
             
             print("Booking data inserted successfully.")
             

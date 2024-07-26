@@ -24,6 +24,7 @@ class login(loginTemplate):
             if user:
                 self.current_user = user['oxi_id']  # Store the current user ID in the variable
                 print(f"Current user ID: {self.current_user}")  # Print the user ID in the console
+              
                 if user['oxi_usertype'] == 'service provider':
                   user_id.user_id = user['oxi_id']
                   open_form('servicers.servicers_dashboard')

@@ -12,7 +12,6 @@ import string
 import hashlib
 import anvil.secrets
 import hmac
-import bcrypt
 
 @anvil.server.callable
 def user(oxi_id,oxusername,email,password,phone,pincode,wallet_balance):
