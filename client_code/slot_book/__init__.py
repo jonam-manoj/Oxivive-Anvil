@@ -95,7 +95,7 @@ class slot_book(slot_bookTemplate):
       """This method is called when the button is clicked"""
       try:
             # Get the logged-in user ID from the global variable
-            self.user_id = global_vars.user_id
+            # self.user_id = global_vars.user_id
             
             if not self.user_id:
                 raise Exception("User is not logged in.")
@@ -106,7 +106,7 @@ class slot_book(slot_bookTemplate):
             oxi_book_time = current_datetime.strftime("%H:%M:%S")
             oxi_date_time = current_datetime.strftime("%d-%m-%Y %H:%M:%S")
             oxi_servicer_id = "SP1234"
-            oxi_id= self.user_id 
+            oxi_id= "jonam"
             oxi_book_id = 'BOOK001'
             oxi_payment_id = 'PAY001'
             
