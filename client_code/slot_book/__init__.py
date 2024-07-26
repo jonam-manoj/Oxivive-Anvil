@@ -103,7 +103,7 @@ class slot_book(slot_bookTemplate):
             oxi_date_time = current_datetime.strftime("%d-%m-%Y %H:%M:%S")
             oxi_servicer_id = 'jonam'
             oxi_book_id = 'BOOK001'
-            oxi_id =  ''
+            oxi_id =  'self.oxi_id'
             oxi_payment_id = 'PAY001'
             
             # Insert into the database
