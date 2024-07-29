@@ -30,7 +30,8 @@ class login(loginTemplate):
                   user_id.user_id = user['oxi_id']
                   open_form('servicers.servicers_dashboard')
                 else:
-                  open_form('dashboard', oxi_id=self.current_user)
+                  open_form('new_dashboard', oxi_id=self.current_user)
+                  # open_form('dashboard', oxi_id=self.current_user)
             else:
                 alert("Invalid email or password. Please try again.")
         
