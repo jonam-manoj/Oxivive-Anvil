@@ -203,7 +203,7 @@ db_schema:
     server: full
     columns:
     - name: oxi_username
-      admin_ui: {width: 200, order: -1}
+      admin_ui: {order: 0, width: 200}
       type: string
     - name: oxi_email
       admin_ui: {width: 200, order: 0.5}
