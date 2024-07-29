@@ -30,24 +30,35 @@ class new_dashboard(new_dashboardTemplate):
     self.id_of_serviceprovider = None  # Initialize id_of_serviceprovider variable    
 
   def primary_color_1_click(self, **event_args):
-        """This method is called when the button is clicked"""
+    """This method is called when the button is clicked"""
+    if self.card_3.visible:
         service_provider_id = self.card_3.tag.get('id_of_serviceprovider')
         print(f"Service Provider ID (Clinic): {service_provider_id}")
-        open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=service_provider_id)
-    
+    else:
+        print("No clinic provider available.")
+    open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=service_provider_id)
+  
   def primary_color_1_copy_click(self, **event_args):
-        """This method is called when the button is clicked"""
-        service_provider_id = self.card_4.tag.get('id_of_serviceprovider')
-        print(f"Service Provider ID (Gym): {service_provider_id}")
-        open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=service_provider_id)
-
-
-  def primary_color_1_copy_2_click(self, **event_args):
-        """This method is called when the button is clicked"""
+    """This method is called when the button is clicked"""
+    if self.card_5.visible:
         service_provider_id = self.card_5.tag.get('id_of_serviceprovider')
         print(f"Service Provider ID (Wheels): {service_provider_id}")
-        open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=service_provider_id)
+    else:
+        print("No wheels provider available.")
+    open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=service_provider_id)
 
+ 
+  def  primary_color_1_copy_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if self.card_4.visible:
+        service_provider_id = self.card_4.tag.get('id_of_serviceprovider')
+        print(f"Service Provider ID (Gym): {service_provider_id}")
+    else:
+        print("No gym provider available.")
+    open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=service_provider_id)
+
+
+    
   def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
         pass
@@ -97,10 +108,10 @@ class new_dashboard(new_dashboardTemplate):
         self.card_3.visible = result['oxiclinics_exists']
         self.card_3.tag = {'id_of_serviceprovider': result['id_of_serviceprovider_clinic']}
     
-        self.card_4.visible = result['oxigyms_exists']
+        self.card_4.visible = result['oxiwheels_exists']
         self.card_4.tag = {'id_of_serviceprovider': result['id_of_serviceprovider_gym']}
     
-        self.card_5.visible = result['oxiwheels_exists']
+        self.card_5.visible = result['oxigyms_exists']
         self.card_5.tag = {'id_of_serviceprovider': result['id_of_serviceprovider_wheel']}
 
          # Print the IDs of the service providers found
