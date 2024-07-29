@@ -4,7 +4,7 @@ import anvil.server
 from datetime import datetime, timedelta
 import random
 import string
-from datetime import datetime, date
+from datetime import date
 # import global_vars
 
 class slot_book(slot_bookTemplate):
@@ -103,23 +103,29 @@ class slot_book(slot_bookTemplate):
 
     def primary_color_1_click(self, **event_args):
         try:
-            # Get current datetime
-            current_datetime = datetime.now()
-
-            oxi_book_date = current_datetime.strftime("%d-%m-%Y")                                                   
-            oxi_book_time = current_datetime.strftime("%H:%M:%S")
-            oxi_date_time = current_datetime.strftime("%d-%m-%Y %H:%M:%S")
-            oxi_servicer_id = 'jonam'
-            oxi_book_id = 'BOOK001'
-            oxi_id =  'self.oxi_id'
-            oxi_payment_id = 'PAY001'
-            
-            # Insert into the database
-            anvil.server.call('insert_booking_data', oxi_id ,oxi_book_date, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id)
+            # Generate random booking ID
+            oxi_book_id = f"BI{random.randint(10000, 99999)}"  # Example: BI70000
+    
+            # Set the booking time
+            oxi_book_time = '19:00 - 21:00'  # Fixed time range
+    
+            # Set the booking date
+            oxi_book_date = '23-07-2024'  # Fixed date format
+    
+            # Get current datetime and format oxi_date_time
+            current_datetime = datetime.strptime(f'{oxi_book_date} {oxi_book_time.split(" - ")[0]}', '%d-%m-%Y %H:%M')
+            oxi_date_time = current_datetime.strftime('%a, %d %b %Y %I:%M %p')
+    
+            # Prepare variables
+            oxi_id = self.oxi_id  # From new_dashboard form
+            oxi_servicer_id = self.id_of_serviceprovider  # The ID of the selected service provider
+            oxi_service_type = self.service_type  # The type of service selected (OxiGym, OxiWheel, OxiClinic)
+            oxi_username = self.oxi_username  # Username from the login form
+    
+            # Call the server function to insert booking data
+            anvil.server.call('insert_booking_data', oxi_id, oxi_book_date, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id, oxi_service_type, oxi_username)
             
             print("Booking data inserted successfully.")
-            
         except Exception as e:
-            print(f"Error inserting booking data: {e}")
-            print("Failed to insert booking data.")
+            print(f"Error: {e}")
       

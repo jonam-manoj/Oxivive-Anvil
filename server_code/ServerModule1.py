@@ -150,22 +150,23 @@ def check_pincode_in_tables(location_name):
 #     return hashed_password
 
 @anvil.server.callable
-def insert_booking_data(oxi_id, oxi_book_date, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id):
+def insert_booking_data(oxi_id, oxi_book_date, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id, oxi_service_type, oxi_username):
     try:
-        # Insert logic here to insert data into 'oxi_book_slot' table
+        # Insert data into 'oxi_book_slot' table
         app_tables.oxi_book_slot.add_row(
             oxi_book_date=oxi_book_date,
             oxi_servicer_id=oxi_servicer_id,
             oxi_book_id=oxi_book_id,
-            oxi_id= oxi_id,  # Generate or fetch this as per your application logic
+            oxi_id=oxi_id,  # Store oxi_id in the table
             oxi_book_time=oxi_book_time,
             oxi_date_time=oxi_date_time,
-            oxi_payment_id=oxi_payment_id
+            oxi_payment_id=oxi_payment_id,
+            oxi_service_type=oxi_service_type,
+            oxi_username=oxi_username
         )
         return True  # Indicate success if needed
     except Exception as e:
         print(f"Error inserting booking data: {e}")
         return False  # Return False or handle error as per your application logic
-
 
 
