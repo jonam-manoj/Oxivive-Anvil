@@ -101,7 +101,9 @@ def check_pincode_in_tables(location_name):
         'oxiclinics_exists': False,
         'oxigyms_exists': False,
         'oxiwheels_exists': False,
-        'id_of_serviceprovider': None  # Add to store the oxi_id
+        'id_of_serviceprovider_clinic': None,
+        'id_of_serviceprovider_gym': None,
+        'id_of_serviceprovider_wheel': None
     }
     
     if nearby_pincodes:
@@ -109,24 +111,25 @@ def check_pincode_in_tables(location_name):
         for record in app_tables.oxiclinics.search():
             if record['oxiclinics_pincode'] in nearby_pincodes:
                 results['oxiclinics_exists'] = True
-                results['id_of_serviceprovider'] = record['oxi_id']  # Store the oxi_id
+                results['id_of_serviceprovider_clinic'] = record['oxi_id']
                 break
 
         # Check oxigyms
         for record in app_tables.oxigyms.search():
             if record['oxigyms_pincode'] in nearby_pincodes:
                 results['oxigyms_exists'] = True
-                results['id_of_serviceprovider'] = record['oxi_id']
+                results['id_of_serviceprovider_gym'] = record['oxi_id']
                 break
 
         # Check oxiwheels
         for record in app_tables.oxiwheels.search():
             if record['oxiwheels_pincode'] in nearby_pincodes:
                 results['oxiwheels_exists'] = True
-                results['id_of_serviceprovider'] = record['oxi_id']  # Store the oxi_id
+                results['id_of_serviceprovider_wheel'] = record['oxi_id']
                 break
     
     return results
+
 
 
 # def custom_hash_function(password, salt):
@@ -143,16 +146,6 @@ def check_pincode_in_tables(location_name):
     
 #     hashed_password = mixed_bytes.hex()
 #     return hashed_password
-
-@anvil.server.callable
-def hash_password(password):
-    hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-    return hashed_password.decode('utf-8')
-
-@anvil.server.callable
-def check_password(password, hashed_password):
-    return bcrypt.checkpw(password.encode('utf-8'), hashed_password.encode('utf-8'))
-
 
 @anvil.server.callable
 def insert_booking_data(oxi_id, oxi_book_date, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id):

@@ -31,15 +31,22 @@ class new_dashboard(new_dashboardTemplate):
 
   def primary_color_1_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=self.id_of_serviceprovider)
-
+        service_provider_id = self.card_3.tag.get('id_of_serviceprovider')
+        print(f"Service Provider ID (Clinic): {service_provider_id}")
+        open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=service_provider_id)
+    
   def primary_color_1_copy_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=self.id_of_serviceprovider)
+        service_provider_id = self.card_4.tag.get('id_of_serviceprovider')
+        print(f"Service Provider ID (Gym): {service_provider_id}")
+        open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=service_provider_id)
+
 
   def primary_color_1_copy_2_click(self, **event_args):
         """This method is called when the button is clicked"""
-        open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=self.id_of_serviceprovider)
+        service_provider_id = self.card_5.tag.get('id_of_serviceprovider')
+        print(f"Service Provider ID (Wheels): {service_provider_id}")
+        open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=service_provider_id)
 
   def button_1_click(self, **event_args):
         """This method is called when the button is clicked"""
@@ -88,12 +95,18 @@ class new_dashboard(new_dashboardTemplate):
         
         # Show or hide cards based on the results
         self.card_3.visible = result['oxiclinics_exists']
+        self.card_3.tag = {'id_of_serviceprovider': result['id_of_serviceprovider_clinic']}
+    
         self.card_4.visible = result['oxigyms_exists']
+        self.card_4.tag = {'id_of_serviceprovider': result['id_of_serviceprovider_gym']}
+    
         self.card_5.visible = result['oxiwheels_exists']
+        self.card_5.tag = {'id_of_serviceprovider': result['id_of_serviceprovider_wheel']}
 
-        # Store the selected service provider's oxi_id
-        self.id_of_serviceprovider = result['id_of_serviceprovider']
-        print(f"ID of Service Provider: {self.id_of_serviceprovider}")  # Print the ID to the console
+         # Print the IDs of the service providers found
+        print(f"Clinic ID: {result['id_of_serviceprovider_clinic']}")
+        print(f"Gym ID: {result['id_of_serviceprovider_gym']}")
+        print(f"Wheel ID: {result['id_of_serviceprovider_wheel']}")
 
   def primary_color_2_click(self, **event_args):
         """This method is called when the button is clicked"""
