@@ -8,17 +8,18 @@ from datetime import datetime, date
 # import global_vars
 
 class slot_book(slot_bookTemplate):
-    def __init__(self, oxi_id=None, location_name=None, id_of_serviceprovider=None ,**properties):
+    def __init__(self, oxi_id=None,oxi_username=None, location_name=None, id_of_serviceprovider=None ,**properties):
         self.init_components(**properties)
         self.set_button_date()
         self.oxi_id = oxi_id  # Store the oxi_id
+        self.oxi_username = oxi_username   # Store received values
         self.location_name = location_name  # Store the location_name
         self.id_of_serviceprovider = id_of_serviceprovider
        # Print the values to the console
         print(f" oxi_id in Slot Book: {self.oxi_id}")
         print(f"Location Name in Slot Book: {self.location_name}")
         print(f"ID of Service Provider in Slot Book : {self.id_of_serviceprovider}")
-        
+        print(f"User Name in Slot Book: {self.oxi_username}")
    
     def set_button_date(self):
         current_date = datetime.now()

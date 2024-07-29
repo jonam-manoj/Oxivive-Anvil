@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 
 
 class new_dashboard(new_dashboardTemplate):
-  def __init__(self, oxi_id=None, **properties):
+  def __init__(self, oxi_id=None, oxi_username=None, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
@@ -23,7 +23,9 @@ class new_dashboard(new_dashboardTemplate):
     self.card_5.visible = False
 
     self.oxi_id = oxi_id  # Store the oxi_id
+    self.oxi_username = oxi_username
     print(f"User ID in Dashboard opened: {self.oxi_id}")  # Print the user ID
+    print(f"User Name in Dashboard: {self.oxi_username}")
     self.location_name = None  # Initialize location_name variable
     self.id_of_serviceprovider = None  # Initialize id_of_serviceprovider variable    
 
