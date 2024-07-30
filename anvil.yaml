@@ -76,6 +76,9 @@ db_schema:
     - name: oxiclinics_discription
       admin_ui: {width: 200, order: 16.5}
       type: string
+    - name: oxiclinics_fees
+      admin_ui: {width: 200, order: 18}
+      type: string
   oxigyms:
     title: oxigyms
     client: full
@@ -135,6 +138,9 @@ db_schema:
     - name: oxigyms_image
       admin_ui: {width: 200, order: 16.5}
       type: media
+    - name: oxigyms_fees
+      admin_ui: {width: 200, order: 18}
+      type: string
   oxiwheels:
     title: oxiwheels
     client: full
@@ -197,6 +203,9 @@ db_schema:
     - name: oxiwheels_discrption
       admin_ui: {width: 200, order: 16.5}
       type: string
+    - name: oxiwheels_fees
+      admin_ui: {width: 200, order: 19}
+      type: string
   oxi_users:
     title: oxi_users
     client: full
@@ -237,6 +246,63 @@ db_schema:
       type: string
     - name: oxi_pan_card_no
       admin_ui: {width: 200, order: 11}
+      type: string
+    - name: oxi_state
+      admin_ui: {width: 200, order: 12}
+      type: string
+    - name: oxi_country
+      admin_ui: {width: 200, order: 13}
+      type: string
+    - name: oxi_city
+      admin_ui: {width: 200, order: 14}
+      type: string
+    - name: oxi_gender
+      admin_ui: {width: 200, order: 15}
+      type: string
+    - name: oxi_allergies
+      admin_ui: {width: 200, order: 16}
+      type: string
+    - name: oxi_current_medications
+      admin_ui: {width: 200, order: 17}
+      type: string
+    - name: oxi_past_medications
+      admin_ui: {width: 200, order: 18}
+      type: string
+    - name: oxi_chronic_diseases
+      admin_ui: {width: 200, order: 19}
+      type: string
+    - name: oxi_injuries
+      admin_ui: {width: 200, order: 20}
+      type: string
+    - name: oxi_surgeries
+      admin_ui: {width: 200, order: 21}
+      type: string
+    - name: oxi_smoking_habits
+      admin_ui: {width: 200, order: 22}
+      type: string
+    - name: oxi_alcohol_consumption
+      admin_ui: {width: 200, order: 23}
+      type: string
+    - name: oxi_activity_level
+      admin_ui: {width: 200, order: 24}
+      type: string
+    - name: oxi_food_preference
+      admin_ui: {width: 200, order: 25}
+      type: string
+    - name: oxi_occupation
+      admin_ui: {width: 200, order: 26}
+      type: string
+    - name: oxi_height
+      admin_ui: {width: 200, order: 27}
+      type: number
+    - name: oxi_weight
+      admin_ui: {width: 200, order: 28}
+      type: number
+    - name: oxi_dob
+      admin_ui: {width: 200, order: 29}
+      type: date
+    - name: oxi_blood_group_label
+      admin_ui: {width: 200, order: 30}
       type: string
   oxi_wallet:
     title: oxi_wallet
@@ -305,6 +371,27 @@ db_schema:
       admin_ui: {width: 200, order: 2.75}
       type: string
     - name: oxi_book_date
-      admin_ui: {order: -0.3125, width: 200}
+      admin_ui: {width: 200, order: -1}
+      type: date
+    - name: oxi_doctor_name
+      admin_ui: {width: 200, order: 11}
       type: string
+    - name: oxi_session
+      admin_ui: {width: 200, order: 12}
+      type: number
+    - name: oxi_price
+      admin_ui: {width: 200, order: 13}
+      type: number
+    - name: book_date
+      admin_ui: {width: 200, order: 14}
+      type: date
+    - name: serviceProvider_id
+      admin_ui: {width: 200, order: 15}
+      type: string
+    - name: oxi_another_person_name
+      admin_ui: {width: 200, order: 16}
+      type: string
+    - name: oxi_another_person_number
+      admin_ui: {width: 200, order: 17}
+      type: number
 uplink_visible: true
