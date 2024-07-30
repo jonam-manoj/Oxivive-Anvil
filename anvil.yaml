@@ -6,7 +6,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {custom_smtp: true}
-startup: {type: form, module: Activity}
+startup: {type: form, module: login}
 package_name: Oxyvive
 allow_embedding: false
 name: Oxyvive
