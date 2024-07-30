@@ -1,0 +1,199 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: 'theme:Secondary 500', foreground: '', border: '', visible: true, role: null, html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_2
+    layout_properties: {grid_position: 'MYELCS,ODZPHL'}
+    components:
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_1
+      layout_properties: {grid_position: 'SGMBMA,JYEVSL'}
+      components:
+      - type: Label
+        properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 28, tooltip: '', text: OxiGym, margin: null}
+        name: label_1
+        layout_properties: {grid_position: 'CXGZPU,FSICTQ'}
+      - type: Label
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: 'Date :-', margin: null}
+        name: label_2
+        layout_properties: {grid_position: 'XXUCZK,VVSULE'}
+      - type: Label
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: '2024-07-24', margin: null}
+        name: label_5
+        layout_properties: {grid_position: 'XXUCZK,PPBAJS'}
+      - type: Label
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: 'Time-Slot :- ', margin: null}
+        name: label_3
+        layout_properties: {grid_position: 'KLABDP,TSYCVY'}
+      - type: Label
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: 'Wed, 24 jul 5:00 PM', margin: null}
+        name: label_6
+        layout_properties: {grid_position: 'KLABDP,OJBEWZ'}
+      - type: Label
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Completed, margin: null}
+        name: label_4
+        layout_properties: {grid_position: 'HRVFRQ,GQIKNT'}
+  - type: Spacer
+    properties: {height: 40}
+    name: spacer_2
+    layout_properties: {grid_position: 'BDPRZB,GJJASY'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}', spacing_above: medium, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
+    name: card_2
+    layout_properties: {grid_position: 'TNEHIV,DQXHIY'}
+    components:
+    - type: Label
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 28, tooltip: '', text: Tretment Details, margin: null}
+      name: label_7
+      layout_properties: {grid_position: 'MBCKMH,FOZYNF'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: 'fa:map-pin', underline: false, font: '', icon_align: left, foreground: green, spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: '', margin: null}
+      name: label_8
+      layout_properties: {grid_position: 'EJRROP,NIOJKP'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: 'fa:map-pin', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: '', margin: null}
+      name: label_9
+      layout_properties: {grid_position: 'KWDOBY,JFFLNW'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Duration, margin: null}
+      name: label_10
+      layout_properties: {grid_position: 'JNZMQK,VMZMLY'}
+    - type: Label
+      properties: {}
+      name: label_17
+      layout_properties: {grid_position: 'JNZMQK,QHSWFX'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Booking Time, margin: null}
+      name: label_11
+      layout_properties: {grid_position: 'GNQLGI,JDQEDC'}
+    - type: Label
+      properties: {}
+      name: label_16
+      layout_properties: {grid_position: 'GNQLGI,BRISPJ'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Booking Date, margin: null}
+      name: label_12
+      layout_properties: {grid_position: 'BVHUWN,JBDKTJ'}
+    - type: Label
+      properties: {}
+      name: label_15
+      layout_properties: {grid_position: 'BVHUWN,RHNKTS'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Booking ID, margin: null}
+      name: label_13
+      layout_properties: {grid_position: 'DFYADM,ZKIEKR'}
+    - type: Label
+      properties: {}
+      name: label_14
+      layout_properties: {grid_position: 'DFYADM,VRTTXK'}
+  - type: Spacer
+    properties: {height: 43}
+    name: spacer_3
+    layout_properties: {grid_position: 'TTLDMS,PSILUG'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}', spacing_above: medium, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
+    name: card_3
+    layout_properties: {grid_position: 'OZDOVR,AYAKJR'}
+    components:
+    - type: Label
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 28, tooltip: '', text: INVOICE, margin: null}
+      name: label_18
+      layout_properties: {grid_position: 'XRBFFX,VBZXRG'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Total Fare, margin: null}
+      name: label_19
+      layout_properties: {grid_position: 'WSHKMO,ECYAQP'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Rs 4000, margin: null}
+      name: label_24
+      layout_properties: {grid_position: 'WSHKMO,BYXLJP'}
+    - type: Label
+      properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 800', spacing_below: small, visible: true, border: '', italic: false, font_size: 25, tooltip: '', text: ' ------------------------------------------------------------------------------------------------------------------------------', margin: null}
+      name: label_25
+      layout_properties: {grid_position: 'JQZYGP,YTCWCN'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Treatment Charge, margin: null}
+      name: label_20
+      layout_properties: {grid_position: 'MSNVBU,MNWQPR'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Rs 4019.27, margin: null}
+      name: label_23
+      layout_properties: {grid_position: 'MSNVBU,KVTHYB'}
+    - type: Label
+      properties:
+        role: null
+        bold: false
+        align: left
+        spacing_above: small
+        background: ''
+        icon: ''
+        underline: false
+        font: ''
+        icon_align: left
+        foreground: ''
+        spacing_below: small
+        visible: true
+        border: ''
+        italic: false
+        font_size: 17
+        tooltip: ''
+        text: |-
+          Booking Fees & Convenience
+          Charges
+        margin: null
+      name: label_21
+      layout_properties: {grid_position: 'WFKXRQ,WJTZVZ'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Rs 19.27, margin: null}
+      name: label_22
+      layout_properties: {grid_position: 'WFKXRQ,HQYSLL'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: ColumnPanel
+  properties: {role: null, col_widths: '{}', spacing_above: small, background: 'theme:Secondary 500', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
+  name: column_panel_1
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Spacer
+    properties: {height: 112}
+    name: spacer_1
+    layout_properties: {grid_position: 'FUNMHY,AWLYXK'}
+  - type: Link
+    properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:user', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Profile}
+    name: link_1
+    layout_properties: {grid_position: 'ZNJUTB,SBQDLG'}
+  - type: Link
+    properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:bell', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Notifications}
+    name: link_2
+    layout_properties: {grid_position: 'OAHPVA,YXDLDM'}
+  - type: Link
+    properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:calendar-check-o', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Bookings}
+    name: link_3
+    layout_properties: {grid_position: 'URTMWR,CKKWHX'}
+  - type: Link
+    properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:file', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Reports}
+    name: link_4
+    layout_properties: {grid_position: 'IVAOZY,AOOMZP'}
+  - type: Link
+    properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:headphones', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Support}
+    name: link_5
+    layout_properties: {grid_position: 'VLOAGM,UVJGAL'}
+  - type: Link
+    properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:sign-out', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Log-out}
+    name: link_6
+    layout_properties: {grid_position: 'WECNMR,CHWPYJ'}
+- type: RichText
+  properties: {role: null, format: markdown, align: center, spacing_above: small, content: Booking Details, background: 'theme:Secondary 500', font: '', foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', enable_slots: true, font_size: 26, tooltip: '', margin: null, data: null}
+  name: rich_text_1
+  layout_properties: {slot: title}

@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: medium, col_widths: '{}', spacing_below: small, background: ''}
+  properties: {role: null, col_widths: '{}', spacing_above: medium, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
 components:
 - name: service_navigation_bar_1
   properties: {}
@@ -11,7 +11,7 @@ components:
   type: Label
   layout_properties: {grid_position: 'ZBHYWO,QIGBJP', full_width_row: true}
 - name: label_2
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '', visible: true, text: OxiClinic, font_size: 15, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
+  properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: OxiClinic}
   type: Label
   layout_properties: {grid_position: 'BTRQPU,TGAOEV UPLVSX,ITJSLP'}
 - name: image_1
@@ -19,12 +19,12 @@ components:
   type: Image
   layout_properties: {grid_position: 'BTRQPU,TGAOEV KGFNUE,FXOUXG'}
 - name: add_oxiclinic_button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true, foreground: '#fa1900', visible: true, text: Add, font_size: null, font: '', spacing_above: medium, icon_align: left, spacing_below: small, italic: false, background: '', bold: false, underline: false, icon: 'fa:plus'}
+  properties: {role: null, bold: false, align: center, spacing_above: medium, background: '', icon: 'fa:plus', underline: false, font: '', icon_align: left, foreground: '#fa1900', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Add}
   type: Button
   layout_properties: {grid_position: 'BTRQPU,TGAOEV ERDOVF,ZCOAFJ'}
   event_bindings: {click: add_oxiclinic_button_click}
 - name: label_3
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '', visible: true, text: OxiWheel, font_size: 15, font: '', spacing_above: medium, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
+  properties: {role: null, bold: true, align: center, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: OxiWheel}
   type: Label
   layout_properties: {grid_position: 'BTRQPU,TNWPUG PBQOMX,OMMUGL'}
 - name: image_2
@@ -32,12 +32,12 @@ components:
   type: Image
   layout_properties: {grid_position: 'BTRQPU,TNWPUG MOXKFX,AMGEBF'}
 - name: add_oxiwheel_button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true, foreground: '#fa1900', visible: true, text: ADD, font_size: null, font: '', spacing_above: medium, icon_align: left, spacing_below: small, italic: false, background: '', bold: false, underline: false, icon: 'fa:plus'}
+  properties: {role: null, bold: false, align: center, spacing_above: medium, background: '', icon: 'fa:plus', underline: false, font: '', icon_align: left, foreground: '#fa1900', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ADD}
   type: Button
   layout_properties: {grid_position: 'BTRQPU,TNWPUG XGVEVY,VYXCCT'}
   event_bindings: {click: add_oxiwheel_button_click}
 - name: label_4
-  properties: {role: null, align: center, tooltip: '', border: '', foreground: '', visible: true, text: OxiGym, font_size: 15, font: '', spacing_above: medium, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
+  properties: {role: null, bold: true, align: center, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: OxiGym}
   type: Label
   layout_properties: {grid_position: 'BTRQPU,OOBSIQ IYMAZH,EUBZGF'}
 - name: image_3
@@ -45,7 +45,7 @@ components:
   type: Image
   layout_properties: {grid_position: 'BTRQPU,OOBSIQ XVVAWL,MUUTXG'}
 - name: add_oxigym_button
-  properties: {role: null, align: center, tooltip: '', border: '', enabled: true, foreground: '#fa1900', visible: true, text: Add, font_size: null, font: '', spacing_above: medium, icon_align: left, spacing_below: small, italic: false, background: '', bold: false, underline: false, icon: 'fa:plus'}
+  properties: {role: null, bold: false, align: center, spacing_above: medium, background: '', icon: 'fa:plus', underline: false, font: '', icon_align: left, foreground: '#fa1900', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Add}
   type: Button
   layout_properties: {grid_position: 'BTRQPU,OOBSIQ WODUKK,PYSMKE'}
   event_bindings: {click: add_oxigym_button_click}

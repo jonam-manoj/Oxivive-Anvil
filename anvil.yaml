@@ -6,7 +6,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {custom_smtp: true}
-startup: {type: form, module: home}
+startup: {type: form, module: login}
 package_name: Oxyvive
 allow_embedding: false
 name: Oxyvive
@@ -203,7 +203,7 @@ db_schema:
     server: full
     columns:
     - name: oxi_username
-      admin_ui: {width: 200, order: -1}
+      admin_ui: {order: 0, width: 200}
       type: string
     - name: oxi_email
       admin_ui: {width: 200, order: 0.5}
@@ -234,6 +234,9 @@ db_schema:
       type: string
     - name: oxi_pan
       admin_ui: {width: 200, order: 10}
+      type: string
+    - name: oxi_pan_card_no
+      admin_ui: {width: 200, order: 11}
       type: string
   oxi_wallet:
     title: oxi_wallet
@@ -271,28 +274,37 @@ db_schema:
     client: full
     server: full
     columns:
-    - name: book_time
-      admin_ui: {width: 200}
+    - name: oxi_date_time
+      admin_ui: {order: 0, width: 200}
       type: string
     - name: service_type
-      admin_ui: {width: 200, order: 5}
+      admin_ui: {order: 0.5, width: 200}
       type: string
-    - name: user_id
-      admin_ui: {width: 200, order: 7}
+    - name: oxi_servicer_id
+      admin_ui: {order: -0.0625, width: 200}
       type: string
-    - name: book_date
-      admin_ui: {width: 200, order: 8}
-      type: date
-    - name: serviceProvider_id
-      admin_ui: {width: 200, order: 9}
-      type: string
-    - name: slot_id
-      admin_ui: {width: 200}
-      type: number
     - name: username
-      admin_ui: {width: 200}
+      admin_ui: {order: 0.75, width: 200}
+      type: string
+    - name: oxi_book_id
+      admin_ui: {order: -1, width: 200}
+      type: string
+    - name: oxi_id
+      admin_ui: {order: -0.125, width: 200}
+      type: string
+    - name: oxi_book_time
+      admin_ui: {order: -0.5, width: 200}
+      type: string
+    - name: oxi_payment_id
+      admin_ui: {order: -0.03125, width: 200}
+      type: string
+    - name: oxi_service_type
+      admin_ui: {width: 200, order: 1.75}
+      type: string
+    - name: oxi_username
+      admin_ui: {width: 200, order: 2.75}
       type: string
     - name: oxi_book_date
-      admin_ui: {width: 200, order: 4.5}
-      type: date
+      admin_ui: {order: -0.3125, width: 200}
+      type: string
 uplink_visible: true

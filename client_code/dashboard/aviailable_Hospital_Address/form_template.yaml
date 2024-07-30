@@ -24,3 +24,7 @@ components:
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- type: form:dashboard.gym_booking_form_1
+  properties: {}
+  name: custom_1
+  layout_properties: {slot: default}
