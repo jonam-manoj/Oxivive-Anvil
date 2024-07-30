@@ -17,7 +17,7 @@ class services_list(services_listTemplate):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
    
-    rows = app_tables.oxiclinics.search(id=str(self.user_id)) 
+    rows = app_tables.oxiclinics.search(oxi_id=str(self.user_id)) 
     
     List_oxiclinics = []
     for i, row in enumerate(rows, start=1):

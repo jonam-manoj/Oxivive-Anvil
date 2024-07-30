@@ -23,7 +23,7 @@ class signup(signupTemplate):
         pan = self.pan_text_box.text
 
         # Hash the password using server function
-        hashed_password = anvil.server.call('hash_password', password)
+        #hashed_password = anvil.server.call('hash_password', password)
     
         try:
           rows = app_tables.oxi_users.search()
