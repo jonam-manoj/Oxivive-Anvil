@@ -25,23 +25,17 @@ class signup(signupTemplate):
         # Hash the password using server function
         #hashed_password = anvil.server.call('hash_password', password)
     
-        try:
+        try: 
+          # If not present, proceed to insert the new user
           rows = app_tables.oxi_users.search()
           id = f"C{len(rows):04d}"
-          app_tables.oxi_users.add_row(
-            oxi_id=id,
-            oxi_username=username,
-            oxi_email=email,
-            oxi_password=hashed_password,  # Store hashed password
-            oxi_phone=int(phone),
-            oxi_pincode=pincode,
-            oxi_pan=pan
-          )
-          alert(self.text_box_2.text + ' added')
+          app_tables.oxi_users.add_row(oxi_id = id, oxi_username =username, oxi_email = email, oxi_password = password, oxi_phone = int(phone),oxi_pincode=pincode,oxi_pan=pan)
+          """This method is called when the button is clicked"""
+          alert (self.text_box_2.text + ' added')
           open_form('login')
         except Exception as e:
           print(e)
-          alert(f"Error: {e}")
+          pass
     
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
