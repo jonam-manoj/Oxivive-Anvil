@@ -13,6 +13,7 @@ unique_ids:
     servicers.servicers_dashboard.add_services.oxigym: GJGEOY2E65YTQB6SREO4DC57CSJO7HM7
     servicers_registration_form.services_list.RowTemplate1: '1713767270559693266616357.648'
     servicers_registration_form.servicers_navigation_bar: 6VRQFW5IT4W5MEBOQATQ2MWYY5BZZ3GE
+    Activity: '1721817048710987975622663.1235'
     dashboard.gym_booking_form_1: 65GXIRT7SKEFC6NKRPA3YFX63MPHSHYD
     servicers_registration_form.services_list: '1713767212040614906131180.0999'
     payment_page: '1713868896843804694426356.5883'
@@ -20,6 +21,7 @@ unique_ids:
     servicers.servicers_dashboard.customer_report: '1714375457799616126756024.346'
     slot_book: '1713334561858906627281156.3474'
     dashboard.LocationItemTemplate: '1718562404098676467946755.6764'
+    new_dashboard: '1722226459495818049398917.7524'
     servicers_registration_form.oxiwheel_documents: I2Y3GNWPJFDQHLL5NMGNSFJ5FNBSLZ7Z
     servicers.servicers_dashboard.add_services: '1714032344921525807974636.68414'
     servicers_registration_form.oxiclinic_documents: UXQ3XZ4PSPNKWJZNOUHFQYYN24ALOXUE
@@ -43,6 +45,7 @@ unique_ids:
   modules:
     servicers_registration_form: 27G5MWNGDBQRI2CCV274XTJYESSWZYTU
     servicers_registration_form.servicer_id: '1714447913683132688530669.16763'
+    Module1: '1721896283498540006956332.7305'
     servicers: '1713784754129909004768059.6565'
     servicers.user_id: '1714026390527135559135970.55879'
   server_modules:

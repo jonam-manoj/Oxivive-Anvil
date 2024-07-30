@@ -6,6 +6,13 @@ import anvil.server
 import anvil.media
 import base64
 import requests
+import random
+import string
+
+import hashlib
+import anvil.secrets
+import hmac
+
 @anvil.server.callable
 def user(oxi_id,oxusername,email,password,phone,pincode,wallet_balance):
   app_tables.users.add_row(id=id, username=username, email=email, password=password,phone=phone,pincode=pincode,wallet_balance=wallet_balance)
@@ -59,12 +66,107 @@ def check_login_credentials(email, password):
     else:
         return False
 
+
+
 @anvil.server.callable
 def get_location(query):
-    api_key = "0605205dcb3f4fca85e392adda307d26"  # Replace with your OpenCage API key
-    url = f"https://api.opencagedata.com/geocode/v1/json?q={query}&key={api_key}"
+    api_key = "AIzaSyA8GzhJLPK0Hfryi5zHbg3RMDSMCukmQCw"  # Replace with your Google Maps API key
+    url = f"https://maps.googleapis.com/maps/api/geocode/json?address={query}&key={api_key}"
     response = requests.get(url)
     if response.status_code == 200:
-        return response.json()
+        data = response.json()
+        if 'results' in data:
+            # Extract only the relevant information
+            formatted_results = [{'formatted': result['formatted_address']} for result in data['results']]
+            return {'results': formatted_results}
+        else:
+            return {"error": "No results found"}
     else:
         return {"error": "Unable to fetch data"}
+
+
+# Predefined nearby pin codes for locations
+nearby_pincodes_map = {
+    "Hebbal": [560024, 560032, 560094, 560080],    # Example pin codes for Hebbal
+    "Yelahanka": [560064, 560063, 560057, 560092], # Example pin codes for Yelahanka
+    "Marathahalli": [560037, 560066, 560103, 560048] # Example pin codes for Marathahalli
+}
+
+
+@anvil.server.callable
+def check_pincode_in_tables(location_name):
+    nearby_pincodes = nearby_pincodes_map.get(location_name, [])
+
+    results = {
+        'oxiclinics_exists': False,
+        'oxigyms_exists': False,
+        'oxiwheels_exists': False,
+        'id_of_serviceprovider_clinic': None,        
+        'id_of_serviceprovider_wheel': None,
+        'id_of_serviceprovider_gym': None
+    }
+    
+    if nearby_pincodes:
+        # Check oxiclinics
+        for record in app_tables.oxiclinics.search():
+            if record['oxiclinics_pincode'] in nearby_pincodes:
+                results['oxiclinics_exists'] = True
+                results['id_of_serviceprovider_clinic'] = record['oxi_id']
+                break
+
+        # Check oxiwheels
+        for record in app_tables.oxiwheels.search():
+            if record['oxiwheels_pincode'] in nearby_pincodes:
+                results['oxiwheels_exists'] = True
+                results['id_of_serviceprovider_wheel'] = record['oxi_id']
+                break
+              
+        # Check oxigyms
+        for record in app_tables.oxigyms.search():
+            if record['oxigyms_pincode'] in nearby_pincodes:
+                results['oxigyms_exists'] = True
+                results['id_of_serviceprovider_gym'] = record['oxi_id']
+                break
+
+        
+    
+    return results
+
+
+
+# def custom_hash_function(password, salt):
+#     password_bytes = bytearray(password.encode('utf-8'))
+#     salt_bytes = bytearray(salt)
+#     mixed_bytes = bytearray(len(password_bytes) + len(salt_bytes))
+    
+#     for i in range(len(password_bytes)):
+#         mixed_bytes[i] = password_bytes[i] ^ salt_bytes[i % len(salt_bytes)]
+    
+#     for _ in range(100000):
+#         for i in range(len(mixed_bytes)):
+#             mixed_bytes[i] = (mixed_bytes[i] + i + mixed_bytes[i-1]) % 256
+    
+#     hashed_password = mixed_bytes.hex()
+#     return hashed_password
+
+@anvil.server.callable
+def insert_booking_data(oxi_id, oxi_book_date, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id, oxi_service_type, oxi_username):
+    try:
+        # Insert data into 'oxi_book_slot' table
+        app_tables.oxi_book_slot.add_row(
+            oxi_book_date=oxi_book_date,
+            oxi_servicer_id=oxi_servicer_id,
+            oxi_book_id=oxi_book_id,
+            oxi_id=oxi_id,  # Store oxi_id in the table
+            oxi_book_time=oxi_book_time,
+            oxi_date_time=oxi_date_time,
+            oxi_payment_id=oxi_payment_id,
+            oxi_service_type=oxi_service_type,
+            oxi_username=oxi_username
+        )
+        return True  # Indicate success if needed
+    except Exception as e:
+        print(f"Error inserting booking data: {e}")
+        return False  # Return False or handle error as per your application logic
+
+
