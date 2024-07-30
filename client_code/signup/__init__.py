@@ -21,9 +21,8 @@ class signup(signupTemplate):
         phone = self.text_box_4.text
         pincode = self.text_box_5.text
         pan = self.pan_text_box.text
-
-        # Hash the password using server function
-        #hashed_password = anvil.server.call('hash_password', password)
+        # app_tables.users.add_row(username, email, password, phone, pincode)
+        # anvil.server.call('add_info',username, email, password, phone, pincode)
     
         try: 
           # If not present, proceed to insert the new user
@@ -40,10 +39,6 @@ class signup(signupTemplate):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form("login")
-    
-  def text_box_1_pressed_enter(self, **event_args):
-    # Define what happens when enter is pressed in text_box_1
-    pass
     
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""

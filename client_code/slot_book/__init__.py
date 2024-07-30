@@ -110,21 +110,27 @@ class slot_book(slot_bookTemplate):
             # Set the booking time
             oxi_book_time = '19:00 - 21:00'  # Fixed time range
     
-            # Set the booking date
-            oxi_book_date = '23-07-2024'  # Fixed date format
+            # Get the current date
+            current_date = datetime.now()
+            oxi_book_date_db = current_date.date()  # Store as date type for the database
+    
+            # Format current date for display purposes
+            oxi_book_date_display = current_date.strftime('%d %b %Y')  # Format to "23 Jul 2024"
     
             # Get current datetime and format oxi_date_time
-            current_datetime = datetime.strptime(f'{oxi_book_date} {oxi_book_time.split(" - ")[0]}', '%d-%m-%Y %H:%M')
+            current_datetime = datetime.strptime(f'{current_date.strftime("%d-%m-%Y")} {oxi_book_time.split(" - ")[0]}', '%d-%m-%Y %H:%M')
             oxi_date_time = current_datetime.strftime('%a, %d %b %I:%M %p')
-    
+            
             # Prepare variables
             oxi_id = self.oxi_id  # From new_dashboard form
             oxi_servicer_id = self.id_of_serviceprovider  # The ID of the selected service provider
             oxi_service_type = self.service_type  # The type of service selected (OxiGym, OxiWheel, OxiClinic)
             oxi_username = self.oxi_username  # Username from the login form
             oxi_payment_id ="0000"
+          
             # Call the server function to insert booking data
-            anvil.server.call('insert_booking_data', oxi_id, oxi_book_date, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id, oxi_service_type, oxi_username)
+            anvil.server.call('insert_booking_data', oxi_id, oxi_book_date_db, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id, oxi_service_type, oxi_username)
+
             
             print("Booking data inserted successfully.")
         except Exception as e:
