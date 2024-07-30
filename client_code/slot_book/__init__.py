@@ -102,6 +102,7 @@ class slot_book(slot_bookTemplate):
             button.visible = True
 
     def primary_color_1_click(self, oxi_id=None, **event_args):
+        # self.oxi_id = oxi_id  # Store the oxi_id
         try:
             # Generate random booking ID
             oxi_book_id = f"BI{random.randint(10000, 99999)}"  # Example: BI70000
@@ -114,14 +115,14 @@ class slot_book(slot_bookTemplate):
     
             # Get current datetime and format oxi_date_time
             current_datetime = datetime.strptime(f'{oxi_book_date} {oxi_book_time.split(" - ")[0]}', '%d-%m-%Y %H:%M')
-            oxi_date_time = current_datetime.strftime('%a, %d %b %Y %I:%M %p')
+            oxi_date_time = current_datetime.strftime('%a, %d %b %I:%M %p')
     
             # Prepare variables
             oxi_id = self.oxi_id  # From new_dashboard form
             oxi_servicer_id = self.id_of_serviceprovider  # The ID of the selected service provider
             oxi_service_type = self.service_type  # The type of service selected (OxiGym, OxiWheel, OxiClinic)
             oxi_username = self.oxi_username  # Username from the login form
-            oxi_payment_id = None 
+            oxi_payment_id ="0000"
             # Call the server function to insert booking data
             anvil.server.call('insert_booking_data', oxi_id, oxi_book_date, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_book_time, oxi_payment_id, oxi_service_type, oxi_username)
             
