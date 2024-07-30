@@ -133,6 +133,7 @@ class slot_book(slot_bookTemplate):
 
             
             print("Booking data inserted successfully.")
+            open_form('Activity')
         except Exception as e:
             print(f"Error: {e}")
       
