@@ -35,6 +35,7 @@ class oxigym(oxigymTemplate):
     pincode = self.oxiclinic_pincode.text
     address = self.oxiclinic_address.text
     capsule = self.oxiclinic_capsules.text
+    
 
     if (
       not gym_name
