@@ -130,27 +130,28 @@ class slot_book(slot_bookTemplate):
         try:
             # Generate random booking ID
             oxi_book_id = f"BI{random.randint(10000, 99999)}"  # Example: BI70000
-
+    
             # Get the current date
             current_date = datetime.now()
             oxi_book_date_db = current_date.date()  # Store as date type for the database
-
+    
             # Get current datetime and format oxi_date_time
             current_datetime = datetime.strptime(f'{current_date.strftime("%d-%m-%Y")} {self.selected_time}', '%d-%m-%Y %I:%M %p')
             oxi_date_time = current_datetime.strftime('%a, %d %b %Y %I:%M %p')
-
+    
             # Prepare variables
             oxi_id = self.oxi_id  # From new_dashboard form
             oxi_servicer_id = self.id_of_serviceprovider  # The ID of the selected service provider
             oxi_service_type = self.service_type  # The type of service selected (OxiGym, OxiWheel, OxiClinic)
             oxi_username = self.oxi_username  # Username from the login form
             oxi_payment_id = "0000"
-
-            # Call the server function to insert booking data_book_date_db, oxi_servicer_id, oxi_book_id, oxi_date_time, oxi_boo
+    
+            # Call the server function to insert booking data
             anvil.server.call('insert_booking_data', oxi_id, oxi_book_date_db, oxi_servicer_id, oxi_book_id, oxi_date_time, self.oxi_book_time, oxi_payment_id, oxi_service_type, oxi_username)
-
+    
             print("Booking data inserted successfully.")
-            open_form('Activity', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=self.id_of_serviceprovider, service_type=self.service_type, oxi_username=self.oxi_username, oxi_book_time=self.oxi_book_time)
+            # Pass the booking details to the Activity form
+            open_form('Activity', oxi_id=oxi_id, location_name=self.location_name, id_of_serviceprovider=oxi_servicer_id, service_type=oxi_service_type, oxi_username=oxi_username, oxi_book_time=self.oxi_book_time, oxi_book_date=oxi_book_date_db, oxi_book_id=oxi_book_id)
         except Exception as e:
             print(f"Error: {e}")
       
