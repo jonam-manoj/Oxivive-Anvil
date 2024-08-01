@@ -37,3 +37,13 @@ class Activity(ActivityTemplate):
         self.label_6.text = self.oxi_book_time
         self.label_14.text = self.oxi_book_id
         self.label_15.text = self.oxi_book_date
+
+      # Get and display the fee amount
+        self.get_and_display_fee_amount()   
+    
+  def get_and_display_fee_amount(self):
+        fee_amount = anvil.server.call('get_fee_amount', self.id_of_serviceprovider)
+        if fee_amount is not None:
+            self.label_24.text = f"Fees: {fee_amount}"
+        else:
+            self.label_24.text = "Fees: Not available"

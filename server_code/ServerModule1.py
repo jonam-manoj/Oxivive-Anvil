@@ -169,4 +169,24 @@ def insert_booking_data(oxi_id, oxi_book_date, oxi_servicer_id, oxi_book_id, oxi
         print(f"Error inserting booking data: {e}")
         return False  # Return False or handle error as per your application logic
 
+@anvil.server.callable
+def get_fee_amount(id_of_serviceprovider):
+    # Check in oxiclinics table
+    clinic = app_tables.oxiclinics.get(oxi_id=id_of_serviceprovider)
+    if clinic:
+        return clinic['oxiclinics_fees']
+    
+    # Check in oxigyms table
+    gym = app_tables.oxigyms.get(oxi_id=id_of_serviceprovider)
+    if gym:
+        return gym['oxiclinics_fees']
+    
+    # Check in oxiwheels table
+    wheel = app_tables.oxiwheels.get(oxi_id=id_of_serviceprovider)
+    if wheel:
+        return wheel['oxiclinics_fees']
+    
+    return None
+
+
 
