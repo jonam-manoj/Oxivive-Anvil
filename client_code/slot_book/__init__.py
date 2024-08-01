@@ -115,7 +115,7 @@ class slot_book(slot_bookTemplate):
     
     def time_button_click(self, **event_args):
         clicked_button = event_args['sender']
-        self.selected_time = clicked_button.text  # Store the selected time in the instance variable
+        self.selected_time = clicked_button.text.strip()   # Store the selected time in the instance variable
         print(f"Selected time: {self.selected_time}")
       
         if self.selected_time == "09:00 AM":
