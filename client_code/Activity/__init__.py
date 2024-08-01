@@ -44,6 +44,6 @@ class Activity(ActivityTemplate):
   def get_and_display_fee_amount(self):
         fee_amount = anvil.server.call('get_fee_amount', self.id_of_serviceprovider)
         if fee_amount is not None:
-            self.label_24.text = f"Fees: {fee_amount}"
+            self.label_24.text = f"Fees: Rs {fee_amount}"
         else:
             self.label_24.text = "Fees: Not available"
