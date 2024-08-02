@@ -394,4 +394,18 @@ db_schema:
     - name: oxi_another_person_number
       admin_ui: {width: 200, order: 17}
       type: number
+  oxi_notifications:
+    title: oxi_notifications
+    client: none
+    server: full
+    columns:
+    - name: oxi_id
+      admin_ui: {width: 200}
+      type: string
+    - name: oxi_notification_title
+      admin_ui: {width: 200}
+      type: string
+    - name: oxi_notification
+      admin_ui: {width: 200}
+      type: string
 uplink_visible: true
