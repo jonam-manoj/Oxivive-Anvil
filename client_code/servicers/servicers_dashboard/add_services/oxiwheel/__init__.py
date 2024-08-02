@@ -29,7 +29,8 @@ class oxiwheel(oxiwheelTemplate):
     pincode = self.oxiclinic_pincode.text
     address = self.oxiclinic_address.text
     capsule = self.oxiclinic_capsules.text
-
+    fees = self.oxiclinic_fees.text 
+    
     if (
       not vehicle_no
       and not address
@@ -40,6 +41,7 @@ class oxiwheel(oxiwheelTemplate):
       and not state
       and not self.first_file_name
       and not self.second_file_name
+      and not fees
     ):
       Notification('All "Fields" and "Documents"  are required.').show()
     else:
@@ -58,6 +60,7 @@ class oxiwheel(oxiwheelTemplate):
         oxiwheels_District=district,
         oxiwheels_address=address,
         oxiwheels_capsules=int(capsule),
+        oxiwheels_fees=fees,
         oxiwheels_vehicle_rc=self.file1,
         oxiwheels_driving_licence=self.file2,
         oxiwheels_id=self.generate_unique_random_code()

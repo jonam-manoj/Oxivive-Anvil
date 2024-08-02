@@ -35,7 +35,7 @@ class oxiclinic(oxiclinicTemplate):
     pincode = self.oxiclinic_pincode.text
     address = self.oxiclinic_address.text
     capsule = self.oxiclinic_capsules.text
-    
+    fees = self.oxiclinic_fees.text
 
     if (
       not hospital_name
@@ -47,6 +47,7 @@ class oxiclinic(oxiclinicTemplate):
       and not state
       and not self.first_file_name
       and not self.second_file_name
+      and not fees 
     ):
       Notification('All "Fields" and "Documents"  are required.').show()
     else:
@@ -64,6 +65,7 @@ class oxiclinic(oxiclinicTemplate):
                                    oxiclinics_District=district,
                                    oxiclinics_address=address,
                                    oxiclinics_capsules=int(capsule),
+                                   oxiclinics_fees=fees,
                                    oxiclinics_medical_licence=self.file1,
                                    oxiclinics_building_licence=self.file2,
                                    oxiclinics_id=self.generate_unique_random_code())

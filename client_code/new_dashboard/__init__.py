@@ -54,7 +54,7 @@ class new_dashboard(new_dashboardTemplate):
         service_provider_id = None
         service_type = 'None'
         print("No wheels provider available.")
-    print(f"Service Type: {service_type}")
+    print(f"Service Type in dashboard : {service_type}")
     open_form('slot_book', oxi_id=self.oxi_id, location_name=self.location_name, id_of_serviceprovider=service_provider_id, service_type=service_type, oxi_username=self.oxi_username)
 
  
@@ -63,7 +63,7 @@ class new_dashboard(new_dashboardTemplate):
     if self.card_4.visible:
         service_provider_id = self.card_4.tag.get('id_of_serviceprovider')
         service_type = 'OxiGym'  
-        print(f"Service Provider ID (Gym): {service_provider_id}")
+        print(f"Service Provider ID (Gym) in dashboard: {service_provider_id}")
     else:
         service_provider_id = None
         service_type = 'None'
