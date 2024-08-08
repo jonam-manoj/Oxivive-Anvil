@@ -45,7 +45,7 @@ components:
     layout_properties: {grid_position: 'NVTDJY,PNFHQI RFXVXQ,NFBZQL'}
     components:
     - name: servicers_name_text_box
-      properties: {role: null, placeholder: '  Full name', border: 1px solid black, italic: true, text: ''}
+      properties: {role: null, placeholder: '  Full name', border: 1px solid black, italic: false, text: ''}
       type: TextBox
       layout_properties: {x: 12, y: 23.39999771118164, width: 380}
       event_bindings: {change: servicers_name_text_box_change, focus: servicers_name_text_box_focus, lost_focus: servicers_name_text_box_lost_focus}
@@ -54,7 +54,7 @@ components:
       type: Label
       layout_properties: {x: 15.324963379651308, y: 55.787498474121094, width: 377.32501220703125}
     - name: servicers_email_text_box
-      properties: {type: email, placeholder: '  Email', border: 1px solid black, italic: true}
+      properties: {type: email, placeholder: '  Email', border: 1px solid black, italic: false}
       type: TextBox
       layout_properties: {x: 15.300000000745058, y: 85.39999771118164, width: 380}
       event_bindings: {change: servicers_email_text_box_change, focus: servicers_email_text_box_focus, lost_focus: servicers_email_text_box_lost_focus}
@@ -63,7 +63,7 @@ components:
       type: Label
       layout_properties: {x: 17.700024414807558, y: 115.60000610351562, width: 380}
     - name: servicers_password_text_box
-      properties: {font_size: -4, placeholder: '  Password', hide_text: true, border: 1px solid black, italic: true}
+      properties: {font_size: -4, placeholder: '  Password', hide_text: true, border: 1px solid black, italic: false}
       type: TextBox
       layout_properties: {x: 13.212475586682558, y: 149.18750381469727, width: 380}
       event_bindings: {change: servicers_password_text_box_change, focus: servicers_password_text_box_focus, lost_focus: servicers_password_text_box_lost_focus}
@@ -81,12 +81,12 @@ components:
       type: Label
       layout_properties: {x: 17.737438965588808, y: 247, width: 377.32501220703125}
     - name: servicers_phone_text_box
-      properties: {type: tel, placeholder: '  Mobile number', border: 1px solid black, italic: true}
+      properties: {type: tel, placeholder: '  Mobile number', border: 1px solid black, italic: false}
       type: TextBox
       layout_properties: {x: 13.124951172620058, y: 214.18750381469727, width: 380}
       event_bindings: {change: servicers_phone_text_box_change, focus: servicers_phone_text_box_focus, lost_focus: servicers_phone_text_box_lost_focus}
     - name: servicers_address_text_box
-      properties: {placeholder: '  Address', border: 1px solid black, italic: true}
+      properties: {placeholder: '  Address', border: 1px solid black, italic: false}
       type: TextBox
       layout_properties: {x: 12, y: 275.58749771118164, width: 380}
       event_bindings: {change: servicers_address_text_box_change, focus: servicers_address_text_box_focus, lost_focus: servicers_address_text_box_lost_focus}
@@ -95,12 +95,12 @@ components:
       type: Label
       layout_properties: {x: 17.700024414807558, y: 306.5874938964844, width: 380}
     - name: servicers_gst_text_box_copy
-      properties: {placeholder: '  GST number', border: 1px solid black, italic: true}
+      properties: {placeholder: '  GST number', border: 1px solid black, italic: false}
       type: TextBox
       layout_properties: {x: 14.500012207776308, y: 340.987491607666, width: 380}
       event_bindings: {change: servicers_address_text_box_change, focus: servicers_address_text_box_focus, lost_focus: servicers_address_text_box_lost_focus}
     - name: servicers_pan_text_box_copy
-      properties: {placeholder: '  PAN number', border: 1px solid black, italic: true}
+      properties: {placeholder: '  PAN number', border: 1px solid black, italic: false}
       type: TextBox
       layout_properties: {x: 12, y: 402.6000099182129, width: 380}
       event_bindings: {change: servicers_address_text_box_change, focus: servicers_address_text_box_focus, lost_focus: servicers_address_text_box_lost_focus}

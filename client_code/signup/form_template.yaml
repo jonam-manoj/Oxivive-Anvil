@@ -60,32 +60,32 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,PMYITI'}
   - name: text_box_1
-    properties: {border: 1px solid black, placeholder: '  Full name', italic: true}
+    properties: {border: 1px solid black, placeholder: '  Full name', italic: false}
     type: TextBox
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ JUEZXZ,PZKOWK'}
     event_bindings: {pressed_enter: text_box_1_pressed_enter, focus: text_box_1_focus, lost_focus: text_box_1_lost_focus}
   - name: text_box_2
-    properties: {type: email, border: 1px solid black, placeholder: '  Email', italic: true}
+    properties: {type: email, border: 1px solid black, placeholder: '  Email', italic: false}
     type: TextBox
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ YEMZJJ,IMUJXC'}
     event_bindings: {focus: text_box_2_focus, lost_focus: text_box_2_lost_focus}
   - name: text_box_3
-    properties: {visible: true, hide_text: true, border: 1px solid black, placeholder: '  Password', italic: true}
+    properties: {visible: true, hide_text: true, border: 1px solid black, placeholder: '  Password', italic: false}
     type: TextBox
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ YTPVTV,CXONKD'}
     event_bindings: {focus: text_box_3_focus, lost_focus: text_box_3_lost_focus}
   - name: text_box_4
-    properties: {type: number, border: 1px solid black, placeholder: '  Mobile number', italic: true}
+    properties: {type: number, border: 1px solid black, placeholder: '  Mobile number', italic: false}
     type: TextBox
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ SAWKVY,UFAFNS'}
     event_bindings: {focus: text_box_4_focus, lost_focus: text_box_4_lost_focus}
   - name: text_box_5
-    properties: {type: number, border: 1px solid black, placeholder: '  Pincode', italic: true}
+    properties: {type: number, border: 1px solid black, placeholder: '  Pincode', italic: false}
     type: TextBox
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ WVHJPX,JXMHTH'}
     event_bindings: {focus: text_box_5_focus, lost_focus: text_box_5_lost_focus}
   - name: pan_text_box
-    properties: {placeholder: '  PAN number', border: 1px solid black, italic: true}
+    properties: {placeholder: '  PAN number', border: 1px solid black, italic: false}
     type: TextBox
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ VHCIIU,GOUYZT'}
     event_bindings: {change: servicers_address_text_box_change, focus: servicers_address_text_box_focus, lost_focus: servicers_address_text_box_lost_focus}
