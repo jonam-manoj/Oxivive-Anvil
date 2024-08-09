@@ -262,3 +262,4 @@ components:
   properties: {text: Logout, role: primary-color, background: red, foreground: white, spacing_above: small, spacing_below: small}
   type: Button
   layout_properties: {grid_position: 'MHTRBC,FZMAOW', x: 958.375, y: 26.00000762939453, width: 85.625, full_width_row: true, slot: nav-right}
+  event_bindings: {click: primary_color_2_click}
