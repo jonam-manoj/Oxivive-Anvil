@@ -137,5 +137,7 @@ class new_dashboard(new_dashboardTemplate):
   def primary_color_2_click(self, **event_args):
         """This method is called when the button is clicked"""
         open_form('home')
-  
-     
+
+  def link_6_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('home')
