@@ -35,6 +35,7 @@ class oxigym(oxigymTemplate):
     pincode = self.oxiclinic_pincode.text
     address = self.oxiclinic_address.text
     capsule = self.oxiclinic_capsules.text
+    fees = self.oxiclinic_fees.text
 
     if (
       not gym_name
@@ -46,6 +47,7 @@ class oxigym(oxigymTemplate):
       and not state
       and not self.first_file_name
       and not self.second_file_name
+      and not fees
     ):
       Notification('All "Fields" and "Documents"  are required.').show()
     else:
@@ -64,6 +66,7 @@ class oxigym(oxigymTemplate):
         oxigyms_District=district,
         oxigyms_address=address,
         oxigyms_capsules=int(capsule),
+        oxigyms_fees=fees,
         oxigyms_licence=self.file1,
         oxigyms_building_licence=self.file2,
         oxigyms_id=self.generate_unique_random_code()

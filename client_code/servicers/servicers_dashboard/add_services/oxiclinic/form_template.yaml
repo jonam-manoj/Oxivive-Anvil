@@ -52,17 +52,25 @@ components:
   type: Label
   layout_properties: {grid_position: 'DJBJHE,PHDZLA'}
 - name: oxiclinic_address
-  properties: {placeholder: Address}
+  properties: {role: null, bold: false, align: left, placeholder: Address, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
   type: TextBox
   layout_properties: {grid_position: 'DJBJHE,UBARDE'}
 - name: no_capsule_label
   properties: {align: left, text: 'No. of Capsules : ', bold: true}
   type: Label
-  layout_properties: {grid_position: 'LBJZLG,IHDZJQ'}
+  layout_properties: {grid_position: 'LBJZLG,IHDZJQ BJABYH,CFWGLO'}
+- type: Label
+  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Clinics Fees :', margin: null}
+  name: clinics_fees_label
+  layout_properties: {grid_position: 'LBJZLG,IHDZJQ ZQQDAF,NQFLOA'}
 - name: oxiclinic_capsules
-  properties: {type: number, placeholder: No. of Capsules}
+  properties: {role: null, bold: false, align: left, placeholder: No. of Capsules, spacing_above: small, background: '', type: number, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
   type: TextBox
-  layout_properties: {grid_position: 'LBJZLG,KMWBOP'}
+  layout_properties: {grid_position: 'LBJZLG,FHMTKD FFIGFY,MJCTAG'}
+- type: TextBox
+  properties: {role: null, bold: false, align: left, placeholder: 'Clinics Fees ', spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+  name: oxiclinic_fees
+  layout_properties: {grid_position: 'LBJZLG,FHMTKD EMHMLP,ZRAOCJ'}
 - name: spacer_1
   properties: {height: 32}
   type: Spacer
