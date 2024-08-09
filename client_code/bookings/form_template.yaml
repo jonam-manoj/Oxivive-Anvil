@@ -1,0 +1,130 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: content_panel_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: ENXQJW,BEGWWW
+    components:
+    - type: Label
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: 'My Bookings ', margin: null}
+      name: label_1
+      layout_properties: {grid_position: 'VXSFGV,SPCMEF'}
+    - type: Spacer
+      properties: {height: 47}
+      name: spacer_2
+      layout_properties: {grid_position: 'CLRFVA,JRYAZM'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 19, tooltip: '', text: '    Appointments', margin: null}
+      name: label_2
+      layout_properties: {grid_position: 'UWRCPL,GFDQKW'}
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_3
+      layout_properties: {grid_position: 'EVQJMU,XCWKOA'}
+    - type: Image
+      properties: {role: null, vertical_align: center, alt_text: '', spacing_above: small, background: '', horizontal_align: center, source: 'data:image/jpeg;base64,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', foreground: '', display_mode: shrink_to_fit, spacing_below: small, visible: true, border: '', tooltip: '', height: '200', margin: null}
+      name: image_2
+      layout_properties: {grid_position: 'EVQJMU,DCJACW'}
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_4
+      layout_properties: {grid_position: 'EVQJMU,ZJSMBM'}
+    - type: Label
+      properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 19, tooltip: '', text: You haven't booked any appintments yet, margin: null}
+      name: label_3
+      layout_properties: {grid_position: 'OHZAIG,ISSTWG'}
+    - type: Label
+      properties:
+        role: null
+        bold: false
+        align: center
+        spacing_above: small
+        background: ''
+        icon: ''
+        underline: false
+        font: ''
+        icon_align: left
+        foreground: ''
+        spacing_below: small
+        visible: true
+        border: ''
+        italic: false
+        font_size: 14
+        tooltip: ''
+        text: |-
+          Start by looking for doctors near you, read patient
+          stories and book appointments
+        margin: null
+      name: label_4
+      layout_properties: {grid_position: 'YAQZDO,SFLTNZ'}
+    - type: Spacer
+      properties: {height: 22}
+      name: spacer_5
+      layout_properties: {grid_position: 'MMVHBL,SGJZTL'}
+    - type: Button
+      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Book Now, margin: null}
+      name: button_1
+      layout_properties: {grid_position: 'LULVML,JAEVEF'}
+      event_bindings: {click: button_1_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: ColumnPanel
+  properties: {}
+  name: column_panel_1
+  layout_properties: {slot: left-nav}
+  components:
+  - type: ColumnPanel
+    properties: {role: null, col_widths: '{}', spacing_above: small, background: 'theme:Secondary 500', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
+    name: column_panel_1_copy
+    layout_properties:
+      col_widths: {}
+      grid_position: BOCECS,FLGLQX
+    components:
+    - type: Spacer
+      properties: {height: 112}
+      name: spacer_1
+      layout_properties: {grid_position: 'FUNMHY,AWLYXK'}
+    - type: Link
+      properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:user', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Profile}
+      name: link_1
+      layout_properties: {grid_position: 'ZNJUTB,SBQDLG'}
+    - type: Link
+      properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:bell', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Notifications}
+      name: link_2
+      layout_properties: {grid_position: 'OAHPVA,YXDLDM'}
+      event_bindings: {click: link_2_click}
+    - type: Link
+      properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:calendar-check-o', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Bookings}
+      name: link_3
+      layout_properties: {grid_position: 'URTMWR,CKKWHX'}
+      event_bindings: {click: link_3_click}
+    - type: Link
+      properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:file', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Reports}
+      name: link_4
+      layout_properties: {grid_position: 'IVAOZY,AOOMZP'}
+      event_bindings: {click: link_4_click}
+    - type: Link
+      properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:headphones', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Support}
+      name: link_5
+      layout_properties: {grid_position: 'VLOAGM,UVJGAL'}
+    - type: Link
+      properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:sign-out', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Log-out}
+      name: link_6
+      layout_properties: {grid_position: 'WECNMR,CHWPYJ'}
+      event_bindings: {click: link_6_click}
+- name: image_1
+  properties: {role: null, vertical_align: center, alt_text: '', spacing_above: small, background: '', horizontal_align: center, source: _/theme/shot.png, foreground: '', display_mode: shrink_to_fit, spacing_below: small, visible: true, border: '', tooltip: '', height: 97.59999084472656}
+  type: Image
+  layout_properties: {grid_position: 'NWKQOS,YBLPRG', full_width_row: true, slot: title}
