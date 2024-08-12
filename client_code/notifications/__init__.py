@@ -19,15 +19,15 @@ class notifications(notificationsTemplate):
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('notifications')
+    open_form('notifications', oxi_id=self.oxi_id, oxi_username=self.oxi_username)
 
   def link_3_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('bookings')
+    open_form('bookings', oxi_id=self.oxi_id, oxi_username=self.oxi_username)
 
   def link_4_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('reports')
+    open_form('reports', oxi_id=self.oxi_id, oxi_username=self.oxi_username)
 
   def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""
