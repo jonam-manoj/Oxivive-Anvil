@@ -6,7 +6,7 @@ services:
 - source: /runtime/services/anvil/email.yml
   client_config: {}
   server_config: {custom_smtp: true}
-startup: {type: form, module: profile}
+startup: {type: form, module: bookings}
 package_name: production_Oxivive__
 allow_embedding: false
 name: 'production_Oxivive  '
@@ -394,6 +394,9 @@ db_schema:
     - name: oxi_another_person_number
       admin_ui: {width: 200, order: 17}
       type: number
+    - name: oxi_reports
+      admin_ui: {width: 200, order: 18}
+      type: media
   oxi_notifications:
     title: oxi_notifications
     client: none
@@ -407,5 +410,8 @@ db_schema:
       type: string
     - name: oxi_notification
       admin_ui: {width: 200}
+      type: string
+    - name: oxi_timestamp
+      admin_ui: {width: 200, order: 3}
       type: string
 uplink_visible: true
