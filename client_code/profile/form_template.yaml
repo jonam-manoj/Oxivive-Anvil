@@ -104,6 +104,7 @@ components:
       properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Secondary 500', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Edite, margin: null}
       name: button_2
       layout_properties: {x: 433.6388854980469, y: 177.12501525878906, width: 100}
+      event_bindings: {click: button_2_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
