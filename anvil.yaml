@@ -7,9 +7,9 @@ services:
   client_config: {}
   server_config: {custom_smtp: true}
 startup: {type: form, module: bookings}
-package_name: production_Oxivive__
+package_name: product_Oxivive__
 allow_embedding: false
-name: 'production_Oxivive  '
+name: 'product_Oxivive  '
 runtime_options:
   version: 2
   client_version: '3'
