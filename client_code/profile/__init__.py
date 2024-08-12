@@ -31,10 +31,9 @@ class profile(profileTemplate):
 
             # Handle the date of birth, checking if it's None
             if user_details['oxi_dob'] is not None:
-                self.dob_box.text = user_details['oxi_dob'].strftime('%d-%m-%Y')
+                self.date_picker_1.date = user_details['oxi_dob']  # Set the date picker value
             else:
-                self.dob_box.text = ''  # or any default value you prefer
-
+                self.date_picker_1.date = None  # or any default value you prefer
             self.profile_image.source = user_details['oxi_profile']
 
     def update_button_click(self, **event_args):
@@ -53,12 +52,8 @@ class profile(profileTemplate):
         
         # Convert DOB to date object
         updated_dob = None
-        if self.dob_box.text:
-            try:
-                updated_dob = datetime.strptime(self.dob_box.text, "%d-%m-%Y").date()
-            except ValueError:
-                alert("Invalid date format. Please use dd-mm-yyyy.")
-                return
+        if self.date_picker_1.date:
+            updated_dob = self.date_picker_1.date  # Get date from DatePicker
 
         updated_profile = self.profile_image.source
 
@@ -96,16 +91,7 @@ class profile(profileTemplate):
         """This method is called when the link is clicked"""
         open_form('home')
 
-    def profile_image_update_click(self,file, **event_args):
-        """This method is called when the profile_image_update button is clicked"""
-        print("Profile image update button clicked")
-        alert("Profile image update button clicked")
-        
-        # Show the FileLoader to select a new image
-        # self.file_loader_profile.show()
-        self.profile_image_update.append(file)
-
-    def file_loader_profile_change(self, file, **event_args):
+    def file_loader_1_change(self, file, **event_args):
         """This method is called when a new file is loaded into the FileLoader"""
         if file:
             # Update the profile image component with the new file
@@ -122,7 +108,7 @@ class profile(profileTemplate):
                 self.city_box.text,
                 self.state_box.text,
                 self.country_box.text,
-                self.dob_box.text,
+                self.date_picker_1.date,
                 file  # Uploaded file
             )
             

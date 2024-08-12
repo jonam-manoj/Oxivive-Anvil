@@ -7,9 +7,14 @@ from anvil.tables import app_tables
 
 
 class bookings(bookingsTemplate):
-  def __init__(self, **properties):
+  def __init__(self ,oxi_id=None,  oxi_username=None, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.oxi_id = oxi_id
+    self.oxi_username = oxi_username
+    print(f"oxi_id in booking  : {oxi_id}")
+    print(f"oxi_username in booking : {oxi_username}")
+    
 
     # Any code you write here will run before the form opens.
 
@@ -27,12 +32,13 @@ class bookings(bookingsTemplate):
 
   def link_2_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('notifications')
+    open_form('notifications', oxi_id=self.oxi_id, oxi_username=self.oxi_username)
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('new_dashboard')
+    open_form('new_dashboard', oxi_id=self.oxi_id, oxi_username=self.oxi_username)
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('profile')
+    open_form('profile', oxi_id=self.oxi_id, oxi_username=self.oxi_username)
+    
