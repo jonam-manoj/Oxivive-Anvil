@@ -96,6 +96,42 @@ class profile(profileTemplate):
         """This method is called when the link is clicked"""
         open_form('home')
 
-    def button_2_click(self, **event_args):
-      """This method is called when the button is clicked"""
-      pass
+    def profile_image_update_click(self,file, **event_args):
+        """This method is called when the profile_image_update button is clicked"""
+        print("Profile image update button clicked")
+        alert("Profile image update button clicked")
+        
+        # Show the FileLoader to select a new image
+        # self.file_loader_profile.show()
+        self.profile_image_update.append(file)
+
+    def file_loader_profile_change(self, file, **event_args):
+        """This method is called when a new file is loaded into the FileLoader"""
+        if file:
+            # Update the profile image component with the new file
+            self.profile_image.source = file
+            
+            # Save the uploaded image to the database
+            update_result = anvil.server.call(
+                'update_user_details_by_id',
+                self.oxi_id,  # User ID
+                self.username_box.text,
+                self.email_box.text,
+                self.phone_box.text,
+                self.address_box.text,
+                self.city_box.text,
+                self.state_box.text,
+                self.country_box.text,
+                self.dob_box.text,
+                file  # Uploaded file
+            )
+            
+            # Provide feedback to the user
+            alert(update_result)
+
+      
+    
+
+    
+
+    

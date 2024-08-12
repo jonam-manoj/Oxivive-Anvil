@@ -222,7 +222,21 @@ def update_user_details_by_id(oxi_id, oxi_username, oxi_email, oxi_phone, oxi_ad
         user_row['oxi_state'] = oxi_state
         user_row['oxi_country'] = oxi_country
         user_row['oxi_dob'] = oxi_dob
-        user_row['oxi_profile'] = oxi_profile
+        if oxi_profile:
+            user_row['oxi_profile'] = oxi_profile
+        
         return "User details updated successfully"
+        
     else:
         return "User not found"
+
+@anvil.server.callable
+def update_user_profile_image(oxi_id, file):
+    user_row = app_tables.oxi_users.get(oxi_id=oxi_id)
+    
+    if user_row:
+        user_row['oxi_profile'] = file  # Save the uploaded file to the 'oxi_profile' column
+        return "Profile image updated successfully"
+    else:
+        return "User not found"
+

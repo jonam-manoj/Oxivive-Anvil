@@ -36,7 +36,7 @@ components:
           name: label_1
           layout_properties: {grid_position: 'DYUCBG,JZFXSL'}
         - type: TextBox
-          properties: {role: null, bold: false, align: left, placeholder: Name, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          properties: {role: null, bold: false, align: left, placeholder: Name, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
           name: username_box
           layout_properties: {grid_position: 'DYUCBG,VKKHVR'}
         - type: Label
@@ -102,9 +102,9 @@ components:
       event_bindings: {click: update_button_click}
     - type: Button
       properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Secondary 500', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Edite, margin: null}
-      name: button_2
+      name: profile_image_update
       layout_properties: {x: 433.6388854980469, y: 177.12501525878906, width: 100}
-      event_bindings: {click: button_2_click}
+      event_bindings: {click: profile_image_update_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
