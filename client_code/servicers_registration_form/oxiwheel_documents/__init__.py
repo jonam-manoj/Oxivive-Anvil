@@ -42,8 +42,9 @@ class oxiwheel_documents(oxiwheel_documentsTemplate):
                                    oxiwheels_District=oxiwheel_details[3],
                                    oxiwheels_address=oxiwheel_details[5],
                                    oxiwheels_capsules=int(oxiwheel_details[6]),
-                                   oxiwheels_vehicle_rc=oxiwheel_details[7],
-                                   oxiwheels_driving_licence=oxiwheel_details[8],
+                                   oxiwheels_fees=oxiwheel_details[7], 
+                                   oxiwheels_vehicle_rc=oxiwheel_details[8],
+                                   oxiwheels_driving_licence=oxiwheel_details[9],
                                   oxiwheels_id=self.generate_unique_random_code())
                                   
       alert("You added oxiwheel successfully.")

@@ -25,12 +25,17 @@ class servicers_register_add_oxiclinic(servicers_register_add_oxiclinicTemplate)
     pincode = self.oxiclinic_pincode.text
     address = self.oxiclinic_address.text
     capsule = self.oxiclinic_capsules.text
-
-    if not hospital_name and not address and not capsule and not district and not establised_year and not pincode and not state:
+    fees = self.oxiclinics_fees.text
+    
+    if not hospital_name and not address and not capsule and not district and not establised_year and not pincode and not state or not fees :
       Notification('All fields are required.').show()
     else:
       print(self.item)
-      oxiclinc_details =[hospital_name, establised_year, state, district, pincode, address, capsule]
+      oxiclinc_details =[hospital_name, establised_year, state, district, pincode, address, capsule, fees]
       print(oxiclinc_details)
       
       open_form('servicers_registration_form.oxiclinic_documents',oxiclinc_details=oxiclinc_details, user_id =self.user_id)
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('home')
