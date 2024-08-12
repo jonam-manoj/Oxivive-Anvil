@@ -153,3 +153,7 @@ class new_dashboard(new_dashboardTemplate):
   def link_4_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('reports')
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('profile')

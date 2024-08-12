@@ -28,3 +28,7 @@ class notifications(notificationsTemplate):
   def link_6_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('home')
+
+  def link_1_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('profile')
