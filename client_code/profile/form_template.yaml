@@ -13,83 +13,97 @@ components:
     name: label_9
     layout_properties: {grid_position: 'JGTIIH,XPEJFA'}
   - type: XYPanel
-    properties: {role: null, align: center, spacing_above: small, width: null, background: 'theme:Primary 700', foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', height: 610.8888854980469, margin: null}
+    properties: {role: null, align: center, spacing_above: small, width: null, background: 'theme:Primary 700', foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', tooltip: '', height: 727.5555725097656, margin: null}
     name: xy_panel_1
-    layout_properties: {grid_position: 'RVPGPH,GHJVLW'}
+    layout_properties: {grid_position: 'RVPGPH,YMVPWB'}
     components:
     - type: Image
       properties: {height: 152}
-      name: image_2
-      layout_properties: {x: 72.5, y: 26.138885498046875, width: 200}
+      name: profile_image
+      layout_properties: {x: 295.5000305175781, y: 15.125, width: 200}
     - type: ColumnPanel
-      properties: {col_widths: '{}'}
-      name: column_panel_2
-      layout_properties: {x: 87.5, y: 197.19444274902344, width: 416}
+      properties: {role: card, col_widths: '{}', spacing_above: small, background: '#FF7276', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
+      name: card_1
+      layout_properties: {grid_position: 'QJOALB,FAPQXN', x: 177, y: 238.65290075683595, width: 521.056}
       components:
-      - type: Label
-        properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Name :', margin: null}
-        name: label_1
-        layout_properties: {grid_position: 'DYUCBG,JZFXSL'}
-      - type: TextBox
-        properties: {}
-        name: text_box_1
-        layout_properties: {grid_position: 'DYUCBG,VKKHVR'}
-      - type: Label
-        properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Email :', margin: null}
-        name: label_2
-        layout_properties: {grid_position: 'MHJAXI,CEEWKQ'}
-      - type: TextBox
-        properties: {}
-        name: text_box_2
-        layout_properties: {grid_position: 'MHJAXI,PVCQVY'}
-      - type: Label
-        properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Phone Number :', margin: null}
-        name: label_3
-        layout_properties: {grid_position: 'GPVQDW,TGECAR'}
-      - type: TextBox
-        properties: {}
-        name: text_box_3
-        layout_properties: {grid_position: 'GPVQDW,OGAIYE'}
-      - type: Label
-        properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Address :', margin: null}
-        name: label_4
-        layout_properties: {grid_position: 'RHPRXM,ZVJTWG'}
-      - type: TextBox
-        properties: {}
-        name: text_box_4
-        layout_properties: {grid_position: 'RHPRXM,VFDVHC'}
-      - type: Label
-        properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'City :', margin: null}
-        name: label_5
-        layout_properties: {grid_position: 'CQTDZJ,DEVRGO'}
-      - type: TextBox
-        properties: {}
-        name: text_box_5
-        layout_properties: {grid_position: 'CQTDZJ,LOZBPC'}
-      - type: Label
-        properties: {}
-        name: label_6
-        layout_properties: {grid_position: 'PUDQJN,RTXRRK'}
-      - type: TextBox
-        properties: {}
-        name: text_box_6
-        layout_properties: {grid_position: 'PUDQJN,KSEEOL'}
-      - type: Label
-        properties: {}
-        name: label_7
-        layout_properties: {grid_position: 'MXTZTZ,TGGDCL'}
-      - type: TextBox
-        properties: {}
-        name: text_box_7
-        layout_properties: {grid_position: 'MXTZTZ,ZNKBOD'}
-      - type: Label
-        properties: {}
-        name: label_8
-        layout_properties: {grid_position: 'CIMFXN,UMQOFS'}
-      - type: TextBox
-        properties: {}
-        name: text_box_8
-        layout_properties: {grid_position: 'CIMFXN,XMHRFU'}
+      - type: ColumnPanel
+        properties: {col_widths: '{}'}
+        name: column_panel_2
+        layout_properties: {x: 87.5, y: 197.19444274902344, width: 416, grid_position: 'PJFUBU,GEHZLD'}
+        components:
+        - type: Label
+          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Name :', margin: null}
+          name: label_1
+          layout_properties: {grid_position: 'DYUCBG,JZFXSL'}
+        - type: TextBox
+          properties: {role: null, bold: false, align: left, placeholder: Name, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          name: username_box
+          layout_properties: {grid_position: 'DYUCBG,VKKHVR'}
+        - type: Label
+          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Email :', margin: null}
+          name: label_2
+          layout_properties: {grid_position: 'MHJAXI,CEEWKQ'}
+        - type: TextBox
+          properties: {role: null, bold: false, align: left, placeholder: Email id, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          name: email_box
+          layout_properties: {grid_position: 'MHJAXI,PVCQVY'}
+        - type: Label
+          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Phone Number :', margin: null}
+          name: label_3
+          layout_properties: {grid_position: 'GPVQDW,TGECAR'}
+        - type: TextBox
+          properties: {role: null, bold: false, align: left, placeholder: Phone number, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          name: phone_box
+          layout_properties: {grid_position: 'GPVQDW,OGAIYE'}
+        - type: Label
+          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Address :', margin: null}
+          name: label_4
+          layout_properties: {grid_position: 'RHPRXM,ZVJTWG'}
+        - type: TextBox
+          properties: {role: null, bold: false, align: left, placeholder: Address, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          name: address_box
+          layout_properties: {grid_position: 'RHPRXM,VFDVHC'}
+        - type: Label
+          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'City :', margin: null}
+          name: label_5
+          layout_properties: {grid_position: 'CQTDZJ,DEVRGO'}
+        - type: TextBox
+          properties: {role: null, bold: false, align: left, placeholder: City, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          name: city_box
+          layout_properties: {grid_position: 'CQTDZJ,LOZBPC'}
+        - type: Label
+          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'State :', margin: null}
+          name: label_6
+          layout_properties: {grid_position: 'PUDQJN,RTXRRK'}
+        - type: TextBox
+          properties: {role: null, bold: false, align: left, placeholder: State, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          name: state_box
+          layout_properties: {grid_position: 'PUDQJN,KSEEOL'}
+        - type: Label
+          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Country :', margin: null}
+          name: label_7
+          layout_properties: {grid_position: 'MXTZTZ,TGGDCL'}
+        - type: TextBox
+          properties: {role: null, bold: false, align: left, placeholder: Country, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          name: country_box
+          layout_properties: {grid_position: 'MXTZTZ,ZNKBOD'}
+        - type: Label
+          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Date of Birth :', margin: null}
+          name: label_8
+          layout_properties: {grid_position: 'CIMFXN,UMQOFS'}
+        - type: TextBox
+          properties: {role: null, bold: false, align: left, placeholder: Date of birth, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          name: dob_box
+          layout_properties: {grid_position: 'CIMFXN,XMHRFU'}
+    - type: Button
+      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Secondary 500', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Save, margin: null}
+      name: update_button
+      layout_properties: {x: 384.6388854980469, y: 681.7639007568359, width: 100}
+      event_bindings: {click: update_button_click}
+    - type: Button
+      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Secondary 500', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Edite, margin: null}
+      name: button_2
+      layout_properties: {x: 433.6388854980469, y: 177.12501525878906, width: 100}
 - type: FlowPanel
   properties: {}
   name: navbar_links

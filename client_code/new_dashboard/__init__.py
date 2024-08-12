@@ -28,7 +28,8 @@ class new_dashboard(new_dashboardTemplate):
     print(f"User Name in Dashboard: {self.oxi_username}")
     self.location_name = None  # Initialize location_name variable
     self.id_of_serviceprovider = None  # Initialize id_of_serviceprovider variable    
-    # self.service_type = None
+    
+
   
   def primary_color_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -156,4 +157,10 @@ class new_dashboard(new_dashboardTemplate):
 
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form('profile')
+    open_form('profile', oxi_id=self.oxi_id, oxi_username=self.oxi_username)
+
+  # def open_profile_form(self):
+  #       # Create an instance of the profile form and pass oxi_id and oxi_username
+  #       profile_form = profile(oxi_id=self.oxi_id, oxi_username=self.oxi_username)
+  #       # Open the profile form
+  #       self.open_form(profile_form)
