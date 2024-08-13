@@ -13,6 +13,7 @@ class profile(profileTemplate):
         print(f"oxi_id in profile : {oxi_id}")
         print(f"oxi_username in profile : {oxi_username}")
         self.oxi_id = oxi_id  # Store the oxi_id in the instance for later use
+        self.oxi_username = oxi_username
         # Any code you write here will run before the form opens.
 
         user_details = anvil.server.call('get_user_details_by_id', oxi_id)
