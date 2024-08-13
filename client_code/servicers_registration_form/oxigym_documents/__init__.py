@@ -42,8 +42,9 @@ class oxigym_documents(oxigym_documentsTemplate):
                                    oxigyms_District=oxigym_details[3],
                                    oxigyms_address=oxigym_details[5],
                                    oxigyms_capsules=int(oxigym_details[6]),
-                                   oxigyms_building_licence=oxigym_details[7],
-                                   oxigyms_licence=oxigym_details[8],
+                                   oxigyms_fees=oxigym_details[7],
+                                   oxigyms_building_licence=oxigym_details[8],
+                                   oxigyms_licence=oxigym_details[9],
                                   oxigyms_id=self.generate_unique_random_code())
                                   
       alert("You added oxigym successfully.")

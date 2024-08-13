@@ -72,11 +72,21 @@ components:
     properties: {height: 32}
     type: Spacer
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,PMYITI'}
-  - name: text_box_2
-    properties: {hide_text: true, border: 1px solid black, placeholder: '  Password', italic: false}
-    type: TextBox
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ KXJADS,MUSFGJ'}
-    event_bindings: {focus: text_box_2_focus, lost_focus: text_box_2_lost_focus}
+  - type: XYPanel
+    properties: {height: 29}
+    name: xy_panel_1
+    layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ PWMYMX,ZDBHNG'}
+    components:
+    - name: text_box_2
+      properties: {hide_text: true, border: 1px solid black, placeholder: '  Password', italic: false}
+      type: TextBox
+      layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ KXJADS,YSSYUG', x: 0, y: 0, width: 322.208}
+      event_bindings: {focus: text_box_2_focus, lost_focus: text_box_2_lost_focus}
+    - type: CheckBox
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', allow_indeterminate: false, underline: false, font: '', foreground: '', checked: false, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+      name: check_box_1
+      layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,LFKMBP KRZWOV,NRNNWQ', x: 279.19439697265625, y: 0, width: 85.4444}
+      event_bindings: {change: check_box_1_change}
   - name: primary_color_1
     properties: {text: '  Login   ', role: primary-color, background: red, foreground: white, bold: true, border: '', align: full}
     type: Button

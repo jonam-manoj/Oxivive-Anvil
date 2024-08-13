@@ -70,3 +70,13 @@ class login(loginTemplate):
     def link_9_click(self, **event_args):
       """This method is called when the link is clicked"""
       pass
+
+    def check_box_1_change(self, **event_args):
+      """This method is called when this checkbox is checked or unchecked"""
+      checked = self.check_box_1.checked
+      if not  checked:
+           
+            self.text_box_2.hide_text = True
+      else:
+         
+            self.text_box_2.hide_text = False

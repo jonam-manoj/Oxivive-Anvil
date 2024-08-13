@@ -25,14 +25,20 @@ class servicers_register_add_oxigym(servicers_register_add_oxigymTemplate):
     pincode = self.pincode.text
     address = self.address.text
     capsules = self.capsules.text
+    fees = self.oxigyms_fees.text
+    
 
-    if not gym_name and not address and not capsules and not district and not establised_year and not pincode and not state:
+    if not gym_name and not address and not capsules and not district and not establised_year and not pincode and not state and not fees:
       Notification('All fields are required.').show()
     else:
       print(self.item)
-      oxigym_details =[gym_name, establised_year, state, district, pincode, address, capsules]
+      oxigym_details =[gym_name, establised_year, state, district, pincode, address, capsules, fees]
       print(oxigym_details)
       
       open_form('servicers_registration_form.oxigym_documents',oxigym_details=oxigym_details, user_id =self.user_id)
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('home')
 
     

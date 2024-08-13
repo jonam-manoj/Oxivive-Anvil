@@ -26,7 +26,7 @@ class services_list(services_listTemplate):
       
       # Assign data to dictionary keys
       user_info['serial_no'] = i  # Assuming you want to include a serial number
-      user_info['clinic_id'] = row["oxiclinic_id"]
+      user_info['clinics_id'] = row["oxiclinics_id"]
       user_info['Oxiclinics_Name'] = row['Oxiclinics_Name']
       user_info['State'] = row['State']
       
@@ -38,7 +38,7 @@ class services_list(services_listTemplate):
 
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    rows =app_tables.oxiwheels.search(id=str(self.user_id))
+    rows =app_tables.oxiwheels.search(oxi_id=str(self.user_id))
     List_oxiclinics = []
     for i, row in enumerate(rows, start=1):
       # Initialize dictionary to store row data
@@ -58,7 +58,7 @@ class services_list(services_listTemplate):
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""  
-    rows =app_tables.oxigyms.search(id=str(self.user_id))
+    rows =app_tables.oxigyms.search(oxi_id=str(self.user_id))
     
     List_oxiclinics = []
     for i, row in enumerate(rows, start=1):
