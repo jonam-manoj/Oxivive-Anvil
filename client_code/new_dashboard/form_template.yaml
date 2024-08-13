@@ -100,31 +100,13 @@ components:
   layout_properties: {grid_position: 'QVNURT,MTBVVV'}
   components:
   - type: RepeatingPanel
-    properties: {item_template: new_dashboard.ItemTemplate3}
+    properties: {role: null, spacing_above: small, background: '', item_template: new_dashboard.ItemTemplate3, foreground: '', items: null, spacing_below: small, visible: true, border: '', tooltip: '', margin: null}
     name: repeating_panel_2
-    layout_properties: {grid_position: 'LDVINQ,ANLCRV'}
-  - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
-    name: card_5
-    layout_properties: {grid_position: 'DMSWBI,WLSXBH'}
-    components:
-    - name: image_4
-      properties: {source: _/theme/Untitled design (2).png, height: 283.5999755859375, horizontal_align: right, display_mode: zoom_to_fill}
-      type: Image
-      layout_properties: {grid_position: 'JGWCBV,NYHALZ', full_width_row: false}
-    - name: headline_3
-      properties: {role: text, align: center, text: OXIGYM, bold: true, font_size: 20, foreground: black}
-      type: Label
-      layout_properties: {grid_position: 'CWODUH,CBMCSW'}
-    - name: spacer_2
-      properties: {height: 25}
-      type: Spacer
-      layout_properties: {grid_position: 'AASRRU,NMZLLU'}
-    - name: primary_color_1_copy_2
-      properties: {text: Book Now, role: primary-color, enabled: true, visible: true, background: '#2d3249', align: full, foreground: white, bold: false}
-      type: Button
-      layout_properties: {grid_position: 'CWZHBI,WKKDQW'}
-      event_bindings: {click: primary_color_1_copy_2_click}
+    layout_properties: {grid_position: 'LDVINQ,QDCIFC', full_width_row: true}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_2
+    layout_properties: {grid_position: 'LDVINQ,PRJGJX', full_width_row: true}
 - name: spacer_6
   properties: {height: 34.5999755859375}
   type: Spacer

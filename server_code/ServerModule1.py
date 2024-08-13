@@ -92,7 +92,6 @@ nearby_pincodes_map = {
     "Marathahalli": [560037, 560066, 560103, 560048] # Example pin codes for Marathahalli
 }
 
-
 @anvil.server.callable
 def check_pincode_in_tables(location_name):
     nearby_pincodes = nearby_pincodes_map.get(location_name, [])
@@ -101,6 +100,9 @@ def check_pincode_in_tables(location_name):
         'oxiclinics_exists': False,
         'oxigyms_exists': False,
         'oxiwheels_exists': False,
+        'oxiclinics_address': None,
+        'oxiwheels_address': None,
+        'oxigyms_address': None,
         'id_of_serviceprovider_clinic': None,        
         'id_of_serviceprovider_wheel': None,
         'id_of_serviceprovider_gym': None
@@ -112,6 +114,7 @@ def check_pincode_in_tables(location_name):
             if record['oxiclinics_pincode'] in nearby_pincodes:
                 results['oxiclinics_exists'] = True
                 results['id_of_serviceprovider_clinic'] = record['oxi_id']
+                results['oxiclinics_address'] = record['oxiclinics_address']
                 break
 
         # Check oxiwheels
@@ -119,6 +122,7 @@ def check_pincode_in_tables(location_name):
             if record['oxiwheels_pincode'] in nearby_pincodes:
                 results['oxiwheels_exists'] = True
                 results['id_of_serviceprovider_wheel'] = record['oxi_id']
+                results['oxiwheels_address'] = record['oxiwheels_address']
                 break
               
         # Check oxigyms
@@ -126,10 +130,9 @@ def check_pincode_in_tables(location_name):
             if record['oxigyms_pincode'] in nearby_pincodes:
                 results['oxigyms_exists'] = True
                 results['id_of_serviceprovider_gym'] = record['oxi_id']
+                results['oxigyms_address'] = record['oxigyms_address']
                 break
 
-        
-    
     return results
 
 

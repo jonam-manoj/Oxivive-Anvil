@@ -21,40 +21,53 @@ class new_dashboard(new_dashboardTemplate):
         self.text_box_2.text = address
         self.text_box_2.visible = True
         self.text_box_1.visible = False
-        
+    
+        # Extract the location name (we assume it's the first part of the address)
         location_name = address.split(",")[0].strip()
-
+    
         # Call the server function to check the pin code in the tables
         result = anvil.server.call('check_pincode_in_tables', location_name)
-
-        # Prepare items for the repeating panel
-        service_providers = []
-        
+    
+        # Initialize a list to hold the items for the repeating panel
+        repeating_panel_items = []
+    
+        # Check each result and add to the repeating panel items
         if result['oxiclinics_exists']:
-            service_providers.append({
-                'service_type': 'OxiClinic',
-                'service_provider_id': result['id_of_serviceprovider_clinic'],
-                'name': 'Clinic',
-                'image': 'clinic_image.png'  # Replace with the actual image path
+            address = app_tables.oxiclinics.get(oxi_id=result['id_of_serviceprovider_clinic'])['oxiclinics_address']
+            repeating_panel_items.append({
+                'image_source': '_/theme/Untitled design (1).png',
+                'label_text': 'OXICLINIC',
+                'address': address,
+                'id_of_serviceprovider': result['id_of_serviceprovider_clinic']
             })
-        
+    
         if result['oxiwheels_exists']:
-            service_providers.append({
-                'service_type': 'OxiWheel',
-                'service_provider_id': result['id_of_serviceprovider_wheel'],
-                'name': 'Wheels',
-                'image': 'wheels_image.png'  # Replace with the actual image path
+            address = app_tables.oxiwheels.get(oxi_id=result['id_of_serviceprovider_wheel'])['oxiwheels_address']
+            repeating_panel_items.append({
+                'image_source': '_/theme/Untitled design (2).png',
+                'label_text': 'OXIWHEELS',
+                'address': address,
+                'id_of_serviceprovider': result['id_of_serviceprovider_wheel']
             })
-        
+    
         if result['oxigyms_exists']:
-            service_providers.append({
-                'service_type': 'OxiGym',
-                'service_provider_id': result['id_of_serviceprovider_gym'],
-                'name': 'Gym',
-                'image': 'gym_image.png'  # Replace with the actual image path
+            address = app_tables.oxigyms.get(oxi_id=result['id_of_serviceprovider_gym'])['oxigyms_address']
+            repeating_panel_items.append({
+                'image_source': '_/theme/ed and (1).png',
+                'label_text': 'OXIGYM',
+                'address': address,
+                'id_of_serviceprovider': result['id_of_serviceprovider_gym']
             })
+    
+        # Update the repeating panel with the items
+        self.repeating_panel_2.items = repeating_panel_items
+    
+        # Print the IDs of the service providers found
+        print(f"Clinic ID: {result['id_of_serviceprovider_clinic']}")
+        print(f"Gym ID: {result['id_of_serviceprovider_gym']}")
+        print(f"Wheel ID: {result['id_of_serviceprovider_wheel']}")
 
-        self.repeating_panel_2.items = service_providers  # Update the repeating panel with items
+
 
     def primary_color_1_click(self, **event_args):
         self.handle_service_selection('OxiClinic')
