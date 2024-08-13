@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{"YVVZET":45,"IEWLXX":15}'}
 components:
 - name: image_1_copy
   properties: {source: _/theme/shot.png, horizontal_align: center, height: 117.60000610351562, display_mode: shrink_to_fit, background: red}
@@ -10,6 +10,11 @@ components:
   properties: {height: 77.60000610351562}
   type: Spacer
   layout_properties: {grid_position: 'PNZXGS,YVVZET'}
+- type: Button
+  properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Logout, margin: null}
+  name: button_1
+  layout_properties: {grid_position: 'PNZXGS,IEWLXX'}
+  event_bindings: {click: button_1_click}
 - name: link_1
   properties: {text: Back, icon: 'fa:arrow-left', bold: false, font_size: 15}
   type: Link
@@ -24,7 +29,7 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'IKYWPL,LQIKUD'}
   - name: hospital_name_label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true, text: 'Vehicle Number:', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Vehicle Number:'}
     type: Label
     layout_properties: {grid_position: 'IKYWPL,TJADQF DRDWOP,FHXGTP'}
   - name: vehicle_no
@@ -32,7 +37,7 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'IKYWPL,TJADQF DRDWOP,UUEODX'}
   - name: establised_year_label
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true, text: 'Model Year : ', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: true, underline: false, icon: ''}
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Model Year : '}
     type: Label
     layout_properties: {grid_position: 'IKYWPL,TJADQF XGZMHB,WIBOUA'}
   - type: DatePicker
@@ -74,11 +79,19 @@ components:
   - name: no_capsule_label
     properties: {align: left, text: 'No. of Capsules : ', bold: true}
     type: Label
-    layout_properties: {grid_position: 'IKYWPL,TJADQF VRIQCU,SQOZSY'}
+    layout_properties: {grid_position: 'IKYWPL,TJADQF VRIQCU,SQOZSY IRECEE,VSHNNU'}
+  - type: Label
+    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Wheel Fee :', margin: null}
+    name: label_2
+    layout_properties: {grid_position: 'IKYWPL,TJADQF VRIQCU,SQOZSY TEXULS,LCKDGV'}
   - name: capsules
     properties: {type: number, placeholder: No. of Capsules}
     type: TextBox
-    layout_properties: {grid_position: 'IKYWPL,TJADQF VRIQCU,MIYPUD'}
+    layout_properties: {grid_position: 'IKYWPL,TJADQF VRIQCU,MIYPUD QIOECL,MZIZOS'}
+  - type: TextBox
+    properties: {role: null, bold: false, align: left, placeholder: Wheel Fee, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+    name: oxiwheels_fees
+    layout_properties: {grid_position: 'IKYWPL,TJADQF VRIQCU,MIYPUD AUTWEL,ELHVTY'}
   - name: spacer_1
     properties: {height: 57.5999755859375}
     type: Spacer
@@ -89,7 +102,7 @@ components:
     layout_properties: {grid_position: 'IKYWPL,TJADQF QGNPBN,XMFWMD'}
     event_bindings: {click: back_button_2_click}
   - name: next_button_1
-    properties: {align: full, foreground: white, text: Next, spacing_above: small, icon_align: right, spacing_below: small, background: red, bold: true, icon: 'fa:forward'}
+    properties: {bold: true, align: full, spacing_above: small, background: red, icon: 'fa:forward', icon_align: right, foreground: white, spacing_below: small, text: Next}
     type: Button
     layout_properties: {grid_position: 'IKYWPL,TJADQF QGNPBN,HCRLDC'}
     event_bindings: {click: next_button_1_click}
@@ -97,4 +110,10 @@ components:
     properties: {height: 32}
     type: Spacer
     layout_properties: {grid_position: 'IKYWPL,IISNOJ'}
+- type: Label
+  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Clinic Fee :', margin: null}
+  name: label_1
+  layout_properties:
+    col_widths: {}
+    grid_position: ERCQCK,VFDQYY
 is_package: true

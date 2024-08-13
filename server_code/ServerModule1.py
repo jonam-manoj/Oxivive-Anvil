@@ -189,4 +189,54 @@ def get_fee_amount(id_of_serviceprovider):
     return None
 
 
+@anvil.server.callable
+def get_user_details_by_id(oxi_id):
+    # Query the oxi_users table to get user details
+    user_row = app_tables.oxi_users.get(oxi_id=oxi_id)
+    
+    if user_row:
+        return {
+            'oxi_username': user_row['oxi_username'],
+            'oxi_email': user_row['oxi_email'],
+            'oxi_phone': user_row['oxi_phone'],
+            'oxi_address': user_row['oxi_address'],
+            'oxi_city': user_row['oxi_city'],
+            'oxi_state': user_row['oxi_state'],
+            'oxi_country': user_row['oxi_country'],
+            'oxi_dob': user_row['oxi_dob'],
+            'oxi_profile': user_row['oxi_profile']
+        }
+    else:
+        return {'error': 'User not found'}
+
+@anvil.server.callable
+def update_user_details_by_id(oxi_id, oxi_username, oxi_email, oxi_phone, oxi_address, oxi_city, oxi_state, oxi_country, oxi_dob, oxi_profile):
+    user_row = app_tables.oxi_users.get(oxi_id=oxi_id)
+    
+    if user_row:
+        user_row['oxi_username'] = oxi_username
+        user_row['oxi_email'] = oxi_email
+        user_row['oxi_phone'] = oxi_phone
+        user_row['oxi_address'] = oxi_address
+        user_row['oxi_city'] = oxi_city
+        user_row['oxi_state'] = oxi_state
+        user_row['oxi_country'] = oxi_country
+        user_row['oxi_dob'] = oxi_dob
+        if oxi_profile:
+            user_row['oxi_profile'] = oxi_profile
+        
+        return "User details updated successfully"
+        
+    else:
+        return "User not found"
+
+@anvil.server.callable
+def update_user_profile_image(oxi_id, file):
+    user_row = app_tables.oxi_users.get(oxi_id=oxi_id)
+    
+    if user_row:
+        user_row['oxi_profile'] = file  # Save the uploaded file to the 'oxi_profile' column
+        return "Profile image updated successfully"
+    else:
+        return "User not found"
 

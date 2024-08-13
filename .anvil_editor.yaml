@@ -4,15 +4,19 @@ unique_ids:
     servicers_registration_form.servicers_register_add_oxiclinic: A7KBY5NSTBCRWBCUJPTHJXS3LGDOG4HT
     dashboard.oxy_wheels_booking_form_1: 7LI62MQDTTHYOUYTDNNC4CEPRM2H3C3E
     servicers.servicers_dashboard.ItemTemplate1: '1714023449562756630259513.547'
+    notifications.ItemTemplate2: '1723459299538514115369499.39404'
     servicers_registration_form.servicers_register_add_oxigym: E44VFPRWVU37JIEXUAF6DZFLZB6UGI2Q
     wallet: '1713859368779581889009748.0105'
+    notifications: '172318729917629420145616.918526'
     wallet_homepage: '1715215749194551149248612.3804'
     servicers.servicers_dashboard.support: '1713851237637111777016212.71452'
     servicers.servicers_dashboard.profile: '171384585587791985667966.67307'
     servicers.servicers_dashboard.add_services.services_list2: '1714635525659968325790588.4779'
     servicers.servicers_dashboard.add_services.oxigym: GJGEOY2E65YTQB6SREO4DC57CSJO7HM7
     servicers_registration_form.services_list.RowTemplate1: '1713767270559693266616357.648'
+    reports: '1723187325341257166170102.43036'
     servicers_registration_form.servicers_navigation_bar: 6VRQFW5IT4W5MEBOQATQ2MWYY5BZZ3GE
+    profile: '1723432353775344526246269.2038'
     Activity: '1721817048710987975622663.1235'
     dashboard.gym_booking_form_1: 65GXIRT7SKEFC6NKRPA3YFX63MPHSHYD
     servicers_registration_form.services_list: '1713767212040614906131180.0999'
@@ -31,6 +35,7 @@ unique_ids:
     dashboard.aviailable_Hospital_Address: '1714373584827442762928138.6185'
     servicers.servicers_dashboard.notification: '1713851223903601723563890.3866'
     signup: '1713758217782384991869506.14026'
+    bookings: '1723187328893974836306492.1133'
     servicers.servicers_dashboard.add_services.oxiclinic: '1714105073611336997835501.89923'
     dashboard.available_zym_address: '1714373961196905894069470.9718'
     home: IKQ2JL4RGDDAAVZCW26FZOJKQIGPPDBB

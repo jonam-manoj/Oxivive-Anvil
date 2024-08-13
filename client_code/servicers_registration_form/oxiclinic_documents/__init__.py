@@ -29,6 +29,8 @@ class oxiclinic_documents(oxiclinic_documentsTemplate):
       user_details = app_tables.oxi_users.get(oxi_id=self.user_id)
       print(user_details)
       oxiclinc_details = self.oxiclinc_details
+
+      
       app_tables.oxiclinics.add_row(oxi_id=str(user_details['oxi_id']),
                                    oxi_name=user_details['oxi_username'],
                                    oxi_email=user_details['oxi_email'],
@@ -41,8 +43,10 @@ class oxiclinic_documents(oxiclinic_documentsTemplate):
                                    oxiclinics_District=oxiclinc_details[3],
                                    oxiclinics_address=oxiclinc_details[5],
                                    oxiclinics_capsules=int(oxiclinc_details[6]),
-                                   oxiclinics_medical_licence=oxiclinc_details[7],
-                                   oxiclinics_building_licence=oxiclinc_details[8],
+                                   oxiclinics_fees=oxiclinc_details[7],
+                                   oxiclinics_medical_licence=oxiclinc_details[8],
+                                   oxiclinics_building_licence=oxiclinc_details[9],
+                                   
                                    oxiclinics_id=self.generate_unique_random_code())
                                   
                                   

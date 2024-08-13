@@ -7,9 +7,9 @@ services:
   client_config: {}
   server_config: {custom_smtp: true}
 startup: {type: form, module: home}
-package_name: Oxivive
+package_name: production_Oxivive__
 allow_embedding: false
-name: Oxivive
+name: 'production_Oxivive  '
 runtime_options:
   version: 2
   client_version: '3'
@@ -215,7 +215,7 @@ db_schema:
       admin_ui: {order: 0, width: 200}
       type: string
     - name: oxi_email
-      admin_ui: {width: 200, order: 0.5}
+      admin_ui: {order: 1, width: 200}
       type: string
     - name: oxi_password
       admin_ui: {width: 200, order: 1.5}
@@ -394,6 +394,9 @@ db_schema:
     - name: oxi_another_person_number
       admin_ui: {width: 200, order: 17}
       type: number
+    - name: oxi_reports
+      admin_ui: {width: 200, order: 18}
+      type: media
   oxi_notifications:
     title: oxi_notifications
     client: none
@@ -406,6 +409,9 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: oxi_notification
+      admin_ui: {width: 200}
+      type: string
+    - name: oxi_timestamp
       admin_ui: {width: 200}
       type: string
 uplink_visible: true
