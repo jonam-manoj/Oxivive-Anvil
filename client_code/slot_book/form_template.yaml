@@ -21,6 +21,10 @@ components:
       properties: {text: OXIVIVE, bold: true, font_size: 20, foreground: red, spacing_above: large}
       type: Label
       layout_properties: {x: 84.08750991895795, y: 26.55000190809369, width: 466}
+    - type: Button
+      properties: {text: button_11}
+      name: button_11
+      layout_properties: {x: 1059, y: 26.541667938232422, width: 100}
   - name: label_3
     properties: {align: center, text: Book a Slot, bold: true, foreground: 'theme:Primary 700', font_size: 20}
     type: Label
