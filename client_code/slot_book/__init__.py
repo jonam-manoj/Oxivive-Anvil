@@ -165,4 +165,12 @@ class slot_book(slot_bookTemplate):
             open_form('Activity', oxi_id=oxi_id, location_name=self.location_name, id_of_serviceprovider=oxi_servicer_id, service_type=oxi_service_type, oxi_username=oxi_username, oxi_book_time=self.oxi_book_time, oxi_book_date=oxi_book_date_db, oxi_book_id=oxi_book_id)
         except Exception as e:
             print(f"Error: {e}")
+
+    def button_11_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('new_dashboard')
+
+    def button_12_click(self, **event_args):
+      """This method is called when the button is clicked"""
+      open_form('new_dashboard')
       

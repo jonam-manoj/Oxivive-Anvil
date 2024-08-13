@@ -41,4 +41,8 @@ class bookings(bookingsTemplate):
   def link_1_click(self, **event_args):
     """This method is called when the link is clicked"""
     open_form('profile', oxi_id=self.oxi_id, oxi_username=self.oxi_username)
+
+  def link_7_click(self, **event_args):
+    """This method is called when the link is clicked"""
+    open_form('new_dashboard')
     

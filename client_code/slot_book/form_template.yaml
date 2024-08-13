@@ -22,9 +22,15 @@ components:
       type: Label
       layout_properties: {x: 84.08750991895795, y: 26.55000190809369, width: 466}
     - type: Button
-      properties: {text: button_11}
+      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: home, margin: null}
       name: button_11
       layout_properties: {x: 1059, y: 26.541667938232422, width: 100}
+      event_bindings: {click: button_11_click}
+    - type: Button
+      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back, margin: null}
+      name: button_12
+      layout_properties: {x: 1169, y: 26.541667938232422, width: 100}
+      event_bindings: {click: button_12_click}
   - name: label_3
     properties: {align: center, text: Book a Slot, bold: true, foreground: 'theme:Primary 700', font_size: 20}
     type: Label

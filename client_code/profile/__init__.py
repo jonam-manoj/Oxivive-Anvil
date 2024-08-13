@@ -116,6 +116,10 @@ class profile(profileTemplate):
             # Provide feedback to the user
             alert(update_result)
 
+    def link_7_click(self, **event_args):
+      """This method is called when the link is clicked"""
+      open_form('new_dashboard')
+
       
     
 
