@@ -102,11 +102,7 @@ components:
   - type: RepeatingPanel
     properties: {role: null, spacing_above: small, background: '', item_template: new_dashboard.ItemTemplate3, foreground: '', items: null, spacing_below: small, visible: true, border: '', tooltip: '', margin: null}
     name: repeating_panel_2
-    layout_properties: {grid_position: 'LDVINQ,QDCIFC', full_width_row: true}
-  - type: Spacer
-    properties: {height: 32}
-    name: spacer_2
-    layout_properties: {grid_position: 'LDVINQ,PRJGJX', full_width_row: true}
+    layout_properties: {grid_position: 'LDVINQ,QDCIFC', full_width_row: false}
 - name: spacer_6
   properties: {height: 34.5999755859375}
   type: Spacer
