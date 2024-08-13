@@ -105,50 +105,6 @@ components:
     layout_properties: {grid_position: 'LDVINQ,ANLCRV'}
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}'}
-    name: card_3
-    layout_properties: {grid_position: 'DMSWBI,TUTIHW'}
-    components:
-    - name: image_2
-      properties: {source: _/theme/Untitled design (1).png, horizontal_align: center, height: 286.39996337890625, display_mode: zoom_to_fill, vertical_align: top}
-      type: Image
-      layout_properties: {grid_position: 'OHVCGV,QTWARV', full_width_row: false}
-    - name: headline_1
-      properties: {role: text, text: OXICLINIC, align: center, bold: true, font_size: 20, foreground: black}
-      type: Label
-      layout_properties: {grid_position: 'EKHWEI,KFXECL'}
-    - name: spacer_1_copy
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'ABJTOK,VPDDTW'}
-    - name: primary_color_1
-      properties: {text: Book Now, role: primary-color, enabled: true, visible: true, background: '#2d3249', align: full, foreground: white, bold: false}
-      type: Button
-      layout_properties: {grid_position: 'YHMVWT,VXKAGX'}
-      event_bindings: {click: primary_color_1_click}
-  - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
-    name: card_4
-    layout_properties: {grid_position: 'DMSWBI,FAGYVG'}
-    components:
-    - name: image_3
-      properties: {source: _/theme/ed and (1).png, height: 285.1999816894531, display_mode: zoom_to_fill}
-      type: Image
-      layout_properties: {grid_position: 'WXYMYT,ZJDCAL', full_width_row: true}
-    - name: headline_2
-      properties: {role: text, text: OXIWHEELS, align: center, bold: true, font_size: 20, foreground: black}
-      type: Label
-      layout_properties: {grid_position: 'NKDKXE,CWZUNP'}
-    - name: spacer_3
-      properties: {height: 41.79998779296875}
-      type: Spacer
-      layout_properties: {grid_position: 'XJIJKO,ZAUZME'}
-    - name: primary_color_1_copy
-      properties: {text: Book Now, role: primary-color, enabled: true, visible: true, background: '#2d3249', align: full, foreground: white, bold: false}
-      type: Button
-      layout_properties: {grid_position: 'PNEUMP,CCYUAK'}
-      event_bindings: {click: primary_color_1_copy_click}
-  - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
     name: card_5
     layout_properties: {grid_position: 'DMSWBI,WLSXBH'}
     components:
