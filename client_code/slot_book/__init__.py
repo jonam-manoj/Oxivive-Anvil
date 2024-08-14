@@ -10,7 +10,7 @@ from datetime import date
 class slot_book(slot_bookTemplate):
     def __init__(self, oxi_id=None, location_name=None, id_of_serviceprovider=None, service_type=None, oxi_username=None, image_source=None, label_text=None, address=None, **properties):
         self.init_components(**properties)
-        self.set_button_date()
+        
         self.oxi_id = oxi_id  # Store the oxi_id
         self.oxi_username = oxi_username   # Store received values
         self.location_name = location_name  # Store the location_name
@@ -38,98 +38,89 @@ class slot_book(slot_bookTemplate):
 
         self.day_label.text = datetime.now().strftime("%A")  # e.g., "Friday"
         self.month_label.text = datetime.now().strftime("%B %d, %Y")
-   
-    def set_button_date(self):
-        current_date = datetime.now()
-        for i in range(1, 5):  # Assuming you have 4 buttons named button_1, button_2, ..., button_4
+        self.reset_date_buttons()
+        self.button_1.background = "#ff0202"
+        self.display_time_slots(0)
+
+        for i in range(5, 11):
             button_name = f'button_{i}'
             button = getattr(self, button_name)
-            date_for_button = current_date + timedelta(days=i-1)
-            # Format the date as "Day" (e.g., "Tue") and day number (e.g., "17")
-            formatted_date = date_for_button.strftime("%a %d")
-            button.text = formatted_date
-  
-         
-    def button_1_click(self, **event_args):
-        self.primary_color_1.visible = True
+            button.set_event_handler('click', self.time_button_click)
+
+    
+    def reset_date_buttons(self):
+        # Reset the color of all date buttons (button_1 to button_4) to default
+        for i in range(1, 5):
+            button_name = f'button_{i}'
+            button = getattr(self, button_name)
+            button.background = ""  # Reset to default color
+   
+    def reset_time_buttons(self):
+        # Reset the color of all time buttons (button_5 to button_10) to default
+        for i in range(5, 11):
+            button_name = f'button_{i}'
+            button = getattr(self, button_name)
+            button.background = ""  # Reset to default color
+          
+    def display_time_slots(self, days_offset):
+        # Display time slots in button_5 to button_10
+        # days_offset will determine which day's time slots are displayed
+        selected_date = datetime.now() + timedelta(days=days_offset)
         current_time = datetime.now().time()
         times = ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM", "5:00 PM", "7:00 PM"]
-        for i in range(5, 11):  # Assuming you have buttons named button_5 to button_11
+
+        for i in range(5, 11):  # Assuming you have buttons named button_5 to button_10
             button_name = f'button_{i}'
             button = getattr(self, button_name)
             button.text = times[i - 5] if i - 5 < len(times) else "No Time"
-            button_time = datetime.strptime(button.text, "%I:%M %p").time()
-            button.enabled = not (current_time > button_time)  # Disable past times
-        for i in range(5, 11):
-            button_name = f'button_{i}'
-            button = getattr(self, button_name)
-            button.visible = True
-            button.set_event_handler('click', self.time_button_click)
 
+            # Disable past times only for today's slots
+            if days_offset == 0:
+                button_time = datetime.strptime(button.text, "%I:%M %p").time()
+                button.enabled = not (current_time > button_time)  # Disable past times
+            else:
+                button.enabled = True  # Future days' times are always enabled
+            
+            button.visible = True
+        
+        # Update the selected date based on days_offset
+        self.selected_date = selected_date.strftime("%a %d")
+        print(f"Selected date updated: {self.selected_date}")
+
+
+    def button_1_click(self, **event_args):
+        self.reset_date_buttons()  # Reset colors for all date buttons
+        self.reset_time_buttons()  # Reset colors for all time buttons
+        self.button_1.background = "#ff0202"  # Set the clicked date button color
+        self.display_time_slots(0)  # Display today's time slots
+        self.primary_color_1.visible = True
 
     def button_2_click(self, **event_args):
+        self.reset_date_buttons()  # Reset colors for all date buttons
+        self.reset_time_buttons()  # Reset colors for all time buttons
+        self.button_2.background = "#ff0202"  # Set the clicked date button color
+        self.display_time_slots(1)  # Display tomorrow's time slots
         self.primary_color_1.visible = True
-        times = ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM", "5:00 PM", "7:00 PM"]
-        for i in range(5, 11):  # Assuming you have buttons named button_5 to button_11
-            button_name = f'button_{i}'
-            button = getattr(self, button_name)
-            # Display all times without checking current time
-            button.text = times[i - 5] if i - 5 < len(times) else "No Time"
-            button.enabled = True  # Enable all buttons
-        for i in range(5, 11):
-            button_name = f'button_{i}'
-            button = getattr(self, button_name)
-            button.visible = True
-            button.set_event_handler('click', self.time_button_click)
-        # Set selected_date to the date for button_2 (tomorrow)
-        current_date = datetime.now() + timedelta(days=1)
-        self.selected_date = current_date.strftime("%a %d")
-        print(f"Selected date updated: {self.selected_date}")
-
 
     def button_3_click(self, **event_args):
+        self.reset_date_buttons()  # Reset colors for all date buttons
+        self.reset_time_buttons()  # Reset colors for all time buttons
+        self.button_3.background = "#ff0202"  # Set the clicked date button color
+        self.display_time_slots(2)  # Display the day after tomorrow's time slots
         self.primary_color_1.visible = True
-        times = ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM", "5:00 PM", "7:00 PM"]
-        for i in range(5, 11):  # Assuming you have buttons named button_5 to button_11
-            button_name = f'button_{i}'
-            button = getattr(self, button_name)
-            # Display all times without checking current time
-            button.text = times[i - 5] if i - 5 < len(times) else "No Time"
-            button.enabled = True  # Enable all buttons
-        for i in range(5, 11):
-            button_name = f'button_{i}'
-            button = getattr(self, button_name)
-            button.visible = True
-            button.set_event_handler('click', self.time_button_click)
-        # Set selected_date to the date for button_3 (day after tomorrow)
-        current_date = datetime.now() + timedelta(days=2)
-        self.selected_date = current_date.strftime("%a %d")
-        print(f"Selected date updated: {self.selected_date}")
 
     def button_4_click(self, **event_args):
+        self.reset_date_buttons()  # Reset colors for all date buttons
+        self.reset_time_buttons()  # Reset colors for all time buttons
+        self.button_4.background = "#ff0202"  # Set the clicked date button color
+        self.display_time_slots(3)  # Display time slots for 3 days from now
         self.primary_color_1.visible = True
-        times = ["9:00 AM", "11:00 AM", "1:00 PM", "3:00 PM", "5:00 PM", "7:00 PM"]
-        for i in range(5, 11):  # Assuming you have buttons named button_5 to button_11
-            button_name = f'button_{i}'
-            button = getattr(self, button_name)
-            # Display all times without checking current time
-            button.text = times[i - 5] if i - 5 < len(times) else "No Time"
-            button.enabled = True  # Enable all buttons
-        for i in range(5, 11):
-            button_name = f'button_{i}'
-            button = getattr(self, button_name)
-            button.visible = True
-            button.set_event_handler('click', self.time_button_click)
-        # Set selected_date to the date for button_4 (2 days after tomorrow)
-        current_date = datetime.now() + timedelta(days=3)
-        self.selected_date = current_date.strftime("%a %d")
-        print(f"Selected date updated: {self.selected_date}")
-
     
     def time_button_click(self, **event_args):
         clicked_button = event_args['sender']
-        self.selected_time = clicked_button.text.strip()   # Store the selected time in the instance variable
-        print(f"Selected time: {self.selected_time}")
+        self.reset_time_buttons()
+        clicked_button.background = "#ff6464"  # Set the clicked button color
+        self.selected_time = clicked_button.text.strip()  
       
         if self.selected_time == "09:00 AM":
             self.oxi_book_time = "09:00 AM - 11:00 AM"
@@ -150,6 +141,13 @@ class slot_book(slot_bookTemplate):
         print(f"Selected date: {self.selected_date}")
         
         print(f"Booking time range: {self.oxi_book_time}")
+
+    def reset_time_buttons(self):
+        # Reset the color of all time buttons (button_5 to button_10) to default
+        for i in range(5, 11):
+            button_name = f'button_{i}'
+            button = getattr(self, button_name)
+            button.background = ""  # Reset to default color
   
     def primary_color_1_click(self, **event_args):
         try:
