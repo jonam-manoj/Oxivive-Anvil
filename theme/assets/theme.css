@@ -802,3 +802,13 @@ https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-m
   border: 2px solid #ccc;
 }
 
+.anvil-role-repeating-panel-rtl {
+    direction: rtl;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.anvil-role-repeating-panel-rtl > * {
+    display: inline-block;
+    direction: ltr;
+}
