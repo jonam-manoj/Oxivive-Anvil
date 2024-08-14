@@ -8,7 +8,7 @@ from datetime import date
 # import global_vars
 
 class slot_book(slot_bookTemplate):
-    def __init__(self, oxi_id=None, location_name=None, id_of_serviceprovider=None, service_type=None, oxi_username=None, **properties):
+    def __init__(self, oxi_id=None, location_name=None, id_of_serviceprovider=None, service_type=None, oxi_username=None, image_source=None, label_text=None, address=None, **properties):
         self.init_components(**properties)
         self.set_button_date()
         self.oxi_id = oxi_id  # Store the oxi_id
@@ -25,6 +25,16 @@ class slot_book(slot_bookTemplate):
         print(f"ID of Service Provider in Slot Book : {self.id_of_serviceprovider}")
         print(f"User Name in Slot Book: {self.oxi_username}")
         print(f"Service Type in slot book: {self.service_type}")
+
+        print("data from repeting panal")
+        print(f"Service Provider ID: {id_of_serviceprovider}")
+        print(f"Image Source: {image_source}")
+        print(f"Label Text: {label_text}")
+        print(f"Address: {address}")
+
+        self.oxi_image.source = image_source
+        self.oxi_type.text = label_text
+        self.label_2.text = address
    
     def set_button_date(self):
         current_date = datetime.now()

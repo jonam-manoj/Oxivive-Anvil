@@ -4,12 +4,12 @@ container:
   properties: {tooltip: '', background: '', foreground: '', border: '', visible: true, role: null, html: ''}
 components:
 - type: ColumnPanel
-  properties: {}
+  properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
   components:
   - name: xy_panel_1
-    properties: {height: 67.60000610351562}
+    properties: {height: 60.600006103515625}
     type: XYPanel
     layout_properties: {grid_position: 'IKDSZM,CNMFBE', full_width_row: true}
     components:
@@ -31,14 +31,19 @@ components:
       name: button_12
       layout_properties: {x: 1169, y: 26.541667938232422, width: 100}
       event_bindings: {click: button_12_click}
+- type: XYPanel
+  properties: {height: 563}
+  name: xy_panel_2
+  layout_properties: {grid_position: 'RCTUTJ,NNWKGK', slot: default}
+  components:
   - name: label_3
     properties: {align: center, text: Book a Slot, bold: true, foreground: 'theme:Primary 700', font_size: 20}
     type: Label
-    layout_properties: {grid_position: 'OLTNFF,VBFVNY', full_width_row: true}
+    layout_properties: {grid_position: 'OLTNFF,VBFVNY', full_width_row: true, x: 53, y: 10, width: 1631.11}
   - name: card_1
     properties: {role: card, foreground: '', background: 'theme:Primary 700'}
     type: ColumnPanel
-    layout_properties: {grid_position: 'PCZVMJ,PNJUWC'}
+    layout_properties: {grid_position: 'PCZVMJ,PNJUWC', x: 384.5555725097656, y: 52.5694580078125, width: 970}
     components:
     - name: button_1
       properties: {text: button_1, border: '', foreground: '', role: raised, visible: true, background: 'theme:Gray 200', enabled: true}
@@ -64,13 +69,13 @@ components:
   - name: label_1
     properties: {align: center, text: Choose Time Slot, foreground: 'theme:Primary 700', bold: true, font_size: 15, underline: true}
     type: Label
-    layout_properties: {grid_position: 'MFBRGU,FFRAQB', full_width_row: true}
+    layout_properties: {grid_position: 'MFBRGU,FFRAQB', full_width_row: true, x: 17, y: 122.5694580078125, width: 1625.78}
     data_bindings:
     - {property: underline, code: 'self.item[''1'']', writeback: false}
   - name: card_2
     properties: {role: card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'DYHIWD,IPDWMD'}
+    layout_properties: {grid_position: 'DYHIWD,IPDWMD', x: 384.5555725097656, y: 169.98611450195312, width: 970}
     components:
     - name: button_5
       properties: {text: button_5, visible: false}
@@ -98,11 +103,40 @@ components:
       type: Button
       layout_properties: {grid_position: 'EPMDZF,WOLLQR LQLSFS,ABSTLO'}
   - name: spacer_1
-    properties: {height: 32}
+    properties: {height: 14}
     type: Spacer
-    layout_properties: {grid_position: 'NLJTXR,JPDJUI'}
+    layout_properties: {grid_position: 'NLJTXR,JPDJUI', x: 384.5555725097656, y: 290.77777099609375, width: 970}
   - name: primary_color_1
-    properties: {text: Pay Now, role: primary-color, visible: false, background: 'theme:Primary 700', bold: true}
+    properties: {role: primary-color, bold: true, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: false, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Book Now, margin: null}
     type: Button
-    layout_properties: {grid_position: 'CAHHTO,KXOSUX', full_width_row: true, row_background: ''}
+    layout_properties: {grid_position: 'CAHHTO,KXOSUX', full_width_row: true, row_background: '', x: 61, y: 314.77777099609375, width: 1631.1}
     event_bindings: {click: primary_color_1_click}
+  - type: ColumnPanel
+    properties: {col_widths: '{"CFAKQA":15,"ZALITN":45}'}
+    name: column_panel_1
+    layout_properties: {x: 53, y: 52.56944274902344, width: 299}
+    components:
+    - type: Image
+      properties: {height: 208}
+      name: oxi_image
+      layout_properties: {grid_position: 'TSAKZJ,NFARLY'}
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_3
+      layout_properties: {grid_position: 'IDPFPZ,PSQAKT'}
+    - type: Label
+      properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Black', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: '', margin: null}
+      name: oxi_type
+      layout_properties: {grid_position: 'NBUUMB,NKXHZF'}
+    - type: Spacer
+      properties: {height: 23}
+      name: spacer_2
+      layout_properties: {grid_position: 'JURKMP,KILYCA'}
+    - type: Label
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Addres :', margin: null}
+      name: label_5
+      layout_properties: {grid_position: 'ZFIUZI,CFAKQA'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '', margin: null}
+      name: label_2
+      layout_properties: {grid_position: 'ZFIUZI,ZALITN'}

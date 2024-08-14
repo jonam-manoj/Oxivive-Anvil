@@ -51,7 +51,7 @@ class new_dashboard(new_dashboardTemplate):
         if result['oxiwheels_exists']:
             address = app_tables.oxiwheels.get(oxi_id=result['id_of_serviceprovider_wheel'])['oxiwheels_address']
             repeating_panel_items.append({
-                'image_source': '_/theme/Untitled design (2).png',
+                'image_source': '_/theme/ed and (1).png',
                 'label_text': 'OXIWHEELS',
                 'address': address,
                 'id_of_serviceprovider': result['id_of_serviceprovider_wheel']
@@ -60,7 +60,7 @@ class new_dashboard(new_dashboardTemplate):
         if result['oxigyms_exists']:
             address = app_tables.oxigyms.get(oxi_id=result['id_of_serviceprovider_gym'])['oxigyms_address']
             repeating_panel_items.append({
-                'image_source': '_/theme/ed and (1).png',
+                'image_source': '_/theme/Untitled design (2).png',
                 'label_text': 'OXIGYM',
                 'address': address,
                 'id_of_serviceprovider': result['id_of_serviceprovider_gym']

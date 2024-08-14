@@ -816,3 +816,20 @@ https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-m
 .anvil-role-card-spacing {
     margin-bottom: 20px;  /* Adds space between the cards */
 }
+
+
+.anvil-role-repeating-panel-rise {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between cards */
+}
+
+.anvil-role-repeating-panel-rise > * {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth rise effect */
+    transform: translateZ(0); /* Ensure proper 3D space */
+}
+
+.anvil-role-repeating-panel-rise > *:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Shadow for the rise effect */
+}
