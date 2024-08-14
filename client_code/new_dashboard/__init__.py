@@ -9,10 +9,12 @@ class new_dashboard(new_dashboardTemplate):
     def __init__(self, oxi_id=None, oxi_username=None, **properties):
         # Set Form properties and Data Bindings.
         self.init_components(**properties)
-        self.repeating_panel_2.scroll_direction = 'horizontal'
-        self.repeating_panel_2.reverse_order = True  # This will reverse the scroll direction
+        self.repeating_panel_2.scroll_direction = 'vertical'
+        self.repeating_panel_2.reverse_order = True  # This will reverse the scroll direction (bottom to top)
+ # This will reverse the scroll direction
 
-        self.repeating_panel_2.role = 'repeating-panel-rtl'
+        self.repeating_panel_2.role = 'repeating-panel-vertical-rtl'
+
 
 
         self.repeating_panel_2.items = []  # Initialize repeating panel items
