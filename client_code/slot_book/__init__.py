@@ -35,6 +35,9 @@ class slot_book(slot_bookTemplate):
         self.oxi_image.source = image_source
         self.oxi_type.text = label_text
         self.label_2.text = address
+
+        self.day_label.text = datetime.now().strftime("%A")  # e.g., "Friday"
+        self.month_label.text = datetime.now().strftime("%B %d, %Y")
    
     def set_button_date(self):
         current_date = datetime.now()
