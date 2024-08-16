@@ -21,16 +21,6 @@ components:
       properties: {text: OXIVIVE, bold: true, font_size: 20, foreground: red, spacing_above: large}
       type: Label
       layout_properties: {x: 84.08750991895795, y: 26.55000190809369, width: 466}
-    - type: Button
-      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: home, margin: null}
-      name: button_11
-      layout_properties: {x: 1059, y: 26.541667938232422, width: 100}
-      event_bindings: {click: button_11_click}
-    - type: Button
-      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back, margin: null}
-      name: button_12
-      layout_properties: {x: 1169, y: 26.541667938232422, width: 100}
-      event_bindings: {click: button_12_click}
     - type: Label
       properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: '', margin: null}
       name: month_label
@@ -39,8 +29,18 @@ components:
       properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, font_size: 30, tooltip: '', text: '', margin: null}
       name: day_label
       layout_properties: {x: 57, y: 109, width: 160}
+    - type: Button
+      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back, margin: null}
+      name: button_12
+      layout_properties: {x: 1451, y: 26.541667938232422, width: 100}
+      event_bindings: {click: button_12_click}
+    - type: Button
+      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: home, margin: null}
+      name: button_11
+      layout_properties: {x: 1308, y: 26.541667938232422, width: 100}
+      event_bindings: {click: button_11_click}
 - type: XYPanel
-  properties: {height: 1905.5556983947754}
+  properties: {height: 1850.5556983947754}
   name: xy_panel_2
   layout_properties: {grid_position: 'RCTUTJ,NNWKGK', slot: default}
   components:
@@ -75,7 +75,7 @@ components:
       layout_properties: {grid_position: 'YUKIRJ,ULAYLG'}
       event_bindings: {click: button_4_click}
     - type: Spacer
-      properties: {height: 23}
+      properties: {height: 40}
       name: spacer_1
       layout_properties: {grid_position: 'DXDMXA,GCYAAO', full_width_row: true}
     - name: label_1
@@ -85,7 +85,7 @@ components:
       data_bindings:
       - {property: underline, code: 'self.item[''1'']', writeback: false}
     - type: Spacer
-      properties: {height: 16}
+      properties: {height: 44}
       name: spacer_1_copy
       layout_properties:
         col_widths: {}
@@ -117,7 +117,7 @@ components:
       type: Button
       layout_properties: {grid_position: 'ROMJUK,CVDZDW'}
     - type: Spacer
-      properties: {height: 25}
+      properties: {height: 56}
       name: spacer_1_copy_2
       layout_properties:
         col_widths: {}
@@ -129,203 +129,9 @@ components:
       layout_properties: {grid_position: 'DZIBLS,JBSCED', full_width_row: true, row_background: '', x: 386.4025725097656, y: 439.77777099609375, width: 569.153}
       event_bindings: {click: primary_color_1_click}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{"BWTUPF":10,"DQYUYM":32,"SMPDAE":8,"HZBVCU":10,"KPCSUG":9,"ARWHWU":37,"KBEFYF":11,"FQGAUD":11}', spacing_above: small, background: lightred, wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
-    name: column_panel_2
-    layout_properties: {x: 840.5972290039062, y: 202.76388549804688, width: 560}
-    components:
-    - type: Spacer
-      properties: {height: 73}
-      name: spacer_9
-      layout_properties: {grid_position: 'BXNCFY,AUKJWW'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Appointment time, margin: null}
-      name: label_4
-      layout_properties: {grid_position: 'VINUAU,LKMMKV'}
-    - type: Label
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Sat, 17 Aug 05:00 PM ', margin: null}
-      name: label_6
-      layout_properties: {grid_position: 'JYGUGK,OSCOIZ'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: ' in 33 hours and 7 minutes', margin: null}
-      name: label_7
-      layout_properties: {grid_position: 'JYGUGK,PAPKKK'}
-    - type: Spacer
-      properties: {height: 18}
-      name: spacer_4
-      layout_properties: {grid_position: 'LXLMWU,XNIUKX'}
-    - type: Spacer
-      properties: {height: 14}
-      name: spacer_5
-      layout_properties: {grid_position: 'LRPNKH,ZBVPBU'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Choose a mode of payment, margin: null}
-      name: label_14
-      layout_properties: {grid_position: 'OUHSXF,QXVCVV'}
-    - type: Spacer
-      properties: {height: 32}
-      name: spacer_6
-      layout_properties: {grid_position: 'EHESGW,SMPDAE'}
-    - type: RadioButton
-      properties: {role: null, bold: false, align: left, selected: false, spacing_above: small, value: '', background: '', underline: false, font: '', group_name: radioGroup1, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 15, tooltip: '', text: '', margin: null}
-      name: radio_button_1
-      layout_properties: {grid_position: 'EHESGW,BWTUPF'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Pay Online ', margin: null}
-      name: label_15
-      layout_properties: {grid_position: 'EHESGW,DQYUYM'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: Rs 1, margin: null}
-      name: label_16
-      layout_properties: {grid_position: 'EHESGW,HZBVCU'}
-    - type: Spacer
-      properties: {height: 32}
-      name: spacer_6_copy
-      layout_properties:
-        col_widths: {}
-        grid_position: XHMQOD,KPCSUG
-    - type: RadioButton
-      properties: {role: null, bold: false, align: left, selected: false, spacing_above: small, value: '', background: '', underline: false, font: '', group_name: radioGroup1, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
-      name: radio_button_2
-      layout_properties: {grid_position: 'XHMQOD,FQGAUD'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: Pay in clinic, margin: null}
-      name: label_15_copy
-      layout_properties:
-        col_widths: {}
-        grid_position: XHMQOD,ARWHWU
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: Rs 1, margin: null}
-      name: label_16_copy
-      layout_properties:
-        col_widths: {}
-        grid_position: XHMQOD,KBEFYF
-    - type: Link
-      properties: {role: selected, bold: true, align: center, col_widths: '', spacing_above: small, background: '', icon: '', wrap_on: mobile, underline: false, font: '', col_spacing: small, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', spacing: null, text: View Bill}
-      name: link_2
-      layout_properties: {grid_position: 'FHGKYL,XDTXBZ'}
-    - type: ColumnPanel
-      properties: {role: card, col_widths: '{"IOQNSA":46,"JLAKTC":14}'}
-      name: card_3
-      layout_properties: {grid_position: 'LWGVUU,HWXTRG'}
-      components:
-      - type: Label
-        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: 'fa:ticket', underline: false, font: '', icon_align: left, foreground: green, spacing_below: small, visible: true, border: '', italic: false, font_size: 100, tooltip: '', text: '', margin: null}
-        name: label_17
-        layout_properties: {grid_position: 'YZEBXC,IOQNSA KSBDBZ,DXXPTC'}
-      - type: Label
-        properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: true, font_size: 17, tooltip: '', text: Apply Coupon, margin: null}
-        name: label_18
-        layout_properties: {grid_position: 'YZEBXC,IOQNSA KSBDBZ,FPQKOZ RWPPYI,DNRPJQ'}
-      - type: Label
-        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Unlock with offers with coupon codes ', margin: null}
-        name: label_19
-        layout_properties: {grid_position: 'YZEBXC,IOQNSA KSBDBZ,FPQKOZ BSFBUE,ZWYNRK'}
-      - type: Spacer
-        properties: {height: 32}
-        name: spacer_7
-        layout_properties: {grid_position: 'YZEBXC,JLAKTC QZZEFM,MIVTJA'}
-      - type: Link
-        properties: {role: null, bold: false, align: center, col_widths: '{}', spacing_above: small, background: '', icon: '', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: 'theme:Primary 700', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', spacing: null, text: APPLY}
-        name: link_1
-        layout_properties: {grid_position: 'YZEBXC,JLAKTC WUDKMA,FQPCCY'}
-        components: []
-        event_bindings: {click: link_1_click}
-    - type: Label
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Safety measures followed by Clinic, margin: null}
-      name: label_35
-      layout_properties: {grid_position: 'OFLUEA,GKUASD'}
-    - type: Label
-      properties:
-        role: null
-        bold: false
-        align: left
-        spacing_above: small
-        background: ''
-        icon: ''
-        underline: false
-        font: ''
-        icon_align: left
-        foreground: theme:Gray 600
-        spacing_below: small
-        visible: true
-        border: ''
-        italic: false
-        font_size: 18
-        tooltip: ''
-        text: "*  Mask Mandatory \n"
-        margin: null
-      name: label_36
-      layout_properties: {grid_position: 'XMLDZC,MQQMSW'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: '* Temperature check at entrance ', margin: null}
-      name: label_37
-      layout_properties: {grid_position: 'MBSQWN,QAVKTY'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: '* Sanitization of the visitors ', margin: null}
-      name: label_38
-      layout_properties: {grid_position: 'EUTENE,TKNOSE'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: '* Social distance maintained ', margin: null}
-      name: label_39
-      layout_properties: {grid_position: 'DQCHUU,DWTUTG'}
-    - type: Spacer
-      properties: {height: 24}
-      name: spacer_8
-      layout_properties: {grid_position: 'CJTNYF,RRQDWK'}
-    - type: Button
-      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'Pay & confirm Book ', margin: null}
-      name: button_13
-      layout_properties: {grid_position: 'QQBDXA,WWLVET'}
-  - type: ColumnPanel
-    properties: {role: card, col_widths: '{}'}
-    name: card_5
-    layout_properties: {grid_position: 'GEJOYU,CUFXLN', x: 908, y: 0, width: 416}
-    components:
-    - type: Image
-      properties: {role: null, vertical_align: center, alt_text: '', spacing_above: small, background: '', horizontal_align: center, source: _/theme/Untitled design (1).png, foreground: '', display_mode: shrink_to_fit, spacing_below: small, visible: true, border: '', tooltip: '', height: 184, margin: null}
-      name: image_2
-      layout_properties: {grid_position: 'BHFEKI,LNWKJX'}
-    - type: Spacer
-      properties: {height: 16}
-      name: spacer_12
-      layout_properties: {grid_position: 'PPDSGF,NHAPNU'}
-    - type: Label
-      properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: 'Oxivive Home ', margin: null}
-      name: label_40
-      layout_properties: {grid_position: 'LHKFRF,QBEFLO'}
-  - type: ColumnPanel
-    properties: {role: card, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
-    name: column_panel_1
-    layout_properties: {x: 115.55555725097656, y: 423.5694580078125, width: 631.056}
-    components:
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: 'Clinic Details ', margin: null}
-      name: label_8
-      layout_properties: {grid_position: 'WQPMSV,QRIZLW'}
-    - type: Label
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 29 13TH CROSS ASHOK NAGAR BSK 1ST STAGE, margin: null}
-      name: label_9
-      layout_properties: {grid_position: 'DZZKGU,LCTYUO'}
-    - type: Label
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#b300b3', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Oxivive Promise -, margin: null}
-      name: label_10
-      layout_properties: {grid_position: 'OWXWEG,UTEEPJ'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Appointment confirmed instantly ', margin: null}
-      name: label_11
-      layout_properties: {grid_position: 'OWXWEG,GQUXAT'}
-    - type: Label
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#b300b3', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Distance between - ', margin: null}
-      name: label_12
-      layout_properties: {grid_position: 'EXVEVJ,PTBCJD'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Error fetching coordinates:', margin: null}
-      name: label_13
-      layout_properties: {grid_position: 'EXVEVJ,EFGVYY'}
-  - type: ColumnPanel
     properties: {role: card, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
     name: column_panel_3
-    layout_properties: {x: 115.55555725097656, y: 665.7916870117188, width: 631.056}
+    layout_properties: {x: 115.55555725097656, y: 958.75, width: 1330.06}
     components:
     - type: Label
       properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 19, tooltip: '', text: 'Bill Details ', margin: null}
@@ -372,44 +178,251 @@ components:
       name: label_30
       layout_properties: {grid_position: 'EJXOAN,RYSCUC'}
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{"ROKLQW":15,"KSZFKR":45,"OQFJIZ":15,"FKZBTA":45,"CKMKIL":15,"XMNLFU":45}'}
+    properties: {role: card, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
+    name: column_panel_1
+    layout_properties: {x: 115.55555725097656, y: 525.5694580078125, width: 1330.06}
+    components:
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: 'Clinic Details ', margin: null}
+      name: label_8
+      layout_properties: {grid_position: 'QTNQYD,HOZAKU WQPMSV,QRIZLW'}
+    - type: Label
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 29 13TH CROSS ASHOK NAGAR BSK 1ST STAGE, margin: null}
+      name: label_9
+      layout_properties: {grid_position: 'QTNQYD,HOZAKU DZZKGU,LCTYUO'}
+    - type: Label
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#b300b3', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Oxivive Promise -, margin: null}
+      name: label_10
+      layout_properties: {grid_position: 'QTNQYD,HOZAKU OWXWEG,UTEEPJ'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Appointment confirmed instantly ', margin: null}
+      name: label_11
+      layout_properties: {grid_position: 'QTNQYD,HOZAKU OWXWEG,GQUXAT'}
+    - type: Label
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '#b300b3', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Distance between - ', margin: null}
+      name: label_12
+      layout_properties: {grid_position: 'QTNQYD,HOZAKU EXVEVJ,PTBCJD'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Error fetching coordinates:', margin: null}
+      name: label_13
+      layout_properties: {grid_position: 'QTNQYD,HOZAKU EXVEVJ,EFGVYY'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Choose a mode of payment, margin: null}
+      name: label_14
+      layout_properties: {grid_position: 'QTNQYD,LCDNND IZWVNM,CDWPOZ'}
+    - type: Spacer
+      properties: {height: 14}
+      name: spacer_5
+      layout_properties: {grid_position: 'QTNQYD,LCDNND YTTEUO,MIAPEI'}
+    - type: RadioButton
+      properties: {role: null, bold: false, align: left, selected: false, spacing_above: small, value: '', background: '', underline: false, font: '', group_name: radioGroup1, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: 15, tooltip: '', text: '', margin: null}
+      name: radio_button_1
+      layout_properties: {grid_position: 'QTNQYD,LCDNND NFFOYN,DVRDLT WOPMRR,MQQVCV'}
+    - type: RadioButton
+      properties: {role: null, bold: false, align: left, selected: false, spacing_above: small, value: '', background: '', underline: false, font: '', group_name: radioGroup1, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+      name: radio_button_2
+      layout_properties: {grid_position: 'QTNQYD,LCDNND NFFOYN,DVRDLT TWCYYH,JSSRWP'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Pay Online ', margin: null}
+      name: label_15
+      layout_properties: {grid_position: 'QTNQYD,LCDNND NFFOYN,MGTXTA ZELUEU,QDWYKQ'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: Pay in clinic, margin: null}
+      name: label_15_copy
+      layout_properties:
+        col_widths: {}
+        grid_position: QTNQYD,LCDNND NFFOYN,MGTXTA SFVBBW,ZGJXNV
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: Rs 1, margin: null}
+      name: label_16
+      layout_properties: {grid_position: 'QTNQYD,LCDNND NFFOYN,ACMWPC QOTYNQ,ZIUPKW'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: Rs 1, margin: null}
+      name: label_16_copy
+      layout_properties:
+        col_widths: {}
+        grid_position: QTNQYD,LCDNND NFFOYN,ACMWPC OPCZSP,IETJOP
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{"IOQNSA":46,"JLAKTC":14}'}
+      name: card_3
+      layout_properties: {grid_position: 'QTNQYD,LCDNND PJEFLD,UBBAEP'}
+      components:
+      - type: Label
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: 'fa:ticket', underline: false, font: '', icon_align: left, foreground: green, spacing_below: small, visible: true, border: '', italic: false, font_size: 50, tooltip: '', text: '', margin: null}
+        name: label_17
+        layout_properties: {grid_position: 'YZEBXC,IOQNSA KSBDBZ,DXXPTC'}
+      - type: Label
+        properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: true, font_size: 17, tooltip: '', text: Apply Coupon, margin: null}
+        name: label_18
+        layout_properties: {grid_position: 'YZEBXC,IOQNSA KSBDBZ,FPQKOZ RWPPYI,DNRPJQ'}
+      - type: Label
+        properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Unlock with offers with coupon codes ', margin: null}
+        name: label_19
+        layout_properties: {grid_position: 'YZEBXC,IOQNSA KSBDBZ,FPQKOZ BSFBUE,ZWYNRK'}
+      - type: Spacer
+        properties: {height: 32}
+        name: spacer_7
+        layout_properties: {grid_position: 'YZEBXC,JLAKTC QZZEFM,MIVTJA'}
+      - type: Link
+        properties: {role: null, bold: false, align: center, col_widths: '{}', spacing_above: small, background: '', icon: '', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: 'theme:Primary 700', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', spacing: null, text: APPLY}
+        name: link_1
+        layout_properties: {grid_position: 'YZEBXC,JLAKTC WUDKMA,FQPCCY'}
+        components: []
+        event_bindings: {click: link_1_click}
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_3
+      layout_properties: {grid_position: 'QTNQYD,LCDNND PDQTFZ,OMRTLQ'}
+    - type: Button
+      properties: {role: raised, bold: true, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 700', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: View Bill, margin: null}
+      name: button_14
+      layout_properties: {grid_position: 'QTNQYD,LCDNND ASNKHW,PCKAFJ'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{"KPCSUG":9}', spacing_above: small, background: lightred, wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
+    name: column_panel_2
+    layout_properties: {x: 840.5972290039062, y: 213.47222900390625, width: 605.014}
+    components:
+    - type: Spacer
+      properties: {height: 79}
+      name: spacer_9
+      layout_properties: {grid_position: 'BGQBTT,GOENZV'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Appointment time, margin: null}
+      name: label_4
+      layout_properties: {grid_position: 'VINUAU,LKMMKV'}
+    - type: Label
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Sat, 17 Aug 05:00 PM ', margin: null}
+      name: label_6
+      layout_properties: {grid_position: 'JYGUGK,OSCOIZ'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: ' in 33 hours and 7 minutes', margin: null}
+      name: label_7
+      layout_properties: {grid_position: 'JYGUGK,PAPKKK'}
+    - type: Spacer
+      properties: {height: 18}
+      name: spacer_4
+      layout_properties: {grid_position: 'LXLMWU,XNIUKX'}
+    - type: Spacer
+      properties: {height: 17}
+      name: spacer_6_copy
+      layout_properties:
+        col_widths: {}
+        grid_position: XHMQOD,KPCSUG
+  - type: XYPanel
+    properties: {height: 105}
+    name: xy_panel_3
+    layout_properties: {grid_position: 'KAAFMP,WVJPGD', x: 908.6111450195312, y: 166, width: 479}
+    components:
+    - type: ColumnPanel
+      properties: {role: card, col_widths: '{}'}
+      name: card_5
+      layout_properties: {grid_position: 'GEJOYU,CUFXLN', x: 0, y: -156.93, width: 448}
+      components:
+      - type: Image
+        properties: {role: null, vertical_align: center, alt_text: '', spacing_above: small, background: '', horizontal_align: center, source: _/theme/Untitled design (1).png, foreground: '', display_mode: shrink_to_fit, spacing_below: small, visible: true, border: '', tooltip: '', height: 184, margin: null}
+        name: image_2
+        layout_properties: {grid_position: 'BHFEKI,LNWKJX'}
+      - type: Label
+        properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: 'Oxivive Home ', margin: null}
+        name: label_40
+        layout_properties: {grid_position: 'LHKFRF,QBEFLO'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{"ROKLQW":15,"KSZFKR":45,"OQFJIZ":15,"FKZBTA":45,"CKMKIL":15,"XMNLFU":45,"BENHFB":35,"HVDDTL":11,"UIXCQV":24,"TKMMSE":11}'}
     name: card_4
     layout_properties:
       col_widths: {}
       grid_position: EOQQKO,FNDCFM
-      x: 115.55555725097656
-      y: 1036.7083740234375
-      width: 631.056
+      x: 115.54166412353516
+      y: 1338.7083740234375
+      width: 1330.06
     components:
     - type: Label
       properties: {role: null, bold: true, align: center, spacing_above: small, background: '#ff9dac', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, font_size: 25, tooltip: '', text: Oxivive Promise, margin: null}
       name: label_31
-      layout_properties: {grid_position: 'MMXNOU,SYWTZN'}
+      layout_properties: {grid_position: 'THKSTB,BENHFB MMXNOU,SYWTZN'}
     - type: CheckBox
       properties: {role: null, bold: false, align: center, spacing_above: small, background: '', allow_indeterminate: false, underline: false, font: '', foreground: '', checked: false, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
       name: check_box_1
-      layout_properties: {grid_position: 'IEAWDY,ROKLQW'}
+      layout_properties: {grid_position: 'THKSTB,BENHFB IEAWDY,ROKLQW'}
     - type: Label
       properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: Appointment confirmed instantly with the doctor, margin: null}
       name: label_32
-      layout_properties: {grid_position: 'IEAWDY,KSZFKR'}
+      layout_properties: {grid_position: 'THKSTB,BENHFB IEAWDY,KSZFKR'}
     - type: Spacer
       properties: {height: 32}
       name: spacer_13
-      layout_properties: {grid_position: 'UFFEXL,OQFJIZ AUMAPF,KTJOYP'}
+      layout_properties: {grid_position: 'THKSTB,BENHFB UFFEXL,OQFJIZ AUMAPF,KTJOYP'}
     - type: CheckBox
       properties: {role: null, bold: false, align: center, spacing_above: small, background: '', allow_indeterminate: false, underline: false, font: '', foreground: '', checked: false, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
       name: check_box_2
-      layout_properties: {grid_position: 'UFFEXL,OQFJIZ XPGXBK,SPTHZY'}
+      layout_properties: {grid_position: 'THKSTB,BENHFB UFFEXL,OQFJIZ XPGXBK,SPTHZY'}
     - type: Label
       properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'We assure we will connect you to the doctor. if your consultation does not happen for unforeseen reasons, we will give you 100% money back.', margin: null}
       name: label_33
-      layout_properties: {grid_position: 'UFFEXL,FKZBTA'}
+      layout_properties: {grid_position: 'THKSTB,BENHFB UFFEXL,FKZBTA'}
     - type: CheckBox
       properties: {role: null, bold: false, align: center, spacing_above: small, background: '', allow_indeterminate: false, underline: false, font: '', foreground: '', checked: false, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
       name: check_box_3
-      layout_properties: {grid_position: 'EWCUDZ,CKMKIL'}
+      layout_properties: {grid_position: 'THKSTB,BENHFB EWCUDZ,CKMKIL'}
     - type: Label
       properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 24/7 live chat support to address all your queries., margin: null}
       name: label_34
-      layout_properties: {grid_position: 'EWCUDZ,XMNLFU'}
+      layout_properties: {grid_position: 'THKSTB,BENHFB EWCUDZ,XMNLFU'}
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_6
+      layout_properties: {grid_position: 'THKSTB,TKMMSE'}
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_2
+      layout_properties: {grid_position: 'THKSTB,HVDDTL'}
+    - type: Label
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Safety measures followed by Clinic, margin: null}
+      name: label_35
+      layout_properties: {grid_position: 'THKSTB,UIXCQV PKUABR,FTCTPL'}
+    - type: Label
+      properties:
+        role: null
+        bold: false
+        align: left
+        spacing_above: small
+        background: ''
+        icon: ''
+        underline: false
+        font: ''
+        icon_align: left
+        foreground: theme:Gray 600
+        spacing_below: small
+        visible: true
+        border: ''
+        italic: false
+        font_size: 18
+        tooltip: ''
+        text: "*  Mask Mandatory \n"
+        margin: null
+      name: label_36
+      layout_properties: {grid_position: 'THKSTB,UIXCQV ARZDOW,NAITGA'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: '* Temperature check at entrance ', margin: null}
+      name: label_37
+      layout_properties: {grid_position: 'THKSTB,UIXCQV MVKLCB,HGPKQH'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: '* Sanitization of the visitors ', margin: null}
+      name: label_38
+      layout_properties: {grid_position: 'THKSTB,UIXCQV MOCUIH,TGXMQP'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: '* Social distance maintained ', margin: null}
+      name: label_39
+      layout_properties: {grid_position: 'THKSTB,UIXCQV LLMWNQ,TWEGRH'}
+    - type: Spacer
+      properties: {height: 24}
+      name: spacer_8
+      layout_properties: {grid_position: 'THKSTB,UIXCQV XGXHNW,QZKQNR'}
+    - type: Button
+      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'Pay & confirm Book ', margin: null}
+      name: button_13
+      layout_properties: {grid_position: 'THKSTB,UIXCQV UXGRPF,DDBTEZ'}
+  - type: TextBox
+    properties: {}
+    name: text_box_1
+    layout_properties: {x: 864, y: 1720.6803740234375, width: 160}
