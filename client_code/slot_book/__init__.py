@@ -38,6 +38,8 @@ class slot_book(slot_bookTemplate):
 
         self.day_label.text = datetime.now().strftime("%A")  # e.g., "Friday"
         self.month_label.text = datetime.now().strftime("%B %d, %Y")
+        self.update_date_buttons()
+      
         self.reset_date_buttons()
         self.button_1.background = "#ff0202"
         self.display_time_slots(0)
@@ -47,7 +49,20 @@ class slot_book(slot_bookTemplate):
             button = getattr(self, button_name)
             button.set_event_handler('click', self.time_button_click)
 
-    
+        self.column_panel_2.visible = False
+        self.column_panel_3.visible = False
+
+        self.primary_color_1.set_event_handler('click', self.primary_color_1_click)
+
+    def update_date_buttons(self):
+        # Update the text on date buttons to show the correct days (e.g., "Fri", "Sat", "Sun", "Mon")
+        for i in range(4):
+            button_name = f'button_{i + 1}'
+            button = getattr(self, button_name)
+            day_name = (datetime.now() + timedelta(days=i)).strftime("%a")  # Get day name
+            button.text = day_name
+            print(f"Updated {button_name} text to: {day_name}")
+          
     def reset_date_buttons(self):
         # Reset the color of all date buttons (button_1 to button_4) to default
         for i in range(1, 5):
@@ -115,6 +130,8 @@ class slot_book(slot_bookTemplate):
         self.button_4.background = "#ff0202"  # Set the clicked date button color
         self.display_time_slots(3)  # Display time slots for 3 days from now
         self.primary_color_1.visible = True
+
+    
     
     def time_button_click(self, **event_args):
         clicked_button = event_args['sender']
@@ -142,40 +159,39 @@ class slot_book(slot_bookTemplate):
         
         print(f"Booking time range: {self.oxi_book_time}")
 
-    def reset_time_buttons(self):
-        # Reset the color of all time buttons (button_5 to button_10) to default
-        for i in range(5, 11):
-            button_name = f'button_{i}'
-            button = getattr(self, button_name)
-            button.background = ""  # Reset to default color
+    
   
     def primary_color_1_click(self, **event_args):
-        try:
-            # Generate random booking ID
-            oxi_book_id = f"BI{random.randint(10000, 99999)}"  # Example: BI70000
+       
+        # try:
+        #     # Generate random booking ID
+        #     oxi_book_id = f"BI{random.randint(10000, 99999)}"  # Example: BI70000
 
-            # Get the current date
-            current_date = datetime.now()
-            oxi_book_date_db = current_date.date()  # Store as date type for the database
+        #     # Get the current date
+        #     current_date = datetime.now()
+        #     oxi_book_date_db = current_date.date()  # Store as date type for the database
 
-            # Get current datetime and format oxi_date_time
-            oxi_date_time = f"{self.selected_date} {self.selected_time}"
+        #     # Get current datetime and format oxi_date_time
+        #     oxi_date_time = f"{self.selected_date} {self.selected_time}"
 
-            # Prepare variables
-            oxi_id = self.oxi_id  # From new_dashboard form
-            oxi_servicer_id = self.id_of_serviceprovider  # The ID of the selected service provider
-            oxi_service_type = self.service_type  # The type of service selected (OxiGym, OxiWheel, OxiClinic)
-            oxi_username = self.oxi_username  # Username from the login form
-            oxi_payment_id = "0000"
+        #     # Prepare variables
+        #     oxi_id = self.oxi_id  # From new_dashboard form
+        #     oxi_servicer_id = self.id_of_serviceprovider  # The ID of the selected service provider
+        #     oxi_service_type = self.service_type  # The type of service selected (OxiGym, OxiWheel, OxiClinic)
+        #     oxi_username = self.oxi_username  # Username from the login form
+        #     oxi_payment_id = "0000"
 
-            # Call the server function to insert booking data
-            anvil.server.call('insert_booking_data', oxi_id, oxi_book_date_db, oxi_servicer_id, oxi_book_id, oxi_date_time, self.oxi_book_time, oxi_payment_id, oxi_service_type, oxi_username)
+        #     # Call the server function to insert booking data
+        #     anvil.server.call('insert_booking_data', oxi_id, oxi_book_date_db, oxi_servicer_id, oxi_book_id, oxi_date_time, self.oxi_book_time, oxi_payment_id, oxi_service_type, oxi_username)
 
-            print("Booking data inserted successfully.")
-            # Pass the booking details to the Activity form
-            open_form('Activity', oxi_id=oxi_id, location_name=self.location_name, id_of_serviceprovider=oxi_servicer_id, service_type=oxi_service_type, oxi_username=oxi_username, oxi_book_time=self.oxi_book_time, oxi_book_date=oxi_book_date_db, oxi_book_id=oxi_book_id)
-        except Exception as e:
-            print(f"Error: {e}")
+        #     print("Booking data inserted successfully.")
+        #     #Pass the booking details to the Activity form
+        #     open_form('Activity', oxi_id=oxi_id, location_name=self.location_name, id_of_serviceprovider=oxi_servicer_id, service_type=oxi_service_type, oxi_username=oxi_username, oxi_book_time=self.oxi_book_time, oxi_book_date=oxi_book_date_db, oxi_book_id=oxi_book_id)
+        # except Exception as e:
+        #     print(f"Error: {e}")
+
+        self.column_panel_2.visible = True
+        self.column_panel_3.visible = True
 
     def button_11_click(self, **event_args):
       """This method is called when the button is clicked"""
