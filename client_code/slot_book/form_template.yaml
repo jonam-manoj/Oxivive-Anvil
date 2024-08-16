@@ -30,15 +30,15 @@ components:
       name: day_label
       layout_properties: {x: 57, y: 109, width: 160}
     - type: Button
-      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back, margin: null}
-      name: button_12
-      layout_properties: {x: 1451, y: 26.541667938232422, width: 100}
-      event_bindings: {click: button_12_click}
-    - type: Button
       properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: home, margin: null}
       name: button_11
-      layout_properties: {x: 1308, y: 26.541667938232422, width: 100}
+      layout_properties: {x: 1278, y: 26.541667938232422, width: 100}
       event_bindings: {click: button_11_click}
+    - type: Button
+      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Back, margin: null}
+      name: button_12
+      layout_properties: {x: 1416, y: 26.541667938232422, width: 100}
+      event_bindings: {click: button_12_click}
 - type: XYPanel
   properties: {height: 1850.5556983947754}
   name: xy_panel_2
@@ -128,59 +128,55 @@ components:
       type: Button
       layout_properties: {grid_position: 'DZIBLS,JBSCED', full_width_row: true, row_background: '', x: 386.4025725097656, y: 439.77777099609375, width: 569.153}
       event_bindings: {click: primary_color_1_click}
+  - type: XYPanel
+    properties: {height: 105}
+    name: xy_panel_3
+    layout_properties: {grid_position: 'KAAFMP,WVJPGD', x: 908.6111450195312, y: 166, width: 479}
+    components: []
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
-    name: column_panel_3
-    layout_properties: {x: 115.55555725097656, y: 958.75, width: 1330.06}
+    properties: {role: card, col_widths: '{"KPCSUG":9}', spacing_above: small, background: lightred, wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
+    name: column_panel_2
+    layout_properties: {x: 834.5972290039062, y: 215.47299999999996, width: 605.014}
     components:
+    - type: Spacer
+      properties: {height: 60}
+      name: spacer_9
+      layout_properties: {grid_position: 'BGQBTT,GOENZV'}
     - type: Label
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 19, tooltip: '', text: 'Bill Details ', margin: null}
-      name: label_20
-      layout_properties: {grid_position: 'RBOKBO,ILPUZN'}
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Appointment time, margin: null}
+      name: label_4
+      layout_properties: {grid_position: 'VINUAU,LKMMKV'}
     - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Consultation Fee ', margin: null}
-      name: label_21
-      layout_properties: {grid_position: 'MZALYR,DELMKL'}
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Sat, 17 Aug 05:00 PM ', margin: null}
+      name: label_6
+      layout_properties: {grid_position: 'JYGUGK,OSCOIZ'}
     - type: Label
-      properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: Rs 1, margin: null}
-      name: label_22
-      layout_properties: {grid_position: 'MZALYR,ILEOVM'}
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: ' in 33 hours and 7 minutes', margin: null}
+      name: label_7
+      layout_properties: {grid_position: 'JYGUGK,PAPKKK'}
+    - type: Spacer
+      properties: {height: 17}
+      name: spacer_6_copy
+      layout_properties:
+        col_widths: {}
+        grid_position: XHMQOD,KPCSUG
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}'}
+    name: card_5
+    layout_properties: {grid_position: 'GEJOYU,CUFXLN', x: 902.6111450195312, y: 32, width: 448}
+    components:
+    - type: Image
+      properties: {role: null, vertical_align: center, alt_text: '', spacing_above: small, background: '', horizontal_align: center, source: _/theme/Untitled design (1).png, foreground: '', display_mode: shrink_to_fit, spacing_below: small, visible: true, border: '', tooltip: '', height: 184, margin: null}
+      name: image_2
+      layout_properties: {grid_position: 'BHFEKI,LNWKJX'}
     - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Service Fee & Tax ', margin: null}
-      name: label_23
-      layout_properties: {grid_position: 'THCQBO,UUMCXG'}
-    - type: Label
-      properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: green, spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: FREE, margin: null}
-      name: label_24
-      layout_properties: {grid_position: 'THCQBO,PXTCYW'}
-    - type: Label
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: green, spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: We care for you & provide a free booking, margin: null}
-      name: label_25
-      layout_properties: {grid_position: 'VNCEWL,HNKDMN'}
-    - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Discount/Coupon, margin: null}
-      name: label_26
-      layout_properties: {grid_position: 'LGDYXA,SFXLSS'}
-    - type: Label
-      properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: Nothing, margin: null}
-      name: label_27
-      layout_properties: {grid_position: 'LGDYXA,KLILVJ'}
-    - type: Label
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: 'Total Payable ', margin: null}
-      name: label_28
-      layout_properties: {grid_position: 'ESVCPM,TLYMPN'}
-    - type: Label
-      properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Rs 1, margin: null}
-      name: label_29
-      layout_properties: {grid_position: 'ESVCPM,QHITEJ'}
-    - type: Label
-      properties: {role: null, bold: false, align: center, spacing_above: small, background: lightgreen, icon: '', underline: false, font: '', icon_align: left, foreground: green, spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'You have saved Rs 49 on this appointment ', margin: null}
-      name: label_30
-      layout_properties: {grid_position: 'EJXOAN,RYSCUC'}
+      properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: 'Oxivive Home ', margin: null}
+      name: label_40
+      layout_properties: {grid_position: 'LHKFRF,QBEFLO'}
   - type: ColumnPanel
     properties: {role: card, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
     name: column_panel_1
-    layout_properties: {x: 115.55555725097656, y: 525.5694580078125, width: 1330.06}
+    layout_properties: {x: 115.55555725097656, y: 489.5694580078125, width: 1330.06}
     components:
     - type: Label
       properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: 'Clinic Details ', margin: null}
@@ -242,10 +238,23 @@ components:
       layout_properties:
         col_widths: {}
         grid_position: QTNQYD,LCDNND NFFOYN,ACMWPC OPCZSP,IETJOP
+    - type: Spacer
+      properties: {height: 32}
+      name: spacer_3
+      layout_properties: {grid_position: 'QTNQYD,LCDNND PDQTFZ,OMRTLQ'}
+    - type: Button
+      properties: {role: raised, bold: true, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 700', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: View Bill, margin: null}
+      name: button_14
+      layout_properties: {grid_position: 'QTNQYD,LCDNND ASNKHW,PCKAFJ'}
+  - type: ColumnPanel
+    properties: {role: card, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
+    name: column_panel_3
+    layout_properties: {x: 115.55555725097656, y: 780.75, width: 1330.06}
+    components:
     - type: ColumnPanel
       properties: {role: card, col_widths: '{"IOQNSA":46,"JLAKTC":14}'}
       name: card_3
-      layout_properties: {grid_position: 'QTNQYD,LCDNND PJEFLD,UBBAEP'}
+      layout_properties: {grid_position: 'VKCKPR,FNKXUJ'}
       components:
       - type: Label
         properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: 'fa:ticket', underline: false, font: '', icon_align: left, foreground: green, spacing_below: small, visible: true, border: '', italic: false, font_size: 50, tooltip: '', text: '', margin: null}
@@ -269,71 +278,58 @@ components:
         layout_properties: {grid_position: 'YZEBXC,JLAKTC WUDKMA,FQPCCY'}
         components: []
         event_bindings: {click: link_1_click}
-    - type: Spacer
-      properties: {height: 32}
-      name: spacer_3
-      layout_properties: {grid_position: 'QTNQYD,LCDNND PDQTFZ,OMRTLQ'}
-    - type: Button
-      properties: {role: raised, bold: true, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 700', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: View Bill, margin: null}
-      name: button_14
-      layout_properties: {grid_position: 'QTNQYD,LCDNND ASNKHW,PCKAFJ'}
-  - type: ColumnPanel
-    properties: {role: card, col_widths: '{"KPCSUG":9}', spacing_above: small, background: lightred, wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
-    name: column_panel_2
-    layout_properties: {x: 840.5972290039062, y: 213.47222900390625, width: 605.014}
-    components:
-    - type: Spacer
-      properties: {height: 79}
-      name: spacer_9
-      layout_properties: {grid_position: 'BGQBTT,GOENZV'}
     - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', text: Appointment time, margin: null}
-      name: label_4
-      layout_properties: {grid_position: 'VINUAU,LKMMKV'}
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 19, tooltip: '', text: 'Bill Details ', margin: null}
+      name: label_20
+      layout_properties: {grid_position: 'RBOKBO,ILPUZN'}
     - type: Label
-      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Sat, 17 Aug 05:00 PM ', margin: null}
-      name: label_6
-      layout_properties: {grid_position: 'JYGUGK,OSCOIZ'}
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Consultation Fee ', margin: null}
+      name: label_21
+      layout_properties: {grid_position: 'MZALYR,DELMKL'}
     - type: Label
-      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: ' in 33 hours and 7 minutes', margin: null}
-      name: label_7
-      layout_properties: {grid_position: 'JYGUGK,PAPKKK'}
-    - type: Spacer
-      properties: {height: 18}
-      name: spacer_4
-      layout_properties: {grid_position: 'LXLMWU,XNIUKX'}
-    - type: Spacer
-      properties: {height: 17}
-      name: spacer_6_copy
-      layout_properties:
-        col_widths: {}
-        grid_position: XHMQOD,KPCSUG
-  - type: XYPanel
-    properties: {height: 105}
-    name: xy_panel_3
-    layout_properties: {grid_position: 'KAAFMP,WVJPGD', x: 908.6111450195312, y: 166, width: 479}
-    components:
-    - type: ColumnPanel
-      properties: {role: card, col_widths: '{}'}
-      name: card_5
-      layout_properties: {grid_position: 'GEJOYU,CUFXLN', x: 0, y: -156.93, width: 448}
-      components:
-      - type: Image
-        properties: {role: null, vertical_align: center, alt_text: '', spacing_above: small, background: '', horizontal_align: center, source: _/theme/Untitled design (1).png, foreground: '', display_mode: shrink_to_fit, spacing_below: small, visible: true, border: '', tooltip: '', height: 184, margin: null}
-        name: image_2
-        layout_properties: {grid_position: 'BHFEKI,LNWKJX'}
-      - type: Label
-        properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 18, tooltip: '', text: 'Oxivive Home ', margin: null}
-        name: label_40
-        layout_properties: {grid_position: 'LHKFRF,QBEFLO'}
+      properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: Rs 1, margin: null}
+      name: label_22
+      layout_properties: {grid_position: 'MZALYR,ILEOVM'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: 'Service Fee & Tax ', margin: null}
+      name: label_23
+      layout_properties: {grid_position: 'THCQBO,UUMCXG'}
+    - type: Label
+      properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: green, spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: FREE, margin: null}
+      name: label_24
+      layout_properties: {grid_position: 'THCQBO,PXTCYW'}
+    - type: Label
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: green, spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: We care for you & provide a free booking, margin: null}
+      name: label_25
+      layout_properties: {grid_position: 'VNCEWL,HNKDMN'}
+    - type: Label
+      properties: {role: null, bold: false, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Discount/Coupon, margin: null}
+      name: label_26
+      layout_properties: {grid_position: 'LGDYXA,SFXLSS'}
+    - type: Label
+      properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Gray 600', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: Nothing, margin: null}
+      name: label_27
+      layout_properties: {grid_position: 'LGDYXA,KLILVJ'}
+    - type: Label
+      properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: 'Total Payable ', margin: null}
+      name: label_28
+      layout_properties: {grid_position: 'ESVCPM,TLYMPN'}
+    - type: Label
+      properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: Rs 1, margin: null}
+      name: label_29
+      layout_properties: {grid_position: 'ESVCPM,QHITEJ'}
+    - type: Label
+      properties: {role: null, bold: false, align: center, spacing_above: small, background: lightgreen, icon: '', underline: false, font: '', icon_align: left, foreground: green, spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'You have saved Rs 49 on this appointment ', margin: null}
+      name: label_30
+      layout_properties: {grid_position: 'EJXOAN,RYSCUC'}
   - type: ColumnPanel
     properties: {role: card, col_widths: '{"ROKLQW":15,"KSZFKR":45,"OQFJIZ":15,"FKZBTA":45,"CKMKIL":15,"XMNLFU":45,"BENHFB":35,"HVDDTL":11,"UIXCQV":24,"TKMMSE":11}'}
     name: card_4
     layout_properties:
       col_widths: {}
       grid_position: EOQQKO,FNDCFM
-      x: 115.54166412353516
-      y: 1338.7083740234375
+      x: 115.55555725097656
+      y: 1283.7083740234375
       width: 1330.06
     components:
     - type: Label
@@ -422,7 +418,3 @@ components:
       properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: 'Pay & confirm Book ', margin: null}
       name: button_13
       layout_properties: {grid_position: 'THKSTB,UIXCQV UXGRPF,DDBTEZ'}
-  - type: TextBox
-    properties: {}
-    name: text_box_1
-    layout_properties: {x: 864, y: 1720.6803740234375, width: 160}
