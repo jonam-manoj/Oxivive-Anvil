@@ -836,3 +836,12 @@ https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-m
     transform: translateY(-10px); /* Slight lift on hover */
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Shadow for the rise effect */
 }
+
+.anvil-role-custom-border-card {
+    border: 2px solid #007bff;  /* Set the border thickness and color */
+    border-radius: 15px;        /* Optional: Set the border radius for rounded corners */
+    padding: 10px;              /* Optional: Add padding inside the card */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: Add a shadow for a 3D effect */
+    background-color: #f8f9fa;  /* Optional: Set a background color */
+}
+

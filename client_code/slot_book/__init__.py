@@ -32,7 +32,7 @@ class slot_book(slot_bookTemplate):
         print(f"Label Text: {label_text}")
         print(f"Address: {address}")
 
-        # self.oxi_image.source = image_source
+        self.image_2.source = image_source
         # self.oxi_type.text = label_text
         self.label_9.text = address
 
