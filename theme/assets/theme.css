@@ -802,15 +802,17 @@ https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-m
   border: 2px solid #ccc;
 }
 
-.anvil-role-repeating-panel-vertical-rtl {
+.anvil-role-repeating-panel-rtl {
+    direction: rtl;
+    overflow-x: auto;
+    white-space: nowrap;
     display: flex;
-    flex-direction: column-reverse;
-    overflow-y: auto;
-    height: 100%; /* Adjust this as needed */
+    justify-content: center; /* Center the content horizontally */
 }
 
-.anvil-role-repeating-panel-vertical-rtl > * {
-    display: block;
+.anvil-role-repeating-panel-rtl > * {
+    display: inline-block;
+    direction: ltr;
 }
 
 .anvil-role-card-spacing {
@@ -821,6 +823,7 @@ https://stackoverflow.com/questions/30533055/calculating-shadow-values-for-all-m
 .anvil-role-repeating-panel-rise {
     display: flex;
     flex-direction: column; /* Stack items vertically */
+    align-items: center; 
     gap: 10px; /* Space between cards */
 }
 

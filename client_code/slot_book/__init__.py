@@ -32,9 +32,9 @@ class slot_book(slot_bookTemplate):
         print(f"Label Text: {label_text}")
         print(f"Address: {address}")
 
-        self.oxi_image.source = image_source
-        self.oxi_type.text = label_text
-        self.label_2.text = address
+        # self.oxi_image.source = image_source
+        # self.oxi_type.text = label_text
+        self.label_9.text = address
 
         self.day_label.text = datetime.now().strftime("%A")  # e.g., "Friday"
         self.month_label.text = datetime.now().strftime("%B %d, %Y")
@@ -48,11 +48,6 @@ class slot_book(slot_bookTemplate):
             button_name = f'button_{i}'
             button = getattr(self, button_name)
             button.set_event_handler('click', self.time_button_click)
-
-        self.column_panel_2.visible = False
-        self.column_panel_3.visible = False
-
-        self.primary_color_1.set_event_handler('click', self.primary_color_1_click)
 
     def update_date_buttons(self):
         # Update the text on date buttons to show the correct days (e.g., "Fri", "Sat", "Sun", "Mon")
@@ -162,6 +157,7 @@ class slot_book(slot_bookTemplate):
     
   
     def primary_color_1_click(self, **event_args):
+      pass
        
         # try:
         #     # Generate random booking ID
@@ -189,9 +185,6 @@ class slot_book(slot_bookTemplate):
         #     open_form('Activity', oxi_id=oxi_id, location_name=self.location_name, id_of_serviceprovider=oxi_servicer_id, service_type=oxi_service_type, oxi_username=oxi_username, oxi_book_time=self.oxi_book_time, oxi_book_date=oxi_book_date_db, oxi_book_id=oxi_book_id)
         # except Exception as e:
         #     print(f"Error: {e}")
-
-        self.column_panel_2.visible = True
-        self.column_panel_3.visible = True
 
     def button_11_click(self, **event_args):
       """This method is called when the button is clicked"""

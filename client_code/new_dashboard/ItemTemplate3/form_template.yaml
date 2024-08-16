@@ -13,22 +13,34 @@ components:
     layout_properties: {grid_position: 'UXBNMM,DQIUMG'}
     data_bindings:
     - {property: source, code: 'self.item[''image_source'']'}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {grid_position: 'UXBNMM,OVSFQY PIFUAG,CNFJZW'}
   - type: Label
     properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: black, spacing_below: small, visible: true, border: '', italic: false, font_size: 20, tooltip: '', text: '', margin: null}
     name: label_1
-    layout_properties: {grid_position: 'KGFGZS,OZNVIP'}
+    layout_properties: {grid_position: 'UXBNMM,OVSFQY LOOOGI,SMRSXC'}
     data_bindings:
     - {property: text, code: 'self.item[''label_text'']'}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_2
+    layout_properties: {grid_position: 'UXBNMM,OVSFQY BBTFVR,TLEEDX'}
   - type: Label
     properties: {role: null, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: '', margin: null}
     name: label_2
-    layout_properties: {grid_position: 'ENKLUB,TQDRSU'}
+    layout_properties: {grid_position: 'UXBNMM,OVSFQY YUNPBB,XUZSGQ'}
     data_bindings:
     - {property: text, code: 'self.item[''address'']'}
+  - type: Spacer
+    properties: {height: 67}
+    name: spacer_3
+    layout_properties: {grid_position: 'UXBNMM,KHXSGN MNRTXR,DCEYDX'}
   - type: Button
     properties: {role: raised, bold: false, align: center, spacing_above: small, background: '#2d3249', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: book  now, margin: null}
     name: button_1
-    layout_properties: {grid_position: 'HTCTWE,LUOWTG'}
+    layout_properties: {grid_position: 'UXBNMM,KHXSGN PKSDSO,EQEDEB'}
     event_bindings: {click: button_1_click}
     data_bindings: []
 is_package: true
