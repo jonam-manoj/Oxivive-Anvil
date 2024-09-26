@@ -1,101 +1,101 @@
-is_package: true
-container: {type: ColumnPanel}
 components:
-- name: card_1
-  properties: {role: card, col_widths: '{"POLYQO":15,"DKQKJQ":25,"HRXEGM":20}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'MJWOMS,HKBMYH'}
-  components:
-  - name: timer_1
+- components:
+  - event_bindings: {tick: timer_1_tick}
+    layout_properties: {grid_position: 'UGTANF,EMKVXQ JJEGYZ,TGXMWL'}
+    name: timer_1
     properties: {}
     type: Timer
-    layout_properties: {grid_position: 'UGTANF,EMKVXQ JJEGYZ,TGXMWL'}
-    event_bindings: {tick: timer_1_tick}
-  - name: spacer_2
+  - layout_properties: {grid_position: 'UGTANF,EMKVXQ ZGDYIR,BQNAWF'}
+    name: spacer_2
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'UGTANF,EMKVXQ ZGDYIR,BQNAWF'}
-  - name: card_2
-    properties: {role: card, col_spacing: tiny, spacing_above: none}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'UGTANF,GGBOAA', full_width_row: false}
-    components:
-    - name: label_11
-      properties: {align: center, background: '', role: null, text: '', bold: true, foreground: '#08bf2d', font_size: 15}
+  - components:
+    - layout_properties: {grid_position: 'YCFCYL,ZFUKTI'}
+      name: label_11
+      properties: {align: center, background: '', bold: true, font_size: 15, foreground: '#08bf2d', role: null, text: ''}
       type: Label
-      layout_properties: {grid_position: 'YCFCYL,ZFUKTI'}
-  - name: spacer_1
+    layout_properties: {full_width_row: false, grid_position: 'UGTANF,GGBOAA'}
+    name: card_2
+    properties: {col_spacing: tiny, role: card, spacing_above: none}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'UGTANF,PVAXDE'}
+    name: spacer_1
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'UGTANF,PVAXDE'}
-  - name: image_1
+  - data_bindings:
+    - {code: 'self.item[''image'']', property: source}
+    layout_properties: {grid_position: 'GWWCVI,POLYQO'}
+    name: image_1
     properties: {role: image, source: _/theme/shot.png}
     type: Image
-    layout_properties: {grid_position: 'GWWCVI,POLYQO'}
-    data_bindings:
-    - {property: source, code: 'self.item[''image'']'}
-  - name: label_1
-    properties: {align: center, text: 'Name :', bold: true}
+  - layout_properties: {grid_position: 'GWWCVI,DKQKJQ KODULL,DISPPK'}
+    name: label_1
+    properties: {align: center, bold: true, text: 'Name :'}
     type: Label
-    layout_properties: {grid_position: 'GWWCVI,DKQKJQ KODULL,DISPPK'}
-  - name: label_3
-    properties: {align: center, text: 'Email : ', bold: true}
+  - layout_properties: {grid_position: 'GWWCVI,DKQKJQ BBTJXZ,KAEHBX'}
+    name: label_3
+    properties: {align: center, bold: true, text: 'Email : '}
     type: Label
-    layout_properties: {grid_position: 'GWWCVI,DKQKJQ BBTJXZ,KAEHBX'}
-  - name: label_5
-    properties: {align: center, text: 'Slot -Time :', bold: true}
+  - layout_properties: {grid_position: 'GWWCVI,DKQKJQ NZHJRJ,PIBBUZ'}
+    name: label_5
+    properties: {align: center, bold: true, text: 'Slot -Time :'}
     type: Label
-    layout_properties: {grid_position: 'GWWCVI,DKQKJQ NZHJRJ,PIBBUZ'}
-  - name: label_12
-    properties: {align: center, text: 'Slot - Date :', bold: true}
+  - layout_properties: {grid_position: 'GWWCVI,DKQKJQ PRTFCR,TRDLEX'}
+    name: label_12
+    properties: {align: center, bold: true, text: 'Slot - Date :'}
     type: Label
-    layout_properties: {grid_position: 'GWWCVI,DKQKJQ PRTFCR,TRDLEX'}
-  - name: label_7
+  - layout_properties: {grid_position: 'GWWCVI,DKQKJQ GNKKDK,NQYQAG'}
+    name: label_7
     properties: {align: center, bold: true, text: 'Phone :'}
     type: Label
-    layout_properties: {grid_position: 'GWWCVI,DKQKJQ GNKKDK,NQYQAG'}
-  - name: label_9
-    properties: {align: center, text: 'Service - Type : ', bold: true}
+  - layout_properties: {grid_position: 'GWWCVI,DKQKJQ ENVIAG,TLCKSE'}
+    name: label_9
+    properties: {align: center, bold: true, text: 'Service - Type : '}
     type: Label
-    layout_properties: {grid_position: 'GWWCVI,DKQKJQ ENVIAG,TLCKSE'}
-  - name: label_2
+  - data_bindings:
+    - {code: 'self.item[''name'']', property: text}
+    layout_properties: {grid_position: 'GWWCVI,HRXEGM IUPOSL,VIZXXH'}
+    name: label_2
     properties: {text: USER NAME}
     type: Label
-    layout_properties: {grid_position: 'GWWCVI,HRXEGM IUPOSL,VIZXXH'}
-    data_bindings:
-    - {property: text, code: 'self.item[''name'']'}
-  - name: label_4
+  - data_bindings:
+    - {code: 'self.item[''email'']', property: text}
+    layout_properties: {grid_position: 'GWWCVI,HRXEGM XQRXZZ,QSAFGB'}
+    name: label_4
     properties: {text: USER@GMAIL.COM}
     type: Label
-    layout_properties: {grid_position: 'GWWCVI,HRXEGM XQRXZZ,QSAFGB'}
-    data_bindings:
-    - {property: text, code: 'self.item[''email'']'}
-  - name: label_6
+  - data_bindings:
+    - {code: 'self.item[''slot_time'']', property: text}
+    layout_properties: {grid_position: 'GWWCVI,HRXEGM RODAGK,YWITKD'}
+    name: label_6
     properties: {text: '09:00-11:00'}
     type: Label
-    layout_properties: {grid_position: 'GWWCVI,HRXEGM RODAGK,YWITKD'}
-    data_bindings:
-    - {property: text, code: 'self.item[''slot_time'']'}
-  - name: label_13
-    properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '', bold: false, underline: false, icon: ''}
-    type: Label
+  - data_bindings:
+    - {code: 'self.item[''date'']', property: text, writeback: false}
     layout_properties: {grid_position: 'GWWCVI,HRXEGM TGKGRR,QGFSOJ'}
-    data_bindings:
-    - {property: text, code: 'self.item[''date'']', writeback: false}
-  - name: label_8
+    name: label_13
+    properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
+    type: Label
+  - data_bindings:
+    - {code: 'self.item[''phone'']', property: text}
+    layout_properties: {grid_position: 'GWWCVI,HRXEGM NDTAEW,DFIANA'}
+    name: label_8
     properties: {text: '9343302172'}
     type: Label
-    layout_properties: {grid_position: 'GWWCVI,HRXEGM NDTAEW,DFIANA'}
-    data_bindings:
-    - {property: text, code: 'self.item[''phone'']'}
-  - name: label_10
+  - data_bindings:
+    - {code: 'self.item[''service'']', property: text}
+    layout_properties: {grid_position: 'GWWCVI,HRXEGM LGTBLJ,GCINAA'}
+    name: label_10
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'GWWCVI,HRXEGM LGTBLJ,GCINAA'}
-    data_bindings:
-    - {property: text, code: 'self.item[''service'']'}
-  - name: button_1
-    properties: {text: Report, background: 'theme:Primary 700', foreground: 'theme:White', role: raised, align: right}
-    type: Button
+  - event_bindings: {click: button_1_click}
     layout_properties: {grid_position: 'RDGJQP,WFPISP'}
-    event_bindings: {click: button_1_click}
+    name: button_1
+    properties: {align: right, background: 'theme:Primary 700', foreground: 'theme:White', role: raised, text: Report}
+    type: Button
+  layout_properties: {grid_position: 'MJWOMS,HKBMYH'}
+  name: card_1
+  properties: {col_widths: '{"POLYQO":15,"DKQKJQ":25,"HRXEGM":20}', role: card}
+  type: ColumnPanel
+container: {type: ColumnPanel}
+is_package: true

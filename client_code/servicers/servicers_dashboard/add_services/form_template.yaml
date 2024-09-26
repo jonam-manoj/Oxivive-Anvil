@@ -1,66 +1,66 @@
-container:
-  type: ColumnPanel
-  properties: {role: null, col_widths: '{}', spacing_above: medium, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
 components:
-- name: service_navigation_bar_1
+- layout_properties: {full_width_row: true, grid_position: 'RFAILV,WSCLBU'}
+  name: service_navigation_bar_1
   properties: {}
   type: form:servicers.service_navigation_bar
-  layout_properties: {grid_position: 'RFAILV,WSCLBU', full_width_row: true}
-- name: label_1
-  properties: {align: center, text: 'Select the services to add  ', bold: true, font_size: 20, underline: true}
+- layout_properties: {full_width_row: true, grid_position: 'ZBHYWO,QIGBJP'}
+  name: label_1
+  properties: {align: center, bold: true, font_size: 20, text: 'Select the services to add  ', underline: true}
   type: Label
-  layout_properties: {grid_position: 'ZBHYWO,QIGBJP', full_width_row: true}
-- name: label_2
-  properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: OxiClinic}
+- layout_properties: {grid_position: 'BTRQPU,TGAOEV UPLVSX,ITJSLP'}
+  name: label_2
+  properties: {align: center, background: '', bold: true, border: '', font: '', font_size: 15, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: OxiClinic, tooltip: '', underline: false, visible: true}
   type: Label
-  layout_properties: {grid_position: 'BTRQPU,TGAOEV UPLVSX,ITJSLP'}
-- name: image_1
-  properties: {source: _/theme/hospital-oxicinic_2.png, height: '90', spacing_above: small, spacing_below: small}
+- layout_properties: {grid_position: 'BTRQPU,TGAOEV KGFNUE,FXOUXG'}
+  name: image_1
+  properties: {height: '90', source: _/theme/hospital-oxicinic_2.png, spacing_above: small, spacing_below: small}
   type: Image
-  layout_properties: {grid_position: 'BTRQPU,TGAOEV KGFNUE,FXOUXG'}
-- name: add_oxiclinic_button
-  properties: {role: null, bold: false, align: center, spacing_above: medium, background: '', icon: 'fa:plus', underline: false, font: '', icon_align: left, foreground: '#fa1900', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Add}
-  type: Button
+- event_bindings: {click: add_oxiclinic_button_click}
   layout_properties: {grid_position: 'BTRQPU,TGAOEV ERDOVF,ZCOAFJ'}
-  event_bindings: {click: add_oxiclinic_button_click}
-- name: label_3
-  properties: {role: null, bold: true, align: center, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: OxiWheel}
-  type: Label
-  layout_properties: {grid_position: 'BTRQPU,TNWPUG PBQOMX,OMMUGL'}
-- name: image_2
-  properties: {source: _/theme/oxi_wheel_3.png, height: '90'}
-  type: Image
-  layout_properties: {grid_position: 'BTRQPU,TNWPUG MOXKFX,AMGEBF'}
-- name: add_oxiwheel_button
-  properties: {role: null, bold: false, align: center, spacing_above: medium, background: '', icon: 'fa:plus', underline: false, font: '', icon_align: left, foreground: '#fa1900', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ADD}
+  name: add_oxiclinic_button
+  properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '#fa1900', icon: 'fa:plus', icon_align: left, italic: false, role: null, spacing_above: medium, spacing_below: small, text: Add, tooltip: '', underline: false, visible: true}
   type: Button
+- layout_properties: {grid_position: 'BTRQPU,TNWPUG PBQOMX,OMMUGL'}
+  name: label_3
+  properties: {align: center, background: '', bold: true, border: '', font: '', font_size: 15, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: medium, spacing_below: small, text: OxiWheel, tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'BTRQPU,TNWPUG MOXKFX,AMGEBF'}
+  name: image_2
+  properties: {height: '90', source: _/theme/oxi_wheel_3.png}
+  type: Image
+- event_bindings: {click: add_oxiwheel_button_click}
   layout_properties: {grid_position: 'BTRQPU,TNWPUG XGVEVY,VYXCCT'}
-  event_bindings: {click: add_oxiwheel_button_click}
-- name: label_4
-  properties: {role: null, bold: true, align: center, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: OxiGym}
+  name: add_oxiwheel_button
+  properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '#fa1900', icon: 'fa:plus', icon_align: left, italic: false, role: null, spacing_above: medium, spacing_below: small, text: ADD, tooltip: '', underline: false, visible: true}
+  type: Button
+- layout_properties: {grid_position: 'BTRQPU,OOBSIQ IYMAZH,EUBZGF'}
+  name: label_4
+  properties: {align: center, background: '', bold: true, border: '', font: '', font_size: 15, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: medium, spacing_below: small, text: OxiGym, tooltip: '', underline: false, visible: true}
   type: Label
-  layout_properties: {grid_position: 'BTRQPU,OOBSIQ IYMAZH,EUBZGF'}
-- name: image_3
-  properties: {source: _/theme/oxi_gym.png, height: '90'}
+- layout_properties: {grid_position: 'BTRQPU,OOBSIQ XVVAWL,MUUTXG'}
+  name: image_3
+  properties: {height: '90', source: _/theme/oxi_gym.png}
   type: Image
-  layout_properties: {grid_position: 'BTRQPU,OOBSIQ XVVAWL,MUUTXG'}
-- name: add_oxigym_button
-  properties: {role: null, bold: false, align: center, spacing_above: medium, background: '', icon: 'fa:plus', underline: false, font: '', icon_align: left, foreground: '#fa1900', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Add}
-  type: Button
+- event_bindings: {click: add_oxigym_button_click}
   layout_properties: {grid_position: 'BTRQPU,OOBSIQ WODUKK,PYSMKE'}
-  event_bindings: {click: add_oxigym_button_click}
-- name: services_list_button
-  properties: {text: 'view / Delete services ', align: right, foreground: '#fa1900', icon: 'fa:table', font_size: 12, bold: true}
+  name: add_oxigym_button
+  properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '#fa1900', icon: 'fa:plus', icon_align: left, italic: false, role: null, spacing_above: medium, spacing_below: small, text: Add, tooltip: '', underline: false, visible: true}
   type: Button
+- event_bindings: {click: services_list_button_click}
   layout_properties: {grid_position: 'DBEUOP,VLUTAC'}
-  event_bindings: {click: services_list_button_click}
-- name: spacer_1
+  name: services_list_button
+  properties: {align: right, bold: true, font_size: 12, foreground: '#fa1900', icon: 'fa:table', text: 'view / Delete services '}
+  type: Button
+- layout_properties: {grid_position: 'PAGFJW,AVWSQX'}
+  name: spacer_1
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'PAGFJW,AVWSQX'}
-- name: servicers_confirm_button
-  properties: {text: CONFirm, background: '#fa1900', foreground: 'theme:White', role: raised, align: center, bold: true}
-  type: Button
+- event_bindings: {click: servicers_confirm_button_click}
   layout_properties: {grid_position: 'MJLSDI,XQVRAQ'}
-  event_bindings: {click: servicers_confirm_button_click}
+  name: servicers_confirm_button
+  properties: {align: center, background: '#fa1900', bold: true, foreground: 'theme:White', role: raised, text: CONFirm}
+  type: Button
+container:
+  properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: null, spacing_above: medium, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+  type: ColumnPanel
 is_package: true

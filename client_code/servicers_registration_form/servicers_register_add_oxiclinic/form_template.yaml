@@ -1,110 +1,110 @@
-container:
-  type: ColumnPanel
-  properties: {col_widths: '{"OGJNWP":45,"UUKNSC":15}'}
-  data_bindings: []
 components:
-- name: image_1_copy
-  properties: {source: _/theme/shot.png, horizontal_align: center, height: 117.60000610351562, display_mode: shrink_to_fit, background: red}
+- layout_properties: {full_width_row: true, grid_position: 'ZSRDTZ,CYCNPQ'}
+  name: image_1_copy
+  properties: {background: red, display_mode: shrink_to_fit, height: 117.60000610351562, horizontal_align: center, source: _/theme/shot.png}
   type: Image
-  layout_properties: {grid_position: 'ZSRDTZ,CYCNPQ', full_width_row: true}
-- name: spacer_2
+- layout_properties: {grid_position: 'XVYDGE,OGJNWP'}
+  name: spacer_2
   properties: {height: 79.39999389648438}
   type: Spacer
-  layout_properties: {grid_position: 'XVYDGE,OGJNWP'}
-- type: Button
-  properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Primary 700', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Logout, margin: null}
-  name: button_1
+- event_bindings: {click: button_1_click}
   layout_properties: {grid_position: 'XVYDGE,UUKNSC'}
-  event_bindings: {click: button_1_click}
-- name: card_1
-  properties: {role: card, col_widths: '{"ASACIX":15,"APOYLS":30,"JXIPUN":15}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'ICZWDO,NABGNK'}
-  components:
-  - name: spacer_3
+  name: button_1
+  properties: {align: center, background: 'theme:Primary 700', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Secondary 500', icon: '', icon_align: left, italic: false, margin: null, role: raised, spacing_above: small, spacing_below: small, text: Logout, tooltip: '', underline: false, visible: true}
+  type: Button
+- components:
+  - layout_properties: {grid_position: 'DYVEJS,ASACIX'}
+    name: spacer_3
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'DYVEJS,ASACIX'}
-  - name: hospital_name_label
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Hospital Name :'}
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS JMJQNX,NFOVDG'}
+    name: hospital_name_label
+    properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Hospital Name :', tooltip: '', underline: false, visible: true}
     type: Label
-    layout_properties: {grid_position: 'DYVEJS,APOYLS JMJQNX,NFOVDG'}
-  - name: hospital_name
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS JMJQNX,ODGZZM'}
+    name: hospital_name
     properties: {placeholder: Hospital Name}
     type: TextBox
-    layout_properties: {grid_position: 'DYVEJS,APOYLS JMJQNX,ODGZZM'}
-  - name: establised_year_label
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Established Year : '}
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS UTJGKY,VDDVQS'}
+    name: establised_year_label
+    properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Established Year : ', tooltip: '', underline: false, visible: true}
     type: Label
-    layout_properties: {grid_position: 'DYVEJS,APOYLS UTJGKY,VDDVQS'}
-  - type: DatePicker
-    properties: {}
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS UTJGKY,ORZTJF'}
     name: oxiclini_established_year
-    layout_properties: {grid_position: 'DYVEJS,APOYLS UTJGKY,ORZTJF'}
-  - name: state_label
-    properties: {align: left, text: 'State :', bold: true}
+    properties: {}
+    type: DatePicker
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS ISXWNE,RRSOYD'}
+    name: state_label
+    properties: {align: left, bold: true, text: 'State :'}
     type: Label
-    layout_properties: {grid_position: 'DYVEJS,APOYLS ISXWNE,RRSOYD'}
-  - name: state
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS ISXWNE,YHUQGP'}
+    name: state
     properties: {placeholder: State}
     type: TextBox
-    layout_properties: {grid_position: 'DYVEJS,APOYLS ISXWNE,YHUQGP'}
-  - name: district_label
-    properties: {align: left, text: 'District :', bold: true}
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS QJIHZL,OUXZNZ'}
+    name: district_label
+    properties: {align: left, bold: true, text: 'District :'}
     type: Label
-    layout_properties: {grid_position: 'DYVEJS,APOYLS QJIHZL,OUXZNZ'}
-  - name: district
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS QJIHZL,VKNZID'}
+    name: district
     properties: {placeholder: District}
     type: TextBox
-    layout_properties: {grid_position: 'DYVEJS,APOYLS QJIHZL,VKNZID'}
-  - name: pincode_label
-    properties: {align: left, text: 'Pincode : ', bold: true}
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS WNMTJB,QZFEEK'}
+    name: pincode_label
+    properties: {align: left, bold: true, text: 'Pincode : '}
     type: Label
-    layout_properties: {grid_position: 'DYVEJS,APOYLS WNMTJB,QZFEEK'}
-  - name: oxiclinic_pincode
-    properties: {type: number, placeholder: Pincode}
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS WNMTJB,FYLZVJ'}
+    name: oxiclinic_pincode
+    properties: {placeholder: Pincode, type: number}
     type: TextBox
-    layout_properties: {grid_position: 'DYVEJS,APOYLS WNMTJB,FYLZVJ'}
-  - name: address_label
-    properties: {align: left, text: 'Address : ', bold: true}
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS HNHRTM,YJXTCS'}
+    name: address_label
+    properties: {align: left, bold: true, text: 'Address : '}
     type: Label
-    layout_properties: {grid_position: 'DYVEJS,APOYLS HNHRTM,YJXTCS'}
-  - name: oxiclinic_address
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS HNHRTM,HKGZPF'}
+    name: oxiclinic_address
     properties: {placeholder: Address}
     type: TextBox
-    layout_properties: {grid_position: 'DYVEJS,APOYLS HNHRTM,HKGZPF'}
-  - name: no_capsule_label
-    properties: {align: left, text: 'No. of Capsules : ', bold: true}
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS LSWQTE,QYBFQU OJEURD,THXWEK'}
+    name: no_capsule_label
+    properties: {align: left, bold: true, text: 'No. of Capsules : '}
     type: Label
-    layout_properties: {grid_position: 'DYVEJS,APOYLS LSWQTE,QYBFQU OJEURD,THXWEK'}
-  - type: Label
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Clinic Fee :', margin: null}
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS LSWQTE,QYBFQU JXEHFZ,NBUSPE'}
     name: label_1
-    layout_properties: {grid_position: 'DYVEJS,APOYLS LSWQTE,QYBFQU JXEHFZ,NBUSPE'}
-  - name: oxiclinic_capsules
-    properties: {type: number, placeholder: No. of Capsules}
+    properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, margin: null, role: null, spacing_above: small, spacing_below: small, text: 'Clinic Fee :', tooltip: '', underline: false, visible: true}
+    type: Label
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS LSWQTE,DLKZTD MIHGWU,BTJUSZ'}
+    name: oxiclinic_capsules
+    properties: {placeholder: No. of Capsules, type: number}
     type: TextBox
-    layout_properties: {grid_position: 'DYVEJS,APOYLS LSWQTE,DLKZTD MIHGWU,BTJUSZ'}
-  - type: TextBox
-    properties: {role: null, bold: false, align: left, placeholder: 'Clinic Fee ', spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS LSWQTE,DLKZTD LXYPPU,AFLEQL'}
     name: oxiclinics_fees
-    layout_properties: {grid_position: 'DYVEJS,APOYLS LSWQTE,DLKZTD LXYPPU,AFLEQL'}
-  - name: spacer_1
+    properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, margin: null, placeholder: 'Clinic Fee ', role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+    type: TextBox
+  - layout_properties: {grid_position: 'DYVEJS,APOYLS JFSSFM,DLRZBU'}
+    name: spacer_1
     properties: {height: 53.79998779296875}
     type: Spacer
-    layout_properties: {grid_position: 'DYVEJS,APOYLS JFSSFM,DLRZBU'}
-  - name: back_button_2
-    properties: {text: back, align: full, foreground: white, bold: true, icon: 'fa:backward', background: red}
-    type: Button
+  - event_bindings: {click: back_button_2_click}
     layout_properties: {grid_position: 'DYVEJS,APOYLS NPKKWS,UBHWMC'}
-    event_bindings: {click: back_button_2_click}
-  - name: next_button_1
-    properties: {bold: true, align: full, spacing_above: small, background: red, icon: 'fa:forward', icon_align: right, foreground: white, spacing_below: small, text: Next}
+    name: back_button_2
+    properties: {align: full, background: red, bold: true, foreground: white, icon: 'fa:backward', text: back}
     type: Button
+  - event_bindings: {click: next_button_1_click}
     layout_properties: {grid_position: 'DYVEJS,APOYLS NPKKWS,MHGZYM'}
-    event_bindings: {click: next_button_1_click}
-  - name: spacer_4
+    name: next_button_1
+    properties: {align: full, background: red, bold: true, foreground: white, icon: 'fa:forward', icon_align: right, spacing_above: small, spacing_below: small, text: Next}
+    type: Button
+  - layout_properties: {grid_position: 'DYVEJS,JXIPUN'}
+    name: spacer_4
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'DYVEJS,JXIPUN'}
+  layout_properties: {grid_position: 'ICZWDO,NABGNK'}
+  name: card_1
+  properties: {col_widths: '{"ASACIX":15,"APOYLS":30,"JXIPUN":15}', role: card}
+  type: ColumnPanel
+container:
+  data_bindings: []
+  properties: {col_widths: '{"OGJNWP":45,"UUKNSC":15}'}
+  type: ColumnPanel
 is_package: true

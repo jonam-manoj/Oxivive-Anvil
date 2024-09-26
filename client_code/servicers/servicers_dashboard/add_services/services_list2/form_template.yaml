@@ -1,75 +1,75 @@
-container: {type: ColumnPanel}
 components:
-- name: spacer_1
+- layout_properties: {grid_position: 'KSCFFT,LYOVPE'}
+  name: spacer_1
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'KSCFFT,LYOVPE'}
-- name: button_1
-  properties: {text: Oxiclinics, role: raised, background: '#3251ec', foreground: 'theme:White', bold: true}
+- event_bindings: {click: button_1_click}
+  layout_properties: {full_width_row: false, grid_position: 'AXXEYA,PDBRXU'}
+  name: button_1
+  properties: {background: '#3251ec', bold: true, foreground: 'theme:White', role: raised, text: Oxiclinics}
   type: Button
-  layout_properties: {grid_position: 'AXXEYA,PDBRXU', full_width_row: false}
-  event_bindings: {click: button_1_click}
-- name: button_2
-  properties: {text: Oxiwheel, background: '#3251ec', foreground: 'theme:White', role: raised, bold: true}
-  type: Button
+- event_bindings: {click: button_2_click}
   layout_properties: {grid_position: 'AXXEYA,XWJOFQ'}
-  event_bindings: {click: button_2_click}
-- name: button_3
-  properties: {text: Oxigym, background: '#3251ec', foreground: 'theme:White', role: raised, bold: true}
+  name: button_2
+  properties: {background: '#3251ec', bold: true, foreground: 'theme:White', role: raised, text: Oxiwheel}
   type: Button
+- event_bindings: {click: button_3_click}
   layout_properties: {grid_position: 'AXXEYA,LCDZZM'}
-  event_bindings: {click: button_3_click}
-- name: spacer_2
+  name: button_3
+  properties: {background: '#3251ec', bold: true, foreground: 'theme:White', role: raised, text: Oxigym}
+  type: Button
+- layout_properties: {grid_position: 'BBHZPI,DOVUZF'}
+  name: spacer_2
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'BBHZPI,DOVUZF'}
-- name: data_grid_1
-  properties:
-    role: null
-    spacing_above: small
-    columns:
-    - {id: JKSDUP, title: S No., data_key: column_1, $$hashKey: 'object:22098'}
-    - {id: VJQQOR, title: Organization Id, data_key: column_2, $$hashKey: 'object:22099'}
-    - {id: OJLQEN, title: Organization Name, data_key: column_3, $$hashKey: 'object:22100'}
-    - {id: ZYQNVH, title: City, data_key: column_4, $$hashKey: 'object:22144'}
-    - {id: PYNXEH, data_key: column_1, title: Action}
-    background: ''
-    rows_per_page: 20
-    wrap_on: never
-    foreground: ''
-    show_page_controls: true
-    auto_header: true
-    spacing_below: small
-    visible: true
-    border: ''
-    tooltip: ''
-  type: DataGrid
-  components:
+- components:
   - name: repeating_panel_1
     properties: {item_template: servicers_registration_form.services_list.RowTemplate1}
     type: RepeatingPanel
-  - name: flow_panel_1
-    properties: {}
-    type: FlowPanel
-    layout_properties: {slot: footer}
-    components:
-    - name: label_1
+  - components:
+    - layout_properties: {}
+      name: label_1
       properties: {text: 'Rows per page : '}
       type: Label
-      layout_properties: {}
-    - name: text_box_1
+    - event_bindings: {lost_focus: text_box_1_lost_focus}
+      layout_properties: {width: 53.20001220703125}
+      name: text_box_1
       properties: {align: center, text: '5'}
       type: TextBox
-      layout_properties: {width: 53.20001220703125}
-      event_bindings: {lost_focus: text_box_1_lost_focus}
+    layout_properties: {slot: footer}
+    name: flow_panel_1
+    properties: {}
+    type: FlowPanel
   layout_properties: {grid_position: 'PPFOXF,SGDEZP'}
-- name: spacer_3
+  name: data_grid_1
+  properties:
+    auto_header: true
+    background: ''
+    border: ''
+    columns:
+    - {$$hashKey: 'object:22098', data_key: column_1, id: JKSDUP, title: S No.}
+    - {$$hashKey: 'object:22099', data_key: column_2, id: VJQQOR, title: Organization Id}
+    - {$$hashKey: 'object:22100', data_key: column_3, id: OJLQEN, title: Organization Name}
+    - {$$hashKey: 'object:22144', data_key: column_4, id: ZYQNVH, title: City}
+    - {data_key: column_1, id: PYNXEH, title: Action}
+    foreground: ''
+    role: null
+    rows_per_page: 20
+    show_page_controls: true
+    spacing_above: small
+    spacing_below: small
+    tooltip: ''
+    visible: true
+    wrap_on: never
+  type: DataGrid
+- layout_properties: {grid_position: 'ECKVVZ,CNHJMN'}
+  name: spacer_3
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'ECKVVZ,CNHJMN'}
-- name: button_4
-  properties: {text: Confirm, background: 'theme:Primary 700', foreground: 'theme:White', role: raised, bold: true}
-  type: Button
+- event_bindings: {click: button_4_click}
   layout_properties: {grid_position: 'FGYBHQ,NCALJW'}
-  event_bindings: {click: button_4_click}
+  name: button_4
+  properties: {background: 'theme:Primary 700', bold: true, foreground: 'theme:White', role: raised, text: Confirm}
+  type: Button
+container: {type: ColumnPanel}
 is_package: true

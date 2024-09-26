@@ -1,180 +1,180 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - type: Label
-    properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, font_size: 25, tooltip: '', text: 'Profile ', margin: null}
+- components:
+  - layout_properties: {grid_position: 'JGTIIH,XPEJFA'}
     name: label_9
-    layout_properties: {grid_position: 'JGTIIH,XPEJFA'}
-  - type: XYPanel
-    properties: {role: null, align: center, spacing_above: small, width: null, background: 'theme:Primary 700', foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', tooltip: '', height: 727.5555725097656, margin: null}
-    name: xy_panel_1
-    layout_properties: {grid_position: 'RVPGPH,YMVPWB'}
-    components:
-    - type: Image
-      properties: {height: 152}
+    properties: {align: left, background: '', bold: true, border: '', font: '', font_size: 25, foreground: 'theme:Primary 700', icon: '', icon_align: left, italic: false, margin: null, role: null, spacing_above: small, spacing_below: small, text: 'Profile ', tooltip: '', underline: false, visible: true}
+    type: Label
+  - components:
+    - layout_properties: {width: 200, x: 295.5000305175781, y: 15.125}
       name: profile_image
-      layout_properties: {x: 295.5000305175781, y: 15.125, width: 200}
-    - type: ColumnPanel
-      properties: {role: card, col_widths: '{}', spacing_above: small, background: '#FF7276', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
-      name: card_1
-      layout_properties: {grid_position: 'QJOALB,FAPQXN', x: 177, y: 238.65290075683595, width: 521.056}
-      components:
-      - type: ColumnPanel
-        properties: {col_widths: '{}'}
-        name: column_panel_2
-        layout_properties: {x: 87.5, y: 197.19444274902344, width: 416, grid_position: 'PJFUBU,GEHZLD'}
-        components:
-        - type: Label
-          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Name :', margin: null}
+      properties: {height: 152}
+      type: Image
+    - components:
+      - components:
+        - layout_properties: {grid_position: 'DYUCBG,JZFXSL'}
           name: label_1
-          layout_properties: {grid_position: 'DYUCBG,JZFXSL'}
-        - type: TextBox
-          properties: {role: null, bold: false, align: left, placeholder: Name, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Secondary 500', icon: '', icon_align: left, italic: false, margin: null, role: subheading, spacing_above: small, spacing_below: small, text: 'Name :', tooltip: '', underline: false, visible: true}
+          type: Label
+        - layout_properties: {grid_position: 'DYUCBG,VKKHVR'}
           name: username_box
-          layout_properties: {grid_position: 'DYUCBG,VKKHVR'}
-        - type: Label
-          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Email :', margin: null}
+          properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, margin: null, placeholder: Name, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+          type: TextBox
+        - layout_properties: {grid_position: 'MHJAXI,CEEWKQ'}
           name: label_2
-          layout_properties: {grid_position: 'MHJAXI,CEEWKQ'}
-        - type: TextBox
-          properties: {role: null, bold: false, align: left, placeholder: Email id, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Secondary 500', icon: '', icon_align: left, italic: false, margin: null, role: subheading, spacing_above: small, spacing_below: small, text: 'Email :', tooltip: '', underline: false, visible: true}
+          type: Label
+        - layout_properties: {grid_position: 'MHJAXI,PVCQVY'}
           name: email_box
-          layout_properties: {grid_position: 'MHJAXI,PVCQVY'}
-        - type: Label
-          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Phone Number :', margin: null}
+          properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, margin: null, placeholder: Email id, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+          type: TextBox
+        - layout_properties: {grid_position: 'GPVQDW,TGECAR'}
           name: label_3
-          layout_properties: {grid_position: 'GPVQDW,TGECAR'}
-        - type: TextBox
-          properties: {role: null, bold: false, align: left, placeholder: Phone number, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Secondary 500', icon: '', icon_align: left, italic: false, margin: null, role: subheading, spacing_above: small, spacing_below: small, text: 'Phone Number :', tooltip: '', underline: false, visible: true}
+          type: Label
+        - layout_properties: {grid_position: 'GPVQDW,OGAIYE'}
           name: phone_box
-          layout_properties: {grid_position: 'GPVQDW,OGAIYE'}
-        - type: Label
-          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Address :', margin: null}
+          properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, margin: null, placeholder: Phone number, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+          type: TextBox
+        - layout_properties: {grid_position: 'RHPRXM,ZVJTWG'}
           name: label_4
-          layout_properties: {grid_position: 'RHPRXM,ZVJTWG'}
-        - type: TextBox
-          properties: {role: null, bold: false, align: left, placeholder: Address, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Secondary 500', icon: '', icon_align: left, italic: false, margin: null, role: subheading, spacing_above: small, spacing_below: small, text: 'Address :', tooltip: '', underline: false, visible: true}
+          type: Label
+        - layout_properties: {grid_position: 'RHPRXM,VFDVHC'}
           name: address_box
-          layout_properties: {grid_position: 'RHPRXM,VFDVHC'}
-        - type: Label
-          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'City :', margin: null}
+          properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, margin: null, placeholder: Address, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+          type: TextBox
+        - layout_properties: {grid_position: 'CQTDZJ,DEVRGO'}
           name: label_5
-          layout_properties: {grid_position: 'CQTDZJ,DEVRGO'}
-        - type: TextBox
-          properties: {role: null, bold: false, align: left, placeholder: City, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Secondary 500', icon: '', icon_align: left, italic: false, margin: null, role: subheading, spacing_above: small, spacing_below: small, text: 'City :', tooltip: '', underline: false, visible: true}
+          type: Label
+        - layout_properties: {grid_position: 'CQTDZJ,LOZBPC'}
           name: city_box
-          layout_properties: {grid_position: 'CQTDZJ,LOZBPC'}
-        - type: Label
-          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'State :', margin: null}
+          properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, margin: null, placeholder: City, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+          type: TextBox
+        - layout_properties: {grid_position: 'PUDQJN,RTXRRK'}
           name: label_6
-          layout_properties: {grid_position: 'PUDQJN,RTXRRK'}
-        - type: TextBox
-          properties: {role: null, bold: false, align: left, placeholder: State, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Secondary 500', icon: '', icon_align: left, italic: false, margin: null, role: subheading, spacing_above: small, spacing_below: small, text: 'State :', tooltip: '', underline: false, visible: true}
+          type: Label
+        - layout_properties: {grid_position: 'PUDQJN,KSEEOL'}
           name: state_box
-          layout_properties: {grid_position: 'PUDQJN,KSEEOL'}
-        - type: Label
-          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Country :', margin: null}
+          properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, margin: null, placeholder: State, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+          type: TextBox
+        - layout_properties: {grid_position: 'MXTZTZ,TGGDCL'}
           name: label_7
-          layout_properties: {grid_position: 'MXTZTZ,TGGDCL'}
-        - type: TextBox
-          properties: {role: null, bold: false, align: left, placeholder: Country, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+          properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Secondary 500', icon: '', icon_align: left, italic: false, margin: null, role: subheading, spacing_above: small, spacing_below: small, text: 'Country :', tooltip: '', underline: false, visible: true}
+          type: Label
+        - layout_properties: {grid_position: 'MXTZTZ,ZNKBOD'}
           name: country_box
-          layout_properties: {grid_position: 'MXTZTZ,ZNKBOD'}
-        - type: Label
-          properties: {role: subheading, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Secondary 500', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Date of Birth :', margin: null}
+          properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, margin: null, placeholder: Country, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+          type: TextBox
+        - layout_properties: {grid_position: 'CIMFXN,UMQOFS'}
           name: label_8
-          layout_properties: {grid_position: 'CIMFXN,UMQOFS'}
-        - type: DatePicker
-          properties: {}
+          properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: 'theme:Secondary 500', icon: '', icon_align: left, italic: false, margin: null, role: subheading, spacing_above: small, spacing_below: small, text: 'Date of Birth :', tooltip: '', underline: false, visible: true}
+          type: Label
+        - layout_properties: {grid_position: 'CIMFXN,XMHRFU', width: 100, x: 447.6388854980469, y: 152.91666412353516}
           name: date_picker_1
-          layout_properties: {x: 447.6388854980469, y: 152.91666412353516, width: 100, grid_position: 'CIMFXN,XMHRFU'}
-    - type: Button
-      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Secondary 500', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Save, margin: null}
+          properties: {}
+          type: DatePicker
+        layout_properties: {grid_position: 'PJFUBU,GEHZLD', width: 416, x: 87.5, y: 197.19444274902344}
+        name: column_panel_2
+        properties: {col_widths: '{}'}
+        type: ColumnPanel
+      layout_properties: {grid_position: 'QJOALB,FAPQXN', width: 521.056, x: 177, y: 238.65290075683595}
+      name: card_1
+      properties: {background: '#FF7276', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: card, spacing: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+      type: ColumnPanel
+    - event_bindings: {click: update_button_click}
+      layout_properties: {width: 100, x: 384.6388854980469, y: 681.7639007568359}
       name: update_button
-      layout_properties: {x: 384.6388854980469, y: 681.7639007568359, width: 100}
-      event_bindings: {click: update_button_click}
-    - type: FileLoader
-      properties:
-        role: raised
-        bold: false
-        file_types: null
-        align: center
-        spacing_above: small
-        file: null
-        background: theme:Secondary 500
-        icon: fa:upload
-        multiple: false
-        underline: false
-        font: ''
-        icon_align: left
-        foreground: theme:Primary 700
-        show_state: true
-        files: []
-        spacing_below: small
-        visible: true
-        border: ''
-        italic: false
-        enabled: true
-        font_size: null
-        tooltip: ''
-        text: Upload
-        margin: null
+      properties: {align: center, background: 'theme:Secondary 500', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Primary 700', icon: '', icon_align: left, italic: false, margin: null, role: raised, spacing_above: small, spacing_below: small, text: Save, tooltip: '', underline: false, visible: true}
+      type: Button
+    - layout_properties: {width: 85, x: 462.6388854980469, y: 165.5833282470703}
       name: file_loader_1
-      layout_properties: {x: 462.6388854980469, y: 165.5833282470703, width: 85}
-    - type: Button
-      properties: {role: raised, bold: false, align: center, spacing_above: small, background: 'theme:Secondary 500', icon: '', underline: false, font: '', icon_align: left, foreground: 'theme:Primary 700', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Edite, margin: null}
+      properties:
+        align: center
+        background: theme:Secondary 500
+        bold: false
+        border: ''
+        enabled: true
+        file: null
+        file_types: null
+        files: []
+        font: ''
+        font_size: null
+        foreground: theme:Primary 700
+        icon: fa:upload
+        icon_align: left
+        italic: false
+        margin: null
+        multiple: false
+        role: raised
+        show_state: true
+        spacing_above: small
+        spacing_below: small
+        text: Upload
+        tooltip: ''
+        underline: false
+        visible: true
+      type: FileLoader
+    - event_bindings: {click: profile_image_update_click}
+      layout_properties: {width: 100, x: 860, y: 171.12501525878906}
       name: profile_image_update
-      layout_properties: {x: 860, y: 171.12501525878906, width: 100}
-      event_bindings: {click: profile_image_update_click}
-- type: FlowPanel
-  properties: {}
+      properties: {align: center, background: 'theme:Secondary 500', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: 'theme:Primary 700', icon: '', icon_align: left, italic: false, margin: null, role: raised, spacing_above: small, spacing_below: small, text: Edite, tooltip: '', underline: false, visible: true}
+      type: Button
+    layout_properties: {grid_position: 'RVPGPH,YMVPWB'}
+    name: xy_panel_1
+    properties: {align: center, background: 'theme:Primary 700', border: '', foreground: 'theme:Secondary 500', height: 727.5555725097656, margin: null, role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, width: null}
+    type: XYPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
   name: navbar_links
-  layout_properties: {slot: nav-right}
-- type: ColumnPanel
-  properties: {role: null, col_widths: '{}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: 'theme:Black', spacing_below: small, visible: true, border: '', tooltip: '', spacing: null}
-  name: column_panel_1
-  layout_properties: {slot: left-nav}
-  components:
-  - type: Spacer
-    properties: {height: 112}
+  properties: {}
+  type: FlowPanel
+- components:
+  - layout_properties: {grid_position: 'FUNMHY,AWLYXK'}
     name: spacer_1
-    layout_properties: {grid_position: 'FUNMHY,AWLYXK'}
-  - type: Link
-    properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:user', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Profile}
+    properties: {height: 112}
+    type: Spacer
+  - layout_properties: {grid_position: 'ZNJUTB,SBQDLG'}
     name: link_1
-    layout_properties: {grid_position: 'ZNJUTB,SBQDLG'}
-  - type: Link
-    properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:bell', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Notifications}
-    name: link_2
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 17, foreground: '', icon: 'fa:user', icon_align: left, italic: false, role: null, spacing: null, spacing_above: small, spacing_below: small, text: Profile, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
+  - event_bindings: {click: link_2_click}
     layout_properties: {grid_position: 'OAHPVA,YXDLDM'}
-    event_bindings: {click: link_2_click}
-  - type: Link
-    properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:calendar-check-o', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Bookings}
-    name: link_3
+    name: link_2
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 17, foreground: '', icon: 'fa:bell', icon_align: left, italic: false, role: null, spacing: null, spacing_above: small, spacing_below: small, text: Notifications, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
+  - event_bindings: {click: link_3_click}
     layout_properties: {grid_position: 'URTMWR,CKKWHX'}
-    event_bindings: {click: link_3_click}
-  - type: Link
-    properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:file', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Reports}
-    name: link_4
+    name: link_3
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 17, foreground: '', icon: 'fa:calendar-check-o', icon_align: left, italic: false, role: null, spacing: null, spacing_above: small, spacing_below: small, text: Bookings, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
+  - event_bindings: {click: link_4_click}
     layout_properties: {grid_position: 'IVAOZY,AOOMZP'}
-    event_bindings: {click: link_4_click}
-  - type: Link
-    properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:headphones', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Support}
+    name: link_4
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 17, foreground: '', icon: 'fa:file', icon_align: left, italic: false, role: null, spacing: null, spacing_above: small, spacing_below: small, text: Reports, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
+  - layout_properties: {grid_position: 'VLOAGM,UVJGAL'}
     name: link_5
-    layout_properties: {grid_position: 'VLOAGM,UVJGAL'}
-  - type: Link
-    properties: {role: null, bold: false, align: left, col_widths: '', spacing_above: small, background: '', icon: 'fa:sign-out', wrap_on: mobile, underline: false, font: '', col_spacing: medium, icon_align: left, foreground: '', url: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 17, tooltip: '', spacing: null, text: Log-out}
-    name: link_6
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 17, foreground: '', icon: 'fa:headphones', icon_align: left, italic: false, role: null, spacing: null, spacing_above: small, spacing_below: small, text: Support, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
+  - event_bindings: {click: link_6_click}
     layout_properties: {grid_position: 'WECNMR,CHWPYJ'}
-    event_bindings: {click: link_6_click}
-- name: image_1
-  properties: {role: null, vertical_align: center, alt_text: '', spacing_above: small, background: '', horizontal_align: center, source: _/theme/shot.png, foreground: '', display_mode: shrink_to_fit, spacing_below: small, visible: true, border: '', tooltip: '', height: 97.59999084472656}
+    name: link_6
+    properties: {align: left, background: '', bold: false, border: '', col_spacing: medium, col_widths: '', font: '', font_size: 17, foreground: '', icon: 'fa:sign-out', icon_align: left, italic: false, role: null, spacing: null, spacing_above: small, spacing_below: small, text: Log-out, tooltip: '', underline: false, url: '', visible: true, wrap_on: mobile}
+    type: Link
+  layout_properties: {slot: left-nav}
+  name: column_panel_1
+  properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: 'theme:Black', role: null, spacing: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+  type: ColumnPanel
+- layout_properties: {full_width_row: true, grid_position: 'NWKQOS,YBLPRG', slot: title}
+  name: image_1
+  properties: {alt_text: '', background: '', border: '', display_mode: shrink_to_fit, foreground: '', height: 97.59999084472656, horizontal_align: center, role: null, source: _/theme/shot.png, spacing_above: small, spacing_below: small, tooltip: '', vertical_align: center, visible: true}
   type: Image
-  layout_properties: {grid_position: 'NWKQOS,YBLPRG', full_width_row: true, slot: title}
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true

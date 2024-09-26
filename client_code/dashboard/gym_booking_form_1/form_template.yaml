@@ -1,63 +1,63 @@
-container:
-  type: ColumnPanel
-  properties: {col_widths: '{}'}
 components:
-- name: image_1
-  properties: {source: _/theme/shot.png, height: 71.25}
+- layout_properties: {grid_position: 'WOPLBT,TOYBMT'}
+  name: image_1
+  properties: {height: 71.25, source: _/theme/shot.png}
   type: Image
-  layout_properties: {grid_position: 'WOPLBT,TOYBMT'}
-- name: headline_1_copy
+- layout_properties: {grid_position: 'WOPLBT,BIRNEL'}
+  name: headline_1_copy
   properties: {role: headline}
   type: Label
-  layout_properties: {grid_position: 'WOPLBT,BIRNEL'}
-- name: headline_1
+- layout_properties: {grid_position: 'WOPLBT,JMPURL'}
+  name: headline_1
   properties: {role: headline}
   type: Label
-  layout_properties: {grid_position: 'WOPLBT,JMPURL'}
-- name: button_2
-  properties: {text: back, background: 'theme:Primary 700', foreground: 'theme:Gray 100', role: raised, icon_align: left, icon: 'fa:backward', align: right, bold: true}
-  type: Button
+- event_bindings: {click: button_2_click}
   layout_properties: {grid_position: 'WOPLBT,NIIKHO'}
-  event_bindings: {click: button_2_click}
-- name: label_1
-  properties: {text: Oxy Gym, font_size: 18, bold: true, align: center}
+  name: button_2
+  properties: {align: right, background: 'theme:Primary 700', bold: true, foreground: 'theme:Gray 100', icon: 'fa:backward', icon_align: left, role: raised, text: back}
+  type: Button
+- layout_properties: {grid_position: 'EAGZZU,MVTHMM'}
+  name: label_1
+  properties: {align: center, bold: true, font_size: 18, text: Oxy Gym}
   type: Label
-  layout_properties: {grid_position: 'EAGZZU,MVTHMM'}
-- name: servicers_name_label
-  properties: {text: Doctor Name, align: left, bold: true}
+- layout_properties: {grid_position: 'FPMTTO,FHEHJI'}
+  name: servicers_name_label
+  properties: {align: left, bold: true, text: Doctor Name}
   type: Label
-  layout_properties: {grid_position: 'FPMTTO,FHEHJI'}
-- name: text_box_1
+- layout_properties: {grid_position: 'FPMTTO,WFTUVW'}
+  name: text_box_1
   properties: {placeholder: Doctor's Name}
   type: TextBox
-  layout_properties: {grid_position: 'FPMTTO,WFTUVW'}
-- name: servicers_email_label
-  properties: {align: left, text: Phone Number, bold: true}
+- layout_properties: {grid_position: 'DHSNRC,ZFGYJP'}
+  name: servicers_email_label
+  properties: {align: left, bold: true, text: Phone Number}
   type: Label
-  layout_properties: {grid_position: 'DHSNRC,ZFGYJP'}
-- name: text_box_2
+- layout_properties: {grid_position: 'DHSNRC,YCQDVR'}
+  name: text_box_2
   properties: {placeholder: Phone Number}
   type: TextBox
-  layout_properties: {grid_position: 'DHSNRC,YCQDVR'}
-- name: servicers_phone_label
-  properties: {align: left, text: Timings, bold: true}
+- layout_properties: {grid_position: 'BJYCOY,VFSMIM'}
+  name: servicers_phone_label
+  properties: {align: left, bold: true, text: Timings}
   type: Label
-  layout_properties: {grid_position: 'BJYCOY,VFSMIM'}
-- name: text_box_3
+- layout_properties: {grid_position: 'BJYCOY,PWPTFT'}
+  name: text_box_3
   properties: {placeholder: Timings}
   type: TextBox
-  layout_properties: {grid_position: 'BJYCOY,PWPTFT'}
-- name: servicers_address_label
-  properties: {align: left, text: 'Gym Address  ', bold: true}
+- layout_properties: {grid_position: 'ONBCXG,WXSNPA'}
+  name: servicers_address_label
+  properties: {align: left, bold: true, text: 'Gym Address  '}
   type: Label
-  layout_properties: {grid_position: 'ONBCXG,WXSNPA'}
-- name: text_box_4
+- layout_properties: {grid_position: 'ONBCXG,AMSLKW'}
+  name: text_box_4
   properties: {placeholder: Gym Address}
   type: TextBox
-  layout_properties: {grid_position: 'ONBCXG,AMSLKW'}
-- name: button_1
-  properties: {text: book slot, background: 'theme:Primary 700', foreground: 'theme:Gray 100', role: raised, bold: true}
-  type: Button
+- event_bindings: {click: button_1_click}
   layout_properties: {grid_position: 'XYCGYA,TPIZRT'}
-  event_bindings: {click: button_1_click}
+  name: button_1
+  properties: {background: 'theme:Primary 700', bold: true, foreground: 'theme:Gray 100', role: raised, text: book slot}
+  type: Button
+container:
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
 is_package: true

@@ -1,261 +1,261 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true, role: null, html: ''}
 components:
-- type: ColumnPanel
-  properties: {role: card, col_widths: '{"YIOROR":60,"LSISTC":10,"YBLPRG":10}', spacing_above: none, background: '', wrap_on: mobile, col_spacing: none, foreground: '', spacing_below: large, visible: true, border: '', tooltip: ''}
-  name: card_1
-  layout_properties: {slot: default}
-  components:
-  - name: image_1
-    properties: {role: null, vertical_align: center, alt_text: '', spacing_above: small, background: '', horizontal_align: center, source: _/theme/shot.png, foreground: '', display_mode: shrink_to_fit, spacing_below: small, visible: true, border: '', tooltip: '', height: 97.59999084472656}
+- components:
+  - layout_properties: {full_width_row: true, grid_position: 'NWKQOS,YBLPRG'}
+    name: image_1
+    properties: {alt_text: '', background: '', border: '', display_mode: shrink_to_fit, foreground: '', height: 97.59999084472656, horizontal_align: center, role: null, source: _/theme/shot.png, spacing_above: small, spacing_below: small, tooltip: '', vertical_align: center, visible: true}
     type: Image
-    layout_properties: {grid_position: 'NWKQOS,YBLPRG', full_width_row: true}
-  - name: xy_panel_1
+  - components:
+    - components:
+      - layout_properties: {}
+        name: link_1
+        properties: {background: '', bold: true, foreground: red, text: Home}
+        type: Link
+      - layout_properties: {}
+        name: link_2
+        properties: {bold: true, foreground: red, text: Bookings}
+        type: Link
+      - layout_properties: {}
+        name: link_3
+        properties: {bold: true, foreground: red, text: Profile}
+        type: Link
+      - layout_properties: {}
+        name: link_4
+        properties: {bold: true, foreground: red, text: Reports}
+        type: Link
+      - layout_properties: {}
+        name: link_5
+        properties: {bold: true, foreground: red, text: Support}
+        type: Link
+      - layout_properties: {}
+        name: link_6
+        properties: {bold: true, foreground: red, icon: '', spacing_above: small, text: Notifications}
+        type: Link
+      layout_properties: {width: 585.8000122070313, x: 5.837490845471621, y: 26}
+      name: flow_panel_2
+      properties: {align: justify, background: '', foreground: '', spacing: huge}
+      type: FlowPanel
+    layout_properties: {full_width_row: true, grid_position: 'NWKQOS,YIOROR'}
+    name: xy_panel_1
     properties: {height: 79}
     type: XYPanel
-    layout_properties: {grid_position: 'NWKQOS,YIOROR', full_width_row: true}
-    components:
-    - name: flow_panel_2
-      properties: {align: justify, background: '', spacing: huge, foreground: ''}
-      type: FlowPanel
-      layout_properties: {x: 5.837490845471621, y: 26, width: 585.8000122070313}
-      components:
-      - name: link_1
-        properties: {text: Home, bold: true, foreground: red, background: ''}
-        type: Link
-        layout_properties: {}
-      - name: link_2
-        properties: {text: Bookings, bold: true, foreground: red}
-        type: Link
-        layout_properties: {}
-      - name: link_3
-        properties: {text: Profile, bold: true, foreground: red}
-        type: Link
-        layout_properties: {}
-      - name: link_4
-        properties: {text: Reports, bold: true, foreground: red}
-        type: Link
-        layout_properties: {}
-      - name: link_5
-        properties: {text: Support, bold: true, foreground: red}
-        type: Link
-        layout_properties: {}
-      - name: link_6
-        properties: {icon: '', spacing_above: small, text: Notifications, bold: true, foreground: red}
-        type: Link
-        layout_properties: {}
-  - name: spacer_9
+  - layout_properties: {grid_position: 'NWKQOS,LSISTC OVNIXS,NHUIOK'}
+    name: spacer_9
     properties: {height: 22}
     type: Spacer
-    layout_properties: {grid_position: 'NWKQOS,LSISTC OVNIXS,NHUIOK'}
-  - name: primary_color_2
-    properties: {text: Logout, role: primary-color, background: red, foreground: white, spacing_above: small, spacing_below: small}
-    type: Button
+  - event_bindings: {click: primary_color_2_click}
     layout_properties: {grid_position: 'NWKQOS,LSISTC LCPYNS,BIYQSA'}
-    event_bindings: {click: primary_color_2_click}
-  - name: xy_panel_2
+    name: primary_color_2
+    properties: {background: red, foreground: white, role: primary-color, spacing_above: small, spacing_below: small, text: Logout}
+    type: Button
+  - components:
+    - layout_properties: {width: 1765.39, x: 0, y: 5.950001526623964}
+      name: image_5
+      properties: {display_mode: zoom_to_fill, height: 500.3999938964844, source: _/theme/ed image of.jpg}
+      type: Image
+    - event_bindings: {change: text_box_1_change}
+      layout_properties: {width: 584.8875122070312, x: 181.69999389722943, y: 198}
+      name: text_box_1
+      properties: {background: white, bold: false, border: 2px solid, italic: true, placeholder: ' Enter your location'}
+      type: TextBox
+    - layout_properties: {width: 517.3875122070312, x: 187.45002441480756, y: 140.66251373291016}
+      name: label_1
+      properties: {bold: true, font: a, font_size: 30, foreground: white, italic: false, text: Search for services in your location, underline: false}
+      type: Label
+    - layout_properties: {width: 580.7250366210938, x: 184.5125091560185, y: 246.76251678541303}
+      name: repeating_panel_1
+      properties: {background: white, item_template: dashboard.LocationItemTemplate, visible: false}
+      type: RepeatingPanel
+    - event_bindings: {focus: text_box_2_focus}
+      layout_properties: {width: 581.1500244140625, x: 183.43749694898725, y: 200.2000093460083}
+      name: text_box_2
+      properties: {background: white, bold: false, border: 2px solid, italic: true, placeholder: ' Enter your location', visible: true}
+      type: TextBox
+    layout_properties: {full_width_row: true, grid_position: 'DDDLVL,DIZMIY'}
+    name: xy_panel_2
     properties: {height: 531.9999389648438}
     type: XYPanel
-    layout_properties: {grid_position: 'DDDLVL,DIZMIY', full_width_row: true}
-    components:
-    - name: image_5
-      properties: {source: _/theme/ed image of.jpg, display_mode: zoom_to_fill, height: 500.3999938964844}
-      type: Image
-      layout_properties: {x: 0, y: 5.950001526623964, width: 1765.39}
-    - name: text_box_1
-      properties: {placeholder: ' Enter your location', italic: true, bold: false, border: 2px solid, background: white}
-      type: TextBox
-      layout_properties: {x: 181.69999389722943, y: 198, width: 584.8875122070312}
-      event_bindings: {change: text_box_1_change}
-    - name: label_1
-      properties: {text: Search for services in your location, foreground: white, bold: true, font: a, font_size: 30, italic: false, underline: false}
-      type: Label
-      layout_properties: {x: 187.45002441480756, y: 140.66251373291016, width: 517.3875122070312}
-    - name: repeating_panel_1
-      properties: {item_template: dashboard.LocationItemTemplate, background: white, visible: false}
-      type: RepeatingPanel
-      layout_properties: {x: 184.5125091560185, y: 246.76251678541303, width: 580.7250366210938}
-    - name: text_box_2
-      properties: {placeholder: ' Enter your location', italic: true, bold: false, border: 2px solid, background: white, visible: true}
-      type: TextBox
-      layout_properties: {x: 183.43749694898725, y: 200.2000093460083, width: 581.1500244140625}
-      event_bindings: {focus: text_box_2_focus}
-  - name: label_3
-    properties: {text: Our services, align: center, font_size: 28, bold: true, foreground: '#2d3249', underline: false}
+  - layout_properties: {grid_position: 'CVXGMC,CQWXAY'}
+    name: label_3
+    properties: {align: center, bold: true, font_size: 28, foreground: '#2d3249', text: Our services, underline: false}
     type: Label
-    layout_properties: {grid_position: 'CVXGMC,CQWXAY'}
-  - name: spacer_5
+  - layout_properties: {grid_position: 'OCAWEJ,KPKFBA'}
+    name: spacer_5
     properties: {height: 20.399993896484375}
     type: Spacer
-    layout_properties: {grid_position: 'OCAWEJ,KPKFBA'}
-  - name: card_2
-    properties: {role: card, visible: true, background: white, foreground: 'theme:Primary 500', col_widths: '{}', spacing_above: small, spacing_below: small, col_spacing: huge}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'QVNURT,MTBVVV'}
-    components:
-    - type: ColumnPanel
-      properties: {role: card, col_widths: '{}'}
-      name: card_3
-      layout_properties: {grid_position: 'DMSWBI,TUTIHW'}
-      components:
-      - name: image_2
-        properties: {source: _/theme/Untitled design (1).png, horizontal_align: center, height: 286.39996337890625, display_mode: zoom_to_fill, vertical_align: top}
+  - components:
+    - components:
+      - layout_properties: {full_width_row: false, grid_position: 'OHVCGV,QTWARV'}
+        name: image_2
+        properties: {display_mode: zoom_to_fill, height: 286.39996337890625, horizontal_align: center, source: _/theme/Untitled design (1).png, vertical_align: top}
         type: Image
-        layout_properties: {grid_position: 'OHVCGV,QTWARV', full_width_row: false}
-      - name: headline_1
-        properties: {role: text, text: OXICLINIC, align: center, bold: true, font_size: 20, foreground: black}
+      - layout_properties: {grid_position: 'EKHWEI,KFXECL'}
+        name: headline_1
+        properties: {align: center, bold: true, font_size: 20, foreground: black, role: text, text: OXICLINIC}
         type: Label
-        layout_properties: {grid_position: 'EKHWEI,KFXECL'}
-      - name: spacer_1
+      - layout_properties: {grid_position: 'ABJTOK,VPDDTW'}
+        name: spacer_1
         properties: {height: 32}
         type: Spacer
-        layout_properties: {grid_position: 'ABJTOK,VPDDTW'}
-      - name: primary_color_1
-        properties: {text: Book Now, role: primary-color, enabled: true, visible: true, background: '#2d3249', align: full, foreground: white, bold: false}
-        type: Button
+      - event_bindings: {click: primary_color_1_click}
         layout_properties: {grid_position: 'YHMVWT,VXKAGX'}
-        event_bindings: {click: primary_color_1_click}
-    - type: ColumnPanel
-      properties: {role: card, col_widths: '{}'}
-      name: card_4
-      layout_properties: {grid_position: 'DMSWBI,FAGYVG'}
-      components:
-      - name: image_3
-        properties: {source: _/theme/ed and (1).png, height: 285.1999816894531, display_mode: zoom_to_fill}
+        name: primary_color_1
+        properties: {align: full, background: '#2d3249', bold: false, enabled: true, foreground: white, role: primary-color, text: Book Now, visible: true}
+        type: Button
+      layout_properties: {grid_position: 'DMSWBI,TUTIHW'}
+      name: card_3
+      properties: {col_widths: '{}', role: card}
+      type: ColumnPanel
+    - components:
+      - layout_properties: {full_width_row: true, grid_position: 'WXYMYT,ZJDCAL'}
+        name: image_3
+        properties: {display_mode: zoom_to_fill, height: 285.1999816894531, source: _/theme/ed and (1).png}
         type: Image
-        layout_properties: {grid_position: 'WXYMYT,ZJDCAL', full_width_row: true}
-      - name: headline_2
-        properties: {role: text, text: OXIWHEELS, align: center, bold: true, font_size: 20, foreground: black}
+      - layout_properties: {grid_position: 'NKDKXE,CWZUNP'}
+        name: headline_2
+        properties: {align: center, bold: true, font_size: 20, foreground: black, role: text, text: OXIWHEELS}
         type: Label
-        layout_properties: {grid_position: 'NKDKXE,CWZUNP'}
-      - name: spacer_3
+      - layout_properties: {grid_position: 'XJIJKO,ZAUZME'}
+        name: spacer_3
         properties: {height: 41.79998779296875}
         type: Spacer
-        layout_properties: {grid_position: 'XJIJKO,ZAUZME'}
-      - name: primary_color_1_copy
-        properties: {text: Book Now, role: primary-color, enabled: true, visible: true, background: '#2d3249', align: full, foreground: white, bold: false}
-        type: Button
+      - event_bindings: {click: primary_color_1_copy_click}
         layout_properties: {grid_position: 'PNEUMP,CCYUAK'}
-        event_bindings: {click: primary_color_1_copy_click}
-    - type: ColumnPanel
-      properties: {role: card, col_widths: '{}'}
-      name: card_5
-      layout_properties: {grid_position: 'DMSWBI,WLSXBH'}
-      components:
-      - name: image_4
-        properties: {source: _/theme/Untitled design (2).png, height: 283.5999755859375, horizontal_align: right, display_mode: zoom_to_fill}
+        name: primary_color_1_copy
+        properties: {align: full, background: '#2d3249', bold: false, enabled: true, foreground: white, role: primary-color, text: Book Now, visible: true}
+        type: Button
+      layout_properties: {grid_position: 'DMSWBI,FAGYVG'}
+      name: card_4
+      properties: {col_widths: '{}', role: card}
+      type: ColumnPanel
+    - components:
+      - layout_properties: {full_width_row: false, grid_position: 'JGWCBV,NYHALZ'}
+        name: image_4
+        properties: {display_mode: zoom_to_fill, height: 283.5999755859375, horizontal_align: right, source: _/theme/Untitled design (2).png}
         type: Image
-        layout_properties: {grid_position: 'JGWCBV,NYHALZ', full_width_row: false}
-      - name: headline_3
-        properties: {role: text, align: center, text: OXIGYM, bold: true, font_size: 20, foreground: black}
+      - layout_properties: {grid_position: 'CWODUH,CBMCSW'}
+        name: headline_3
+        properties: {align: center, bold: true, font_size: 20, foreground: black, role: text, text: OXIGYM}
         type: Label
-        layout_properties: {grid_position: 'CWODUH,CBMCSW'}
-      - name: spacer_2
+      - layout_properties: {grid_position: 'AASRRU,NMZLLU'}
+        name: spacer_2
         properties: {height: 25}
         type: Spacer
-        layout_properties: {grid_position: 'AASRRU,NMZLLU'}
-      - name: primary_color_1_copy_2
-        properties: {text: Book Now, role: primary-color, enabled: true, visible: true, background: '#2d3249', align: full, foreground: white, bold: false}
-        type: Button
+      - event_bindings: {click: primary_color_1_copy_2_click}
         layout_properties: {grid_position: 'CWZHBI,WKKDQW'}
-        event_bindings: {click: primary_color_1_copy_2_click}
-  - name: spacer_6
+        name: primary_color_1_copy_2
+        properties: {align: full, background: '#2d3249', bold: false, enabled: true, foreground: white, role: primary-color, text: Book Now, visible: true}
+        type: Button
+      layout_properties: {grid_position: 'DMSWBI,WLSXBH'}
+      name: card_5
+      properties: {col_widths: '{}', role: card}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'QVNURT,MTBVVV'}
+    name: card_2
+    properties: {background: white, col_spacing: huge, col_widths: '{}', foreground: 'theme:Primary 500', role: card, spacing_above: small, spacing_below: small, visible: true}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'GMOFPG,ZBUVHI'}
+    name: spacer_6
     properties: {height: 34.5999755859375}
     type: Spacer
-    layout_properties: {grid_position: 'GMOFPG,ZBUVHI'}
-  - name: column_panel_24
-    properties: {role: card, col_spacing: huge, col_widths: '{"ASCNSX":20,"DJUEAH":20,"JMQDKX":20}'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'CLVSQI,TGIXJI', full_width_row: true}
-    components:
-    - name: headline_16
-      properties: {role: headline, align: center, text: Our pilot customers, bold: true, foreground: '#2d3249', font_size: 28, underline: true}
+  - components:
+    - layout_properties: {grid_position: 'GJVFSA,LJTMZP'}
+      name: headline_16
+      properties: {align: center, bold: true, font_size: 28, foreground: '#2d3249', role: headline, text: Our pilot customers, underline: true}
       type: Label
-      layout_properties: {grid_position: 'GJVFSA,LJTMZP'}
-    - name: label_20
-      properties: {align: center, text: Unlock your potential with Oxivive's revolutionary anti-aging solutions., font_size: 16}
+    - layout_properties: {grid_position: 'QUZTJY,SJDJQH'}
+      name: label_20
+      properties: {align: center, font_size: 16, text: Unlock your potential with Oxivive's revolutionary anti-aging solutions.}
       type: Label
-      layout_properties: {grid_position: 'QUZTJY,SJDJQH'}
-    - name: card_7
-      properties: {role: card, col_spacing: none}
-      type: ColumnPanel
+    - components:
+      - layout_properties: {grid_position: 'VPAUNO,CXOQPH'}
+        name: label_21
+        properties: {align: center, bold: true, font_size: 45, foreground: 'theme:Primary 700', icon: '', text: ',,'}
+        type: Label
+      - layout_properties: {grid_position: 'PFGMSK,SGFHZT'}
+        name: label_18
+        properties: {font_size: 16, italic: true, text: I never realized aging could be such a positive experience until I discovered Oxivive. Their SHOT therapy has given me boundless energy and a sharper mind.}
+        type: Label
+      - layout_properties: {grid_position: 'FKGMZT,WUYIGM'}
+        name: image_10
+        properties: {display_mode: zoom_to_fill, height: 322, source: _/theme/Ret-govt%20Official.png}
+        type: Image
+      - layout_properties: {grid_position: 'TJUCRV,LEAJLD'}
+        name: label_24
+        properties: {align: center, bold: true, foreground: red, text: Ret Government Official}
+        type: Label
       layout_properties: {grid_position: 'AZDRGP,ASCNSX'}
-      components:
-      - name: label_21
-        properties: {align: center, text: ',,', bold: true, font_size: 45, icon: '', foreground: 'theme:Primary 700'}
-        type: Label
-        layout_properties: {grid_position: 'VPAUNO,CXOQPH'}
-      - name: label_18
-        properties: {text: I never realized aging could be such a positive experience until I discovered Oxivive. Their SHOT therapy has given me boundless energy and a sharper mind., italic: true, font_size: 16}
-        type: Label
-        layout_properties: {grid_position: 'PFGMSK,SGFHZT'}
-      - name: image_10
-        properties: {source: _/theme/Ret-govt%20Official.png, display_mode: zoom_to_fill, height: 322}
-        type: Image
-        layout_properties: {grid_position: 'FKGMZT,WUYIGM'}
-      - name: label_24
-        properties: {text: Ret Government Official, align: center, bold: true, foreground: red}
-        type: Label
-        layout_properties: {grid_position: 'TJUCRV,LEAJLD'}
-    - name: card_8
-      properties: {role: card}
+      name: card_7
+      properties: {col_spacing: none, role: card}
       type: ColumnPanel
-      layout_properties: {grid_position: 'AZDRGP,DJUEAH'}
-      components:
-      - name: label_22
-        properties: {align: center, font_size: 45, bold: true, text: ',,', foreground: 'theme:Primary 700'}
+    - components:
+      - layout_properties: {grid_position: 'BCWAPA,NOXIYV'}
+        name: label_22
+        properties: {align: center, bold: true, font_size: 45, foreground: 'theme:Primary 700', text: ',,'}
         type: Label
-        layout_properties: {grid_position: 'BCWAPA,NOXIYV'}
-      - name: label_48
-        properties: {text: Oxivive's anti-aging solutions truly defy the effects of time. I can't believe how much younger and more vibrant I feel after just a few sessions., italic: true, font_size: 16}
+      - layout_properties: {grid_position: 'IGZTDE,BLELSN'}
+        name: label_48
+        properties: {font_size: 16, italic: true, text: Oxivive's anti-aging solutions truly defy the effects of time. I can't believe how much younger and more vibrant I feel after just a few sessions.}
         type: Label
-        layout_properties: {grid_position: 'IGZTDE,BLELSN'}
-      - name: image_11
-        properties: {source: _/theme/busninessman.png, display_mode: zoom_to_fill, height: 323}
+      - layout_properties: {grid_position: 'PTLKAA,QYYHGD'}
+        name: image_11
+        properties: {display_mode: zoom_to_fill, height: 323, source: _/theme/busninessman.png}
         type: Image
-        layout_properties: {grid_position: 'PTLKAA,QYYHGD'}
-      - name: rich_text_24
-        properties: {align: center, content: ''}
-        type: RichText
+      - components:
+        - layout_properties: {}
+          name: label_25
+          properties: {align: center, background: '', bold: true, font_size: 14, foreground: red, text: Businessmen}
+          type: Label
         layout_properties: {grid_position: 'YDAONG,RRHKRI'}
-        components:
-        - name: label_25
-          properties: {align: center, text: Businessmen, bold: true, font_size: 14, background: '', foreground: red}
-          type: Label
-          layout_properties: {}
-    - name: card_9
-      properties: {role: card}
-      type: ColumnPanel
-      layout_properties: {grid_position: 'AZDRGP,JMQDKX'}
-      components:
-      - name: label_23
-        properties: {align: center, font_size: 45, bold: true, text: ',,', foreground: 'theme:Primary 700'}
-        type: Label
-        layout_properties: {grid_position: 'TZUCUU,RVQMCO'}
-      - name: label_49
-        properties: {text: 'As a busy professional, I was struggling to keep up with my hectic schedule and aging body.', italic: true, font_size: 16}
-        type: Label
-        layout_properties: {grid_position: 'ROQJFB,YTKXUD'}
-      - name: image_12
-        properties: {height: 346.5999755859375, source: _/theme/it%20manager.png, display_mode: zoom_to_fill}
-        type: Image
-        layout_properties: {grid_position: 'WJTELH,NIYPHU'}
-      - name: rich_text_25
+        name: rich_text_24
         properties: {align: center, content: ''}
         type: RichText
-        layout_properties: {grid_position: 'ADQYZN,RXPDKC'}
-        components:
-        - name: label_26
-          properties: {align: center, text: IT Manager, bold: true, foreground: red}
+      layout_properties: {grid_position: 'AZDRGP,DJUEAH'}
+      name: card_8
+      properties: {role: card}
+      type: ColumnPanel
+    - components:
+      - layout_properties: {grid_position: 'TZUCUU,RVQMCO'}
+        name: label_23
+        properties: {align: center, bold: true, font_size: 45, foreground: 'theme:Primary 700', text: ',,'}
+        type: Label
+      - layout_properties: {grid_position: 'ROQJFB,YTKXUD'}
+        name: label_49
+        properties: {font_size: 16, italic: true, text: 'As a busy professional, I was struggling to keep up with my hectic schedule and aging body.'}
+        type: Label
+      - layout_properties: {grid_position: 'WJTELH,NIYPHU'}
+        name: image_12
+        properties: {display_mode: zoom_to_fill, height: 346.5999755859375, source: _/theme/it%20manager.png}
+        type: Image
+      - components:
+        - layout_properties: {}
+          name: label_26
+          properties: {align: center, bold: true, foreground: red, text: IT Manager}
           type: Label
-          layout_properties: {}
-    - name: spacer_4
+        layout_properties: {grid_position: 'ADQYZN,RXPDKC'}
+        name: rich_text_25
+        properties: {align: center, content: ''}
+        type: RichText
+      layout_properties: {grid_position: 'AZDRGP,JMQDKX'}
+      name: card_9
+      properties: {role: card}
+      type: ColumnPanel
+    - layout_properties: {grid_position: 'OPYPWG,MHGACB'}
+      name: spacer_4
       properties: {height: 70.39996337890625}
       type: Spacer
-      layout_properties: {grid_position: 'OPYPWG,MHGACB'}
-  - name: label_16
-    properties: {text: © 2024 OXIVIVE., align: center, foreground: white, background: '#2d3249'}
+    layout_properties: {full_width_row: true, grid_position: 'CLVSQI,TGIXJI'}
+    name: column_panel_24
+    properties: {col_spacing: huge, col_widths: '{"ASCNSX":20,"DJUEAH":20,"JMQDKX":20}', role: card}
+    type: ColumnPanel
+  - layout_properties: {full_width_row: true, grid_position: 'WDRGMM,ZFEULA'}
+    name: label_16
+    properties: {align: center, background: '#2d3249', foreground: white, text: © 2024 OXIVIVE.}
     type: Label
-    layout_properties: {grid_position: 'WDRGMM,ZFEULA', full_width_row: true}
+  layout_properties: {slot: default}
+  name: card_1
+  properties: {background: '', border: '', col_spacing: none, col_widths: '{"YIOROR":60,"LSISTC":10,"YBLPRG":10}', foreground: '', role: card, spacing_above: none, spacing_below: large, tooltip: '', visible: true, wrap_on: mobile}
+  type: ColumnPanel
+container:
+  properties: {background: '', border: '', foreground: '', html: '', role: null, tooltip: '', visible: true}
+  type: HtmlTemplate
+is_package: true

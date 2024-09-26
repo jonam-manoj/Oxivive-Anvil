@@ -1,103 +1,103 @@
-container:
-  type: ColumnPanel
-  properties: {role: null, col_widths: '{"QIGBJP":35}', spacing_above: medium, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: true, border: '', tooltip: ''}
 components:
-- name: image_1_copy
-  properties: {source: _/theme/shot.png, horizontal_align: center, height: 117.60000610351562, display_mode: shrink_to_fit, background: red}
+- layout_properties: {full_width_row: true, grid_position: 'GGDRNG,DHQSNC'}
+  name: image_1_copy
+  properties: {background: red, display_mode: shrink_to_fit, height: 117.60000610351562, horizontal_align: center, source: _/theme/shot.png}
   type: Image
-  layout_properties: {grid_position: 'GGDRNG,DHQSNC', full_width_row: true}
-- name: spacer_2
+- layout_properties: {grid_position: 'IAVBAW,QLDDHV'}
+  name: spacer_2
   properties: {height: 67}
   type: Spacer
-  layout_properties: {grid_position: 'IAVBAW,QLDDHV'}
-- name: label_1
-  properties: {align: center, text: 'Select the services to add  ', bold: true, font_size: 20, underline: true}
+- layout_properties: {full_width_row: true, grid_position: 'ZBHYWO,QIGBJP'}
+  name: label_1
+  properties: {align: center, bold: true, font_size: 20, text: 'Select the services to add  ', underline: true}
   type: Label
-  layout_properties: {grid_position: 'ZBHYWO,QIGBJP', full_width_row: true}
-- name: spacer_3
+- layout_properties: {grid_position: 'YNRMHX,PDZPXM'}
+  name: spacer_3
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'YNRMHX,PDZPXM'}
-- name: label_2
-  properties: {role: null, bold: true, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: OXICLINIC}
+- layout_properties: {grid_position: 'BTRQPU,TGAOEV UPLVSX,ITJSLP'}
+  name: label_2
+  properties: {align: center, background: '', bold: true, border: '', font: '', font_size: 15, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: OXICLINIC, tooltip: '', underline: false, visible: true}
   type: Label
-  layout_properties: {grid_position: 'BTRQPU,TGAOEV UPLVSX,ITJSLP'}
-- name: image_1
-  properties: {source: _/theme/Untitled design (1).png, height: 324.79998779296875, spacing_above: small, spacing_below: small, display_mode: zoom_to_fill}
+- layout_properties: {grid_position: 'BTRQPU,TGAOEV KGFNUE,FXOUXG'}
+  name: image_1
+  properties: {display_mode: zoom_to_fill, height: 324.79998779296875, source: _/theme/Untitled design (1).png, spacing_above: small, spacing_below: small}
   type: Image
-  layout_properties: {grid_position: 'BTRQPU,TGAOEV KGFNUE,FXOUXG'}
-- name: spacer_4
+- layout_properties: {grid_position: 'BTRQPU,TGAOEV WMJAEY,YRRFOC'}
+  name: spacer_4
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'BTRQPU,TGAOEV WMJAEY,YRRFOC'}
-- name: add_oxiclinic_button
-  properties: {role: null, bold: false, align: full, spacing_above: medium, background: '#2d3249', icon: 'fa:plus', underline: false, font: '', icon_align: left, foreground: WHITE, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Add}
-  type: Button
+- event_bindings: {click: add_oxiclinic_button_click}
   layout_properties: {grid_position: 'BTRQPU,TGAOEV ERDOVF,ZCOAFJ'}
-  event_bindings: {click: add_oxiclinic_button_click}
-- name: label_3
-  properties: {role: null, bold: true, align: center, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: OXIWHEEL}
+  name: add_oxiclinic_button
+  properties: {align: full, background: '#2d3249', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: WHITE, icon: 'fa:plus', icon_align: left, italic: false, role: null, spacing_above: medium, spacing_below: small, text: Add, tooltip: '', underline: false, visible: true}
+  type: Button
+- layout_properties: {grid_position: 'BTRQPU,TNWPUG PBQOMX,OMMUGL'}
+  name: label_3
+  properties: {align: center, background: '', bold: true, border: '', font: '', font_size: 15, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: medium, spacing_below: small, text: OXIWHEEL, tooltip: '', underline: false, visible: true}
   type: Label
-  layout_properties: {grid_position: 'BTRQPU,TNWPUG PBQOMX,OMMUGL'}
-- name: image_2
-  properties: {source: _/theme/ed and (1).png, height: 320.5999755859375, display_mode: zoom_to_fill}
+- layout_properties: {grid_position: 'BTRQPU,TNWPUG MOXKFX,AMGEBF'}
+  name: image_2
+  properties: {display_mode: zoom_to_fill, height: 320.5999755859375, source: _/theme/ed and (1).png}
   type: Image
-  layout_properties: {grid_position: 'BTRQPU,TNWPUG MOXKFX,AMGEBF'}
-- name: spacer_5
+- layout_properties: {grid_position: 'BTRQPU,TNWPUG WDEOKO,VCUJMT'}
+  name: spacer_5
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'BTRQPU,TNWPUG WDEOKO,VCUJMT'}
-- name: add_oxiwheel_button
-  properties: {role: null, bold: false, align: full, spacing_above: medium, background: '#2d3249', icon: 'fa:plus', underline: false, font: '', icon_align: left, foreground: WHITE, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: ADD}
-  type: Button
+- event_bindings: {click: add_oxiwheel_button_click}
   layout_properties: {grid_position: 'BTRQPU,TNWPUG XGVEVY,VYXCCT'}
-  event_bindings: {click: add_oxiwheel_button_click}
-- name: label_4
-  properties: {role: null, bold: true, align: center, spacing_above: medium, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: 15, tooltip: '', text: OXIGYM}
+  name: add_oxiwheel_button
+  properties: {align: full, background: '#2d3249', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: WHITE, icon: 'fa:plus', icon_align: left, italic: false, role: null, spacing_above: medium, spacing_below: small, text: ADD, tooltip: '', underline: false, visible: true}
+  type: Button
+- layout_properties: {grid_position: 'BTRQPU,OOBSIQ IYMAZH,EUBZGF'}
+  name: label_4
+  properties: {align: center, background: '', bold: true, border: '', font: '', font_size: 15, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: medium, spacing_below: small, text: OXIGYM, tooltip: '', underline: false, visible: true}
   type: Label
-  layout_properties: {grid_position: 'BTRQPU,OOBSIQ IYMAZH,EUBZGF'}
-- name: image_3
-  properties: {source: _/theme/Untitled design (2).png, height: 320.5999755859375, display_mode: zoom_to_fill}
+- layout_properties: {grid_position: 'BTRQPU,OOBSIQ XVVAWL,MUUTXG'}
+  name: image_3
+  properties: {display_mode: zoom_to_fill, height: 320.5999755859375, source: _/theme/Untitled design (2).png}
   type: Image
-  layout_properties: {grid_position: 'BTRQPU,OOBSIQ XVVAWL,MUUTXG'}
-- name: spacer_6
+- layout_properties: {grid_position: 'BTRQPU,OOBSIQ GOMDEI,QJIGLV'}
+  name: spacer_6
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'BTRQPU,OOBSIQ GOMDEI,QJIGLV'}
-- name: add_oxigym_button
-  properties: {role: null, bold: false, align: full, spacing_above: medium, background: '#2d3249', icon: 'fa:plus', underline: false, font: '', icon_align: left, foreground: WHITE, spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: Add}
-  type: Button
+- event_bindings: {click: add_oxigym_button_click}
   layout_properties: {grid_position: 'BTRQPU,OOBSIQ WODUKK,PYSMKE'}
-  event_bindings: {click: add_oxigym_button_click}
-- name: spacer_7
+  name: add_oxigym_button
+  properties: {align: full, background: '#2d3249', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: WHITE, icon: 'fa:plus', icon_align: left, italic: false, role: null, spacing_above: medium, spacing_below: small, text: Add, tooltip: '', underline: false, visible: true}
+  type: Button
+- layout_properties: {grid_position: 'RHXQLU,OFUHKV'}
+  name: spacer_7
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'RHXQLU,OFUHKV'}
-- name: services_list_button
-  properties: {text: view services list, align: right, foreground: '#fa1900', icon: 'fa:table', font_size: 12, bold: true}
-  type: Button
+- event_bindings: {click: services_list_button_click}
   layout_properties: {grid_position: 'DBEUOP,VLUTAC'}
-  event_bindings: {click: services_list_button_click}
-- name: spacer_1
+  name: services_list_button
+  properties: {align: right, bold: true, font_size: 12, foreground: '#fa1900', icon: 'fa:table', text: view services list}
+  type: Button
+- layout_properties: {grid_position: 'PAGFJW,AVWSQX'}
+  name: spacer_1
   properties: {height: 67.39996337890625}
   type: Spacer
-  layout_properties: {grid_position: 'PAGFJW,AVWSQX'}
-- name: spacer_9
+- layout_properties: {grid_position: 'MJLSDI,CEYLGN'}
+  name: spacer_9
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'MJLSDI,CEYLGN'}
-- name: back_button_1
-  properties: {text: Back, align: full, background: RED, foreground: WHITE, role: null, icon: 'fa:backward', border: line, bold: true}
-  type: Button
+- event_bindings: {click: button_5_click}
   layout_properties: {grid_position: 'MJLSDI,ERTLUT'}
-  event_bindings: {click: button_5_click}
-- name: servicers_register_button
-  properties: {text: Register, background: '#fa1900', foreground: 'theme:White', role: raised, align: full, bold: true}
+  name: back_button_1
+  properties: {align: full, background: RED, bold: true, border: line, foreground: WHITE, icon: 'fa:backward', role: null, text: Back}
   type: Button
+- event_bindings: {click: servicers_register_button_click}
   layout_properties: {grid_position: 'MJLSDI,XQVRAQ'}
-  event_bindings: {click: servicers_register_button_click}
-- name: spacer_8
+  name: servicers_register_button
+  properties: {align: full, background: '#fa1900', bold: true, foreground: 'theme:White', role: raised, text: Register}
+  type: Button
+- layout_properties: {grid_position: 'MJLSDI,UGORCH'}
+  name: spacer_8
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'MJLSDI,UGORCH'}
+container:
+  properties: {background: '', border: '', col_spacing: medium, col_widths: '{"QIGBJP":35}', foreground: '', role: null, spacing_above: medium, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+  type: ColumnPanel
 is_package: true

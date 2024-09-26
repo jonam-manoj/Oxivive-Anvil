@@ -1,8 +1,8 @@
-is_package: true
-container: {type: ColumnPanel}
 components:
-- name: link_location
+- event_bindings: {click: link_location_click}
+  layout_properties: {grid_position: 'VYVTNA,QNJJQW'}
+  name: link_location
   properties: {}
   type: Link
-  layout_properties: {grid_position: 'VYVTNA,QNJJQW'}
-  event_bindings: {click: link_location_click}
+container: {type: ColumnPanel}
+is_package: true

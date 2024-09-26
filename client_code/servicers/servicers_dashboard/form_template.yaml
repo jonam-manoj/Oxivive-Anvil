@@ -1,93 +1,93 @@
-container:
-  type: ColumnPanel
-  properties: {col_widths: '{}'}
 components:
-- type: form:servicers.service_navigation_bar
-  properties: {}
+- layout_properties: {full_width_row: true, grid_position: 'FHEXUL,VCGHVN'}
   name: service_navigation_bar_1
-  layout_properties: {grid_position: 'FHEXUL,VCGHVN', full_width_row: true}
-- name: card_3
+  properties: {}
+  type: form:servicers.service_navigation_bar
+- components:
+  - layout_properties: {grid_position: 'QUSMEZ,CNXLEB'}
+    name: label_5
+    properties: {align: center, bold: true, role: subheading, text: OXIVIVE CUSTOMERS}
+    type: Label
+  layout_properties: {grid_position: 'EYFAHS,RKCFKJ'}
+  name: card_3
   properties: {role: card}
   type: ColumnPanel
-  layout_properties: {grid_position: 'EYFAHS,RKCFKJ'}
-  components:
-  - name: label_5
-    properties: {align: center, text: OXIVIVE CUSTOMERS, bold: true, role: subheading}
-    type: Label
-    layout_properties: {grid_position: 'QUSMEZ,CNXLEB'}
-- name: card_2
-  properties: {role: card, col_widths: '{"GOVVFW":14,"ATBDZC":31,"UEREHV":15}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'XTWTRS,FNZSXX'}
-  components:
-  - name: spacer_1
+- components:
+  - layout_properties: {full_width_row: false, grid_position: 'SBUHUI,ATBDZC'}
+    name: spacer_1
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'SBUHUI,ATBDZC', full_width_row: false}
-  - name: label_6
-    properties: {align: center, text: 'Date : ', bold: true}
+  - layout_properties: {grid_position: 'SBUHUI,GOVVFW'}
+    name: label_6
+    properties: {align: center, bold: true, text: 'Date : '}
     type: Label
-    layout_properties: {grid_position: 'SBUHUI,GOVVFW'}
-  - name: date_picker_1
+  - event_bindings: {change: date_picker_1_change}
+    layout_properties: {grid_position: 'SBUHUI,UEREHV'}
+    name: date_picker_1
     properties: {}
     type: DatePicker
-    layout_properties: {grid_position: 'SBUHUI,UEREHV'}
-    event_bindings: {change: date_picker_1_change}
-- name: repeating_panel_1
+  layout_properties: {grid_position: 'XTWTRS,FNZSXX'}
+  name: card_2
+  properties: {col_widths: '{"GOVVFW":14,"ATBDZC":31,"UEREHV":15}', role: card}
+  type: ColumnPanel
+- layout_properties: {grid_position: 'LRPQUJ,ASWANP'}
+  name: repeating_panel_1
   properties: {item_template: servicers.servicers_dashboard.ItemTemplate1}
   type: RepeatingPanel
-  layout_properties: {grid_position: 'LRPQUJ,ASWANP'}
-- name: card_1
-  properties: {role: card, col_widths: '{"LUZQWO":15,"EJCEEW":17,"BRPPVK":21}', spacing_above: small, background: '', wrap_on: mobile, col_spacing: medium, foreground: '', spacing_below: small, visible: false, border: '', tooltip: ''}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'VVOJLJ,APCUHZ'}
-  components:
-  - name: image_1
+- components:
+  - layout_properties: {grid_position: 'SIKDJK,LUZQWO'}
+    name: image_1
     properties: {role: image, source: _/theme/shot.png}
     type: Image
-    layout_properties: {grid_position: 'SIKDJK,LUZQWO'}
-  - name: label_2
-    properties: {align: center, text: 'Name : ', bold: true}
+  - layout_properties: {grid_position: 'SIKDJK,EJCEEW MXHQRW,UJDXCS'}
+    name: label_2
+    properties: {align: center, bold: true, text: 'Name : '}
     type: Label
-    layout_properties: {grid_position: 'SIKDJK,EJCEEW MXHQRW,UJDXCS'}
-  - name: label_3
+  - layout_properties: {grid_position: 'SIKDJK,EJCEEW MFOHMQ,ROCKAA'}
+    name: label_3
     properties: {align: center, bold: true, text: 'Email : '}
     type: Label
-    layout_properties: {grid_position: 'SIKDJK,EJCEEW MFOHMQ,ROCKAA'}
-  - name: label_7
-    properties: {align: center, text: 'Slot - Time :', bold: true}
+  - layout_properties: {grid_position: 'SIKDJK,EJCEEW XPLHOW,TEWEIH'}
+    name: label_7
+    properties: {align: center, bold: true, text: 'Slot - Time :'}
     type: Label
-    layout_properties: {grid_position: 'SIKDJK,EJCEEW XPLHOW,TEWEIH'}
-  - name: label_9
-    properties: {align: center, text: 'Phone :', bold: true}
+  - layout_properties: {grid_position: 'SIKDJK,EJCEEW INFTNN,PQKYNK'}
+    name: label_9
+    properties: {align: center, bold: true, text: 'Phone :'}
     type: Label
-    layout_properties: {grid_position: 'SIKDJK,EJCEEW INFTNN,PQKYNK'}
-  - name: label_11
+  - layout_properties: {grid_position: 'SIKDJK,EJCEEW PHCRDM,KWQFGD'}
+    name: label_11
     properties: {align: center, bold: true, text: 'Service Type : '}
     type: Label
-    layout_properties: {grid_position: 'SIKDJK,EJCEEW PHCRDM,KWQFGD'}
-  - name: label_1
+  - layout_properties: {grid_position: 'SIKDJK,BRPPVK ZJCSQK,RTMWTO'}
+    name: label_1
     properties: {text: USER NAME}
     type: Label
-    layout_properties: {grid_position: 'SIKDJK,BRPPVK ZJCSQK,RTMWTO'}
-  - name: label_4
+  - layout_properties: {grid_position: 'SIKDJK,BRPPVK WPMIXR,EDCKUO'}
+    name: label_4
     properties: {text: user@gmail.com}
     type: Label
-    layout_properties: {grid_position: 'SIKDJK,BRPPVK WPMIXR,EDCKUO'}
-  - name: label_8
+  - layout_properties: {grid_position: 'SIKDJK,BRPPVK WHOFSS,MOJNFB'}
+    name: label_8
     properties: {text: '09 : 00 - 11 : 00'}
     type: Label
-    layout_properties: {grid_position: 'SIKDJK,BRPPVK WHOFSS,MOJNFB'}
-  - name: label_10
+  - layout_properties: {grid_position: 'SIKDJK,BRPPVK IBREPL,STQDTD'}
+    name: label_10
     properties: {text: '9343302152'}
     type: Label
-    layout_properties: {grid_position: 'SIKDJK,BRPPVK IBREPL,STQDTD'}
-  - name: label_12
+  - layout_properties: {grid_position: 'SIKDJK,BRPPVK SOJDCJ,KQBJRV'}
+    name: label_12
     properties: {text: Oxiclinic}
     type: Label
-    layout_properties: {grid_position: 'SIKDJK,BRPPVK SOJDCJ,KQBJRV'}
-  - name: button_1
-    properties: {text: View More, align: right, background: 'theme:Primary 700', foreground: 'theme:White', role: raised}
+  - layout_properties: {grid_position: 'YTUROK,NHECOI'}
+    name: button_1
+    properties: {align: right, background: 'theme:Primary 700', foreground: 'theme:White', role: raised, text: View More}
     type: Button
-    layout_properties: {grid_position: 'YTUROK,NHECOI'}
+  layout_properties: {grid_position: 'VVOJLJ,APCUHZ'}
+  name: card_1
+  properties: {background: '', border: '', col_spacing: medium, col_widths: '{"LUZQWO":15,"EJCEEW":17,"BRPPVK":21}', foreground: '', role: card, spacing_above: small, spacing_below: small, tooltip: '', visible: false, wrap_on: mobile}
+  type: ColumnPanel
+container:
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
 is_package: true

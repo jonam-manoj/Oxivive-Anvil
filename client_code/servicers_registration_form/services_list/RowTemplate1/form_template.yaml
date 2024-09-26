@@ -1,35 +1,35 @@
-is_package: true
-container:
-  type: DataRowPanel
-  data_bindings: []
-  properties: {align: left}
 components:
-- type: Label
-  properties: {}
-  name: label_1
+- data_bindings:
+  - {code: 'self.item[''serial_no'']', property: text}
   layout_properties: {column: JKSDUP}
-  data_bindings:
-  - {property: text, code: 'self.item[''serial_no'']'}
-- type: Label
-  properties: {}
-  name: label_2
-  layout_properties: {column: OJLQEN}
-  data_bindings:
-  - {property: text, code: 'self.item[''Oxiclinics_Name'']'}
-- name: label_4
+  name: label_1
   properties: {}
   type: Label
-  layout_properties: {column: VJQQOR}
-  data_bindings:
-  - {property: text, code: 'self.item[''clinic_id'']'}
-- type: Label
+- data_bindings:
+  - {code: 'self.item[''Oxiclinics_Name'']', property: text}
+  layout_properties: {column: OJLQEN}
+  name: label_2
   properties: {}
-  name: label_3
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''clinic_id'']', property: text}
+  layout_properties: {column: VJQQOR}
+  name: label_4
+  properties: {}
+  type: Label
+- data_bindings:
+  - {code: 'self.item[''State'']', property: text}
   layout_properties: {column: ZYQNVH}
-  data_bindings:
-  - {property: text, code: 'self.item[''State'']'}
-- name: button_1
-  properties: {text: Delete, background: 'theme:Primary 700', foreground: 'theme:White'}
-  type: Button
+  name: label_3
+  properties: {}
+  type: Label
+- event_bindings: {click: button_1_click}
   layout_properties: {column: PYNXEH}
-  event_bindings: {click: button_1_click}
+  name: button_1
+  properties: {background: 'theme:Primary 700', foreground: 'theme:White', text: Delete}
+  type: Button
+container:
+  data_bindings: []
+  properties: {align: left}
+  type: DataRowPanel
+is_package: true

@@ -1,113 +1,113 @@
-container:
-  type: ColumnPanel
-  properties: {col_widths: '{}'}
-  data_bindings: []
 components:
-- name: service_navigation_bar_1
+- layout_properties: {full_width_row: true, grid_position: 'FEPTCU,STDFCR'}
+  name: service_navigation_bar_1
   properties: {}
   type: form:servicers.service_navigation_bar
-  layout_properties: {grid_position: 'FEPTCU,STDFCR', full_width_row: true}
-- name: hospital_name_label
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Vehicle No. :'}
+- layout_properties: {grid_position: 'XEGFHC,IYFKMQ'}
+  name: hospital_name_label
+  properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Vehicle No. :', tooltip: '', underline: false, visible: true}
   type: Label
-  layout_properties: {grid_position: 'XEGFHC,IYFKMQ'}
-- name: hospital_name
+- layout_properties: {grid_position: 'XEGFHC,GDYEBA'}
+  name: hospital_name
   properties: {placeholder: Vehicle No.}
   type: TextBox
-  layout_properties: {grid_position: 'XEGFHC,GDYEBA'}
-- name: establised_year_label
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Model Year : '}
+- layout_properties: {grid_position: 'AZCYKR,RPMQIM'}
+  name: establised_year_label
+  properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: null, spacing_above: small, spacing_below: small, text: 'Model Year : ', tooltip: '', underline: false, visible: true}
   type: Label
-  layout_properties: {grid_position: 'AZCYKR,RPMQIM'}
-- type: DatePicker
-  properties: {}
+- layout_properties: {grid_position: 'AZCYKR,XVNSIJ'}
   name: oxiclini_established_year
-  layout_properties: {grid_position: 'AZCYKR,XVNSIJ'}
-- name: state_label
-  properties: {align: left, text: 'State :', bold: true}
+  properties: {}
+  type: DatePicker
+- layout_properties: {grid_position: 'VKEAFN,DENLRV'}
+  name: state_label
+  properties: {align: left, bold: true, text: 'State :'}
   type: Label
-  layout_properties: {grid_position: 'VKEAFN,DENLRV'}
-- name: state
+- layout_properties: {grid_position: 'VKEAFN,DXCMVE'}
+  name: state
   properties: {placeholder: State}
   type: TextBox
-  layout_properties: {grid_position: 'VKEAFN,DXCMVE'}
-- name: district_label
-  properties: {align: left, text: 'District :', bold: true}
+- layout_properties: {grid_position: 'RZPNFK,SBNUKF'}
+  name: district_label
+  properties: {align: left, bold: true, text: 'District :'}
   type: Label
-  layout_properties: {grid_position: 'RZPNFK,SBNUKF'}
-- name: district
+- layout_properties: {grid_position: 'RZPNFK,PJBXLF'}
+  name: district
   properties: {placeholder: District}
   type: TextBox
-  layout_properties: {grid_position: 'RZPNFK,PJBXLF'}
-- name: pincode_label
-  properties: {align: left, text: 'Pincode : ', bold: true}
+- layout_properties: {grid_position: 'NUPXPB,ULZPHC'}
+  name: pincode_label
+  properties: {align: left, bold: true, text: 'Pincode : '}
   type: Label
-  layout_properties: {grid_position: 'NUPXPB,ULZPHC'}
-- name: oxiclinic_pincode
-  properties: {type: number, placeholder: Pincode}
+- layout_properties: {grid_position: 'NUPXPB,JAEVZV'}
+  name: oxiclinic_pincode
+  properties: {placeholder: Pincode, type: number}
   type: TextBox
-  layout_properties: {grid_position: 'NUPXPB,JAEVZV'}
-- name: address_label
-  properties: {align: left, text: 'Address : ', bold: true}
+- layout_properties: {grid_position: 'DJBJHE,PHDZLA'}
+  name: address_label
+  properties: {align: left, bold: true, text: 'Address : '}
   type: Label
-  layout_properties: {grid_position: 'DJBJHE,PHDZLA'}
-- name: oxiclinic_address
+- layout_properties: {grid_position: 'DJBJHE,UBARDE'}
+  name: oxiclinic_address
   properties: {placeholder: Address}
   type: TextBox
-  layout_properties: {grid_position: 'DJBJHE,UBARDE'}
-- name: no_capsule_label
-  properties: {align: left, text: 'No. of Capsules : ', bold: true}
+- layout_properties: {grid_position: 'LBJZLG,IHDZJQ ELZWTI,IYRKWT'}
+  name: no_capsule_label
+  properties: {align: left, bold: true, text: 'No. of Capsules : '}
   type: Label
-  layout_properties: {grid_position: 'LBJZLG,IHDZJQ ELZWTI,IYRKWT'}
-- type: Label
-  properties: {role: null, bold: true, align: left, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: 'Wheel Fees :', margin: null}
+- layout_properties: {grid_position: 'LBJZLG,IHDZJQ MFMEWU,LHEWCE'}
   name: wheel_fees_label
-  layout_properties: {grid_position: 'LBJZLG,IHDZJQ MFMEWU,LHEWCE'}
-- name: oxiclinic_capsules
-  properties: {type: number, placeholder: No. of Capsules}
+  properties: {align: left, background: '', bold: true, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, margin: null, role: null, spacing_above: small, spacing_below: small, text: 'Wheel Fees :', tooltip: '', underline: false, visible: true}
+  type: Label
+- layout_properties: {grid_position: 'LBJZLG,KMWBOP KKFFLS,FMBHJR'}
+  name: oxiclinic_capsules
+  properties: {placeholder: No. of Capsules, type: number}
   type: TextBox
-  layout_properties: {grid_position: 'LBJZLG,KMWBOP KKFFLS,FMBHJR'}
-- type: TextBox
-  properties: {role: null, bold: false, align: left, placeholder: Wheel Fees, spacing_above: small, background: '', type: text, underline: false, font: '', hide_text: false, foreground: '', spacing_below: small, visible: true, border: '', italic: false, enabled: true, font_size: null, tooltip: '', text: '', margin: null}
+- layout_properties: {grid_position: 'LBJZLG,KMWBOP KNAOBO,MYKBMH'}
   name: oxiclinic_fees
-  layout_properties: {grid_position: 'LBJZLG,KMWBOP KNAOBO,MYKBMH'}
-- name: spacer_1
+  properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, margin: null, placeholder: Wheel Fees, role: null, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+  type: TextBox
+- layout_properties: {grid_position: 'EEIXRM,YYKGOD'}
+  name: spacer_1
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'EEIXRM,YYKGOD'}
-- name: label_1
-  properties: {align: left, text: 'Upload Documents : ', bold: true}
+- layout_properties: {grid_position: 'UWCRQS,XRNMPL'}
+  name: label_1
+  properties: {align: left, bold: true, text: 'Upload Documents : '}
   type: Label
-  layout_properties: {grid_position: 'UWCRQS,XRNMPL'}
-- name: label_2
+- layout_properties: {grid_position: 'ZOOERS,IRJUYK'}
+  name: label_2
   properties: {text: 'Vehicle RC :'}
   type: Label
-  layout_properties: {grid_position: 'ZOOERS,IRJUYK'}
-- name: file_loader_1
-  properties: {show_state: false, file_types: ' '}
-  type: FileLoader
+- event_bindings: {change: file_loader_1_change}
   layout_properties: {grid_position: 'ZOOERS,PPXOEV'}
-  event_bindings: {change: file_loader_1_change}
-- name: file_name_1
+  name: file_loader_1
+  properties: {file_types: ' ', show_state: false}
+  type: FileLoader
+- layout_properties: {grid_position: 'ZOOERS,PPXOEV JXQOST,OPKKHL'}
+  name: file_name_1
   properties: {align: center}
   type: Label
-  layout_properties: {grid_position: 'ZOOERS,PPXOEV JXQOST,OPKKHL'}
-- name: label_4
+- layout_properties: {grid_position: 'MJKANR,TPNYYZ'}
+  name: label_4
   properties: {text: 'Driving  License : '}
   type: Label
-  layout_properties: {grid_position: 'MJKANR,TPNYYZ'}
-- name: file_loader_2
-  properties: {show_state: false, file_types: '“.png,.jpg,.jpeg,.pdf”'}
-  type: FileLoader
+- event_bindings: {change: file_loader_2_change}
   layout_properties: {grid_position: 'MJKANR,OSAFGN AOWHAG,SCMHGR'}
-  event_bindings: {change: file_loader_2_change}
-- name: file_name_2
+  name: file_loader_2
+  properties: {file_types: '“.png,.jpg,.jpeg,.pdf”', show_state: false}
+  type: FileLoader
+- layout_properties: {grid_position: 'MJKANR,OSAFGN KZHSYM,FEBUGL'}
+  name: file_name_2
   properties: {align: center}
   type: Label
-  layout_properties: {grid_position: 'MJKANR,OSAFGN KZHSYM,FEBUGL'}
-- name: next_button_1
-  properties: {role: raised, bold: true, align: center, spacing_above: large, background: 'theme:Primary 700', icon: '', icon_align: right, foreground: 'theme:White', spacing_below: small, text: Submit}
+- event_bindings: {click: next_button_1_click}
+  layout_properties: {full_width_row: false, grid_position: 'NUOPBI,RZORRS'}
+  name: next_button_1
+  properties: {align: center, background: 'theme:Primary 700', bold: true, foreground: 'theme:White', icon: '', icon_align: right, role: raised, spacing_above: large, spacing_below: small, text: Submit}
   type: Button
-  layout_properties: {grid_position: 'NUOPBI,RZORRS', full_width_row: false}
-  event_bindings: {click: next_button_1_click}
+container:
+  data_bindings: []
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
 is_package: true

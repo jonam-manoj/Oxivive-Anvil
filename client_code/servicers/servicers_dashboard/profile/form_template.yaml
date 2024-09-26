@@ -1,120 +1,120 @@
-container:
-  type: ColumnPanel
-  properties: {col_widths: '{"EIYLNN":55,"TTXAKX":5,"GJXUVH":55,"LLPMIT":5,"KMYXKQ":55,"OWWWHC":5,"AGAHWJ":55,"UZXETA":5,"DJMXEL":60,"BPJBMF":7}'}
 components:
-- name: service_navigation_bar_1
+- layout_properties: {full_width_row: true, grid_position: 'XCNYUK,JTCYMG'}
+  name: service_navigation_bar_1
   properties: {}
   type: form:servicers.service_navigation_bar
-  layout_properties: {grid_position: 'XCNYUK,JTCYMG', full_width_row: true}
-- name: card_1
-  properties: {role: null, col_widths: '{"NMJLRV":15}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'CRMVGY,DMJJSS'}
-  components:
-  - name: xy_panel_1
-    properties: {height: 203.39993286132812, border: ''}
-    type: XYPanel
-    layout_properties: {grid_position: 'RYIEQV,NMJLRV'}
-    components:
-    - name: file_loader_1
+- components:
+  - components:
+    - event_bindings: {change: file_loader_1_change}
+      layout_properties: {width: 37.7875, x: 504.95002365112305, y: 166.58750915527344}
+      name: file_loader_1
       properties:
-        role: null
-        bold: false
-        file_types: null
         align: center
-        spacing_above: small
-        file: null
         background: ''
-        icon: fa:camera
-        multiple: false
-        underline: false
-        font: ''
-        icon_align: left
-        foreground: ''
-        show_state: false
-        files: []
-        spacing_below: small
-        visible: true
+        bold: false
         border: ''
-        italic: false
         enabled: true
+        file: null
+        file_types: null
+        files: []
+        font: ''
         font_size: null
-        tooltip: ''
+        foreground: ''
+        icon: fa:camera
+        icon_align: left
+        italic: false
+        multiple: false
+        role: null
+        show_state: false
+        spacing_above: small
+        spacing_below: small
         text: ''
+        tooltip: ''
+        underline: false
+        visible: true
       type: FileLoader
-      layout_properties: {x: 504.95002365112305, y: 166.58750915527344, width: 37.7875}
-      event_bindings: {change: file_loader_1_change}
-    - name: image_1
-      properties: {role: image, vertical_align: center, alt_text: profile, spacing_above: small, background: '', horizontal_align: center, source: _/theme/hospital-building.jpg, foreground: '', display_mode: shrink_to_fit, spacing_below: small, visible: true, border: '', tooltip: '', height: 190}
+    - layout_properties: {width: 182, x: 352.0500152595341, y: 13.387496948242188}
+      name: image_1
+      properties: {alt_text: profile, background: '', border: '', display_mode: shrink_to_fit, foreground: '', height: 190, horizontal_align: center, role: image, source: _/theme/hospital-building.jpg, spacing_above: small, spacing_below: small, tooltip: '', vertical_align: center, visible: true}
       type: Image
-      layout_properties: {x: 352.0500152595341, y: 13.387496948242188, width: 182}
-- name: c_id
+    layout_properties: {grid_position: 'RYIEQV,NMJLRV'}
+    name: xy_panel_1
+    properties: {border: '', height: 203.39993286132812}
+    type: XYPanel
+  layout_properties: {grid_position: 'CRMVGY,DMJJSS'}
+  name: card_1
+  properties: {col_widths: '{"NMJLRV":15}', role: null}
+  type: ColumnPanel
+- layout_properties: {grid_position: 'YGHBSQ,DJMXEL'}
+  name: c_id
   properties: {align: center, enabled: false}
   type: TextBox
-  layout_properties: {grid_position: 'YGHBSQ,DJMXEL'}
-- name: spacer_5
+- layout_properties: {grid_position: 'YGHBSQ,BPJBMF'}
+  name: spacer_5
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'YGHBSQ,BPJBMF'}
-- name: spacer_1
+- layout_properties: {grid_position: 'GRAAAE,ZFVQRR'}
+  name: spacer_1
   properties: {height: 32}
   type: Spacer
-  layout_properties: {grid_position: 'GRAAAE,ZFVQRR'}
-- name: name
+- layout_properties: {grid_position: 'WWPNWR,EIYLNN'}
+  name: name
   properties: {align: center, enabled: false}
   type: TextBox
-  layout_properties: {grid_position: 'WWPNWR,EIYLNN'}
-- name: link_2
-  properties: {icon: 'fa:pencil', icon_align: left_edge}
-  type: Link
+- event_bindings: {click: link_2_click}
   layout_properties: {grid_position: 'WWPNWR,TTXAKX'}
-  event_bindings: {click: link_2_click}
-- name: spacer_2
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'MZVOPQ,EBMXHN'}
-- name: email
-  properties: {align: center, enabled: false}
-  type: TextBox
-  layout_properties: {grid_position: 'WNMDXT,GJXUVH'}
-- name: link_3
+  name: link_2
   properties: {icon: 'fa:pencil', icon_align: left_edge}
   type: Link
+- layout_properties: {grid_position: 'MZVOPQ,EBMXHN'}
+  name: spacer_2
+  properties: {height: 32}
+  type: Spacer
+- layout_properties: {grid_position: 'WNMDXT,GJXUVH'}
+  name: email
+  properties: {align: center, enabled: false}
+  type: TextBox
+- event_bindings: {click: link_3_click}
   layout_properties: {grid_position: 'WNMDXT,LLPMIT'}
-  event_bindings: {click: link_3_click}
-- name: spacer_3
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'KSKLOR,BHLBFB'}
-- name: phone
-  properties: {align: center, enabled: false}
-  type: TextBox
-  layout_properties: {grid_position: 'ZVTRCJ,KMYXKQ'}
-- name: link_4
+  name: link_3
   properties: {icon: 'fa:pencil', icon_align: left_edge}
   type: Link
+- layout_properties: {grid_position: 'KSKLOR,BHLBFB'}
+  name: spacer_3
+  properties: {height: 32}
+  type: Spacer
+- layout_properties: {grid_position: 'ZVTRCJ,KMYXKQ'}
+  name: phone
+  properties: {align: center, enabled: false}
+  type: TextBox
+- event_bindings: {click: link_4_click}
   layout_properties: {grid_position: 'ZVTRCJ,OWWWHC'}
-  event_bindings: {click: link_4_click}
-- name: spacer_4
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'CUUAIX,UEHBOJ'}
-- name: address
-  properties: {align: center, enabled: false}
-  type: TextBox
-  layout_properties: {grid_position: 'QLLQZD,AGAHWJ WEJQZA,AHAPTU'}
-- name: spacer_6
-  properties: {height: 32}
-  type: Spacer
-  layout_properties: {grid_position: 'QLLQZD,AGAHWJ AHSZWB,LSNMSZ'}
-- name: button_1
-  properties: {text: UPDATE, role: raised, foreground: 'theme:Primary 700'}
-  type: Button
-  layout_properties: {grid_position: 'QLLQZD,AGAHWJ WOVKLE,MTALXM'}
-  event_bindings: {click: button_1_click}
-- name: link_5
+  name: link_4
   properties: {icon: 'fa:pencil', icon_align: left_edge}
   type: Link
+- layout_properties: {grid_position: 'CUUAIX,UEHBOJ'}
+  name: spacer_4
+  properties: {height: 32}
+  type: Spacer
+- layout_properties: {grid_position: 'QLLQZD,AGAHWJ WEJQZA,AHAPTU'}
+  name: address
+  properties: {align: center, enabled: false}
+  type: TextBox
+- layout_properties: {grid_position: 'QLLQZD,AGAHWJ AHSZWB,LSNMSZ'}
+  name: spacer_6
+  properties: {height: 32}
+  type: Spacer
+- event_bindings: {click: button_1_click}
+  layout_properties: {grid_position: 'QLLQZD,AGAHWJ WOVKLE,MTALXM'}
+  name: button_1
+  properties: {foreground: 'theme:Primary 700', role: raised, text: UPDATE}
+  type: Button
+- event_bindings: {click: link_5_click}
   layout_properties: {grid_position: 'QLLQZD,UZXETA'}
-  event_bindings: {click: link_5_click}
+  name: link_5
+  properties: {icon: 'fa:pencil', icon_align: left_edge}
+  type: Link
+container:
+  properties: {col_widths: '{"EIYLNN":55,"TTXAKX":5,"GJXUVH":55,"LLPMIT":5,"KMYXKQ":55,"OWWWHC":5,"AGAHWJ":55,"UZXETA":5,"DJMXEL":60,"BPJBMF":7}'}
+  type: ColumnPanel
 is_package: true

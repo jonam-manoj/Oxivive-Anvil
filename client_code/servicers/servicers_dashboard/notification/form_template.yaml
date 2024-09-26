@@ -1,11 +1,11 @@
-container: {type: ColumnPanel}
 components:
-- name: service_navigation_bar_1
+- layout_properties: {full_width_row: true, grid_position: 'CWNRIL,PRMEBX'}
+  name: service_navigation_bar_1
   properties: {}
   type: form:servicers.service_navigation_bar
-  layout_properties: {grid_position: 'CWNRIL,PRMEBX', full_width_row: true}
-- name: label_1
+- layout_properties: {grid_position: 'RKVLMJ,MTQNYW'}
+  name: label_1
   properties: {align: center, icon: 'fa:bell-slash', text: No notifications.}
   type: Label
-  layout_properties: {grid_position: 'RKVLMJ,MTQNYW'}
+container: {type: ColumnPanel}
 is_package: true

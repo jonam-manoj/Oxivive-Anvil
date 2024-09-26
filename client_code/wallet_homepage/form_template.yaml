@@ -1,95 +1,95 @@
-container: {type: ColumnPanel}
 components:
-- name: xy_panel_1
+- components:
+  - layout_properties: {width: 77.9124969482422, x: 0, y: 0}
+    name: image_1
+    properties: {display_mode: zoom_to_fill, height: 90, horizontal_align: left, source: _/theme/shot.png}
+    type: Image
+  - layout_properties: {width: 96.4000244140625, x: 79.97500305250287, y: 19.61250190809369}
+    name: label_1
+    properties: {bold: true, font_size: 20, foreground: red, spacing_above: large, text: OXIVIVE}
+    type: Label
+  - layout_properties: {width: 120.35227966308594, x: 1184.7727494686842, y: 12.499994799494743}
+    name: primary_color_1
+    properties: {background: red, bold: true, icon: 'fa:sign-out', role: primary-color, text: Logout}
+    type: Button
+  layout_properties: {full_width_row: true, grid_position: 'MSGULM,IEEEQI'}
+  name: xy_panel_1
   properties: {height: 77.45454406738281}
   type: XYPanel
-  layout_properties: {grid_position: 'MSGULM,IEEEQI', full_width_row: true}
-  components:
-  - name: image_1
-    properties: {source: _/theme/shot.png, horizontal_align: left, height: 90, display_mode: zoom_to_fill}
-    type: Image
-    layout_properties: {x: 0, y: 0, width: 77.9124969482422}
-  - name: label_1
-    properties: {text: OXIVIVE, bold: true, font_size: 20, foreground: red, spacing_above: large}
-    type: Label
-    layout_properties: {x: 79.97500305250287, y: 19.61250190809369, width: 96.4000244140625}
-  - name: primary_color_1
-    properties: {text: Logout, role: primary-color, background: red, icon: 'fa:sign-out', bold: true}
-    type: Button
-    layout_properties: {x: 1184.7727494686842, y: 12.499994799494743, width: 120.35227966308594}
-- name: servicers_navigation_bar_1
+- layout_properties: {full_width_row: true, grid_position: 'SPSWDA,FFHLYS'}
+  name: servicers_navigation_bar_1
   properties: {}
   type: form:servicers_registration_form.servicers_navigation_bar
-  layout_properties: {grid_position: 'SPSWDA,FFHLYS', full_width_row: true}
-- name: spacer_1
+- layout_properties: {grid_position: 'WVKQSR,NAQULV'}
+  name: spacer_1
   properties: {height: 13.81817626953125}
   type: Spacer
-  layout_properties: {grid_position: 'WVKQSR,NAQULV'}
-- name: grid_panel_1
-  properties: {}
-  type: GridPanel
-  layout_properties: {grid_position: 'UKBYYZ,RRQJKO'}
-  components:
-  - name: image_2
-    properties: {source: 'https://img.freepik.com/free-vector/pay-by-smart-phone-wallet-transaction-sending-digital-money-money-transferring-digitally-from-one-mobile-phone-another-vector-flat-illustration_1150-58768.jpg', height: 121}
+- components:
+  - layout_properties: {col_xs: 0, row: DWPGKA, width_xs: 3}
+    name: image_2
+    properties: {height: 121, source: 'https://img.freepik.com/free-vector/pay-by-smart-phone-wallet-transaction-sending-digital-money-money-transferring-digitally-from-one-mobile-phone-another-vector-flat-illustration_1150-58768.jpg'}
     type: Image
-    layout_properties: {row: DWPGKA, width_xs: 3, col_xs: 0}
-  - name: image_3
+  - layout_properties: {col_xs: 4, row: DWPGKA, width_xs: 4}
+    name: image_3
     properties: {height: 139.72726440429688, source: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOL5_E8LESJWBHCuxLOElY34KS_vviSLZy35KFyZDLSQ&s'}
     type: Image
-    layout_properties: {row: DWPGKA, width_xs: 4, col_xs: 4}
-  - name: image_4
-    properties: {source: 'https://cdni.iconscout.com/illustration/premium/thumb/banking-management-5904901-4897498.png', height: 146.63632202148438}
+  - layout_properties: {col_xs: 9, row: DWPGKA, width_xs: 3}
+    name: image_4
+    properties: {height: 146.63632202148438, source: 'https://cdni.iconscout.com/illustration/premium/thumb/banking-management-5904901-4897498.png'}
     type: Image
-    layout_properties: {row: DWPGKA, width_xs: 3, col_xs: 9}
-  - name: link_1
-    properties: {text: Transfer Money, align: center, icon: '', bold: true, underline: false}
+  - layout_properties: {col_xs: 0, row: PJOTPF, width_xs: 3}
+    name: link_1
+    properties: {align: center, bold: true, icon: '', text: Transfer Money, underline: false}
     type: Link
-    layout_properties: {row: PJOTPF, width_xs: 3, col_xs: 0}
-  - name: link_2
-    properties: {align: center, text: Your Wallet, icon: '', bold: true}
+  - layout_properties: {col_xs: 4, row: PJOTPF, width_xs: 4}
+    name: link_2
+    properties: {align: center, bold: true, icon: '', text: Your Wallet}
     type: Link
-    layout_properties: {row: PJOTPF, width_xs: 4, col_xs: 4}
-  - name: link_3
-    properties: {align: center, text: Bank Accounts, icon: '', bold: true}
+  - event_bindings: {click: link_3_click}
+    layout_properties: {col_xs: 9, row: PJOTPF, width_xs: 3}
+    name: link_3
+    properties: {align: center, bold: true, icon: '', text: Bank Accounts}
     type: Link
-    layout_properties: {row: PJOTPF, width_xs: 3, col_xs: 9}
-    event_bindings: {click: link_3_click}
-  - name: image_5
+  - layout_properties: {col_xs: 0, row: ZGDDZI, width_xs: 3}
+    name: image_5
     properties: {source: 'https://images.assetsdelivery.com/compings_v2/alexandraklestova/alexandraklestova2011/alexandraklestova201100077.jpg'}
     type: Image
-    layout_properties: {row: ZGDDZI, width_xs: 3, col_xs: 0}
-  - name: image_6
-    properties: {source: 'https://www.thesun.co.uk/wp-content/uploads/2023/03/GettyImages-1250252215jpg-JS805299169.jpg', height: 190}
+  - layout_properties: {col_xs: 4, row: ZGDDZI, width_xs: 4}
+    name: image_6
+    properties: {height: 190, source: 'https://www.thesun.co.uk/wp-content/uploads/2023/03/GettyImages-1250252215jpg-JS805299169.jpg'}
     type: Image
-    layout_properties: {row: ZGDDZI, width_xs: 4, col_xs: 4}
-  - name: image_7
+  - layout_properties: {col_xs: 9, row: ZGDDZI, width_xs: 3}
+    name: image_7
     properties: {source: 'https://assets.materialup.com/uploads/2dd9ca92-caac-4966-b620-ab8fc14c4bf4/preview.png'}
     type: Image
-    layout_properties: {row: ZGDDZI, width_xs: 3, col_xs: 9}
-  - name: link_4
-    properties: {align: center, text: Self Transfer, icon: '', bold: true}
+  - event_bindings: {click: link_4_click}
+    layout_properties: {col_xs: 0, row: DRBMWY, width_xs: 3}
+    name: link_4
+    properties: {align: center, bold: true, icon: '', text: Self Transfer}
     type: Link
-    layout_properties: {row: DRBMWY, width_xs: 3, col_xs: 0}
-    event_bindings: {click: link_4_click}
-  - name: link_5
-    properties: {align: center, text: Refer A Friend, icon: '', bold: true}
+  - layout_properties: {col_xs: 4, row: DRBMWY, width_xs: 4}
+    name: link_5
+    properties: {align: center, bold: true, icon: '', text: Refer A Friend}
     type: Link
-    layout_properties: {row: DRBMWY, width_xs: 4, col_xs: 4}
-  - name: link_6
-    properties: {align: center, text: View Transaction History, bold: true}
+  - layout_properties: {col_xs: 9, row: DRBMWY, width_xs: 3}
+    name: link_6
+    properties: {align: center, bold: true, text: View Transaction History}
     type: Link
-    layout_properties: {row: DRBMWY, width_xs: 3, col_xs: 9}
-- name: spacer_3
+  layout_properties: {grid_position: 'UKBYYZ,RRQJKO'}
+  name: grid_panel_1
+  properties: {}
+  type: GridPanel
+- layout_properties: {grid_position: 'SRHZOR,OAEWQF'}
+  name: spacer_3
   properties: {height: 23.0908203125}
   type: Spacer
-  layout_properties: {grid_position: 'SRHZOR,OAEWQF'}
-- name: link_7
-  properties: {text: Check Balance, icon: 'fa:money'}
+- layout_properties: {grid_position: 'JHGHYV,XITVTQ'}
+  name: link_7
+  properties: {icon: 'fa:money', text: Check Balance}
   type: Link
-  layout_properties: {grid_position: 'JHGHYV,XITVTQ'}
-- name: link_8
-  properties: {text: Settings, align: right, icon: 'fa:cog'}
+- layout_properties: {grid_position: 'JHGHYV,SEHIKA'}
+  name: link_8
+  properties: {align: right, icon: 'fa:cog', text: Settings}
   type: Link
-  layout_properties: {grid_position: 'JHGHYV,SEHIKA'}
+container: {type: ColumnPanel}
 is_package: true

@@ -1,76 +1,76 @@
-container: {type: ColumnPanel}
 components:
-- name: image_1_copy
-  properties: {source: _/theme/shot.png, horizontal_align: center, height: 117.60000610351562, display_mode: shrink_to_fit, background: red}
+- layout_properties: {full_width_row: true, grid_position: 'GJKEOF,YKBYDW'}
+  name: image_1_copy
+  properties: {background: red, display_mode: shrink_to_fit, height: 117.60000610351562, horizontal_align: center, source: _/theme/shot.png}
   type: Image
-  layout_properties: {grid_position: 'GJKEOF,YKBYDW', full_width_row: true}
-- name: spacer_3
+- layout_properties: {grid_position: 'NSOHRR,XTPLQZ'}
+  name: spacer_3
   properties: {height: 44}
   type: Spacer
-  layout_properties: {grid_position: 'NSOHRR,XTPLQZ'}
-- name: card_1
-  properties: {role: card, col_widths: '{"TWHKME":15,"DMFBAI":30,"HEQNNG":15}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'LQUGRX,BQHKYJ'}
-  components:
-  - name: spacer_4
+- components:
+  - layout_properties: {grid_position: 'NYLJFH,TWHKME'}
+    name: spacer_4
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'NYLJFH,TWHKME'}
-  - name: label_1
-    properties: {align: center, text: Upload required documents, bold: true, font_size: 20, underline: true, foreground: '#2d3249'}
+  - layout_properties: {grid_position: 'NYLJFH,DMFBAI ENDTLD,APRJSS'}
+    name: label_1
+    properties: {align: center, bold: true, font_size: 20, foreground: '#2d3249', text: Upload required documents, underline: true}
     type: Label
-    layout_properties: {grid_position: 'NYLJFH,DMFBAI ENDTLD,APRJSS'}
-  - name: label_2
-    properties: {text: Documents should be in pdf / image  format and less then 2MB., align: center, foreground: 'theme:Primary 700', italic: true}
+  - layout_properties: {grid_position: 'NYLJFH,DMFBAI GJGMEK,GGOOIL'}
+    name: label_2
+    properties: {align: center, foreground: 'theme:Primary 700', italic: true, text: Documents should be in pdf / image  format and less then 2MB.}
     type: Label
-    layout_properties: {grid_position: 'NYLJFH,DMFBAI GJGMEK,GGOOIL'}
-  - name: spacer_1
+  - layout_properties: {grid_position: 'NYLJFH,DMFBAI MGHQZL,YFWWGA'}
+    name: spacer_1
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'NYLJFH,DMFBAI MGHQZL,YFWWGA'}
-  - name: label_3
-    properties: {align: left, text: 'Upload Medical Practitioner License ', bold: true}
+  - layout_properties: {grid_position: 'NYLJFH,DMFBAI SZXLCK,KJIEZJ'}
+    name: label_3
+    properties: {align: left, bold: true, text: 'Upload Medical Practitioner License '}
     type: Label
-    layout_properties: {grid_position: 'NYLJFH,DMFBAI SZXLCK,KJIEZJ'}
-  - name: medical_file_loader_1
-    properties: {background: '', foreground: '#2d3249', show_state: true, font_size: 12}
-    type: FileLoader
+  - event_bindings: {change: medical_file_loader_1_change}
     layout_properties: {grid_position: 'NYLJFH,DMFBAI SZXLCK,UHMHAZ IHCVJW,PPSMDJ'}
-    event_bindings: {change: medical_file_loader_1_change}
-  - name: file_name_1
-    properties: {align: center}
-    type: Label
-    layout_properties: {grid_position: 'NYLJFH,DMFBAI SZXLCK,UHMHAZ VJOXUG,WWXUGD'}
-  - name: label_5
-    properties: {align: left, text: 'Upload Building Permit and Licenses ', bold: true}
-    type: Label
-    layout_properties: {grid_position: 'NYLJFH,DMFBAI BVJNHD,WIIZRC'}
-  - name: building_file_loader_2
-    properties: {foreground: '#2d3249', font_size: 12, bold: false}
+    name: medical_file_loader_1
+    properties: {background: '', font_size: 12, foreground: '#2d3249', show_state: true}
     type: FileLoader
-    layout_properties: {grid_position: 'NYLJFH,DMFBAI BVJNHD,CDBPJL SACTOA,NJBUGN'}
-    event_bindings: {change: building_file_loader_2_change}
-  - name: file_name_2
+  - layout_properties: {grid_position: 'NYLJFH,DMFBAI SZXLCK,UHMHAZ VJOXUG,WWXUGD'}
+    name: file_name_1
     properties: {align: center}
     type: Label
-    layout_properties: {grid_position: 'NYLJFH,DMFBAI BVJNHD,CDBPJL TDZBZQ,PYJZNV'}
-  - name: spacer_2
+  - layout_properties: {grid_position: 'NYLJFH,DMFBAI BVJNHD,WIIZRC'}
+    name: label_5
+    properties: {align: left, bold: true, text: 'Upload Building Permit and Licenses '}
+    type: Label
+  - event_bindings: {change: building_file_loader_2_change}
+    layout_properties: {grid_position: 'NYLJFH,DMFBAI BVJNHD,CDBPJL SACTOA,NJBUGN'}
+    name: building_file_loader_2
+    properties: {bold: false, font_size: 12, foreground: '#2d3249'}
+    type: FileLoader
+  - layout_properties: {grid_position: 'NYLJFH,DMFBAI BVJNHD,CDBPJL TDZBZQ,PYJZNV'}
+    name: file_name_2
+    properties: {align: center}
+    type: Label
+  - layout_properties: {grid_position: 'NYLJFH,DMFBAI RRORYF,UQDQQV'}
+    name: spacer_2
     properties: {height: 55}
     type: Spacer
-    layout_properties: {grid_position: 'NYLJFH,DMFBAI RRORYF,UQDQQV'}
-  - name: back_button_1
-    properties: {text: Back, align: full, bold: true, icon: 'fa:backward', foreground: white, background: red}
-    type: Button
+  - event_bindings: {click: back_button_1_click}
     layout_properties: {grid_position: 'NYLJFH,DMFBAI WMHKZE,JHMFGL'}
-    event_bindings: {click: back_button_1_click}
-  - name: Submit_button
-    properties: {text: Submit, role: null, background: '#fa1900', foreground: 'theme:White', spacing_above: small, align: full, bold: true}
+    name: back_button_1
+    properties: {align: full, background: red, bold: true, foreground: white, icon: 'fa:backward', text: Back}
     type: Button
+  - event_bindings: {click: Submit_button_click}
     layout_properties: {grid_position: 'NYLJFH,DMFBAI WMHKZE,NFOGTA'}
-    event_bindings: {click: Submit_button_click}
-  - name: spacer_5
+    name: Submit_button
+    properties: {align: full, background: '#fa1900', bold: true, foreground: 'theme:White', role: null, spacing_above: small, text: Submit}
+    type: Button
+  - layout_properties: {grid_position: 'NYLJFH,HEQNNG'}
+    name: spacer_5
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'NYLJFH,HEQNNG'}
+  layout_properties: {grid_position: 'LQUGRX,BQHKYJ'}
+  name: card_1
+  properties: {col_widths: '{"TWHKME":15,"DMFBAI":30,"HEQNNG":15}', role: card}
+  type: ColumnPanel
+container: {type: ColumnPanel}
 is_package: true

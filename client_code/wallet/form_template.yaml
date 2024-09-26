@@ -1,115 +1,115 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true, role: null, html: ''}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: xy_panel_1_copy
+- components:
+  - components:
+    - layout_properties: {width: 74.0875015258789, x: 0, y: 0}
+      name: image_1_copy
+      properties: {display_mode: zoom_to_fill, height: 90, horizontal_align: left, source: _/theme/shot.png}
+      type: Image
+    - layout_properties: {width: 124.5999755859375, x: 84.08750991895795, y: 26.55000190809369}
+      name: label_1_copy
+      properties: {bold: true, font_size: 20, foreground: red, spacing_above: large, text: OXIVIVE}
+      type: Label
+    layout_properties: {full_width_row: true, grid_position: 'EWASXP,IJYCUZ'}
+    name: xy_panel_1_copy
     properties: {height: 73.80000305175781}
     type: XYPanel
-    layout_properties: {grid_position: 'EWASXP,IJYCUZ', full_width_row: true}
-    components:
-    - name: image_1_copy
-      properties: {source: _/theme/shot.png, horizontal_align: left, height: 90, display_mode: zoom_to_fill}
-      type: Image
-      layout_properties: {x: 0, y: 0, width: 74.0875015258789}
-    - name: label_1_copy
-      properties: {text: OXIVIVE, bold: true, font_size: 20, foreground: red, spacing_above: large}
-      type: Label
-      layout_properties: {x: 84.08750991895795, y: 26.55000190809369, width: 124.5999755859375}
-  - name: servicers_navigation_bar_1
+  - layout_properties: {full_width_row: true, grid_position: 'JSGKHK,AVBAXD'}
+    name: servicers_navigation_bar_1
     properties: {}
     type: form:servicers_registration_form.servicers_navigation_bar
-    layout_properties: {grid_position: 'JSGKHK,AVBAXD', full_width_row: true}
-  - name: navbar_links_copy
-    properties: {}
-    type: FlowPanel
-    layout_properties: {grid_position: 'JGUUYS,CXMZLG', full_width_row: true}
-    components:
-    - name: content_panel_copy
-      properties: {col_widths: '{}'}
-      type: ColumnPanel
-      layout_properties: {expand: true}
-      components:
-      - name: xy_panel_1
+  - components:
+    - components:
+      - components:
+        - layout_properties: {width: 1552.40002441406, x: 0, y: 0}
+          name: image_1
+          properties: {display_mode: zoom_to_fill, height: 205.39993286132812, horizontal_align: right, source: _/theme/wallet.jpg, visible: true}
+          type: Image
+        - layout_properties: {width: 405.7875061035156, x: 101.36249237135053, y: 114.58749389648438}
+          name: headline_1
+          properties: {align: center, bold: true, font_size: 39, foreground: 'theme:Black', italic: true, role: headline, text: Oxyvive Wallet, underline: false}
+          type: Label
+        layout_properties: {full_width_row: true, grid_position: 'DLMGXJ,FPXUXS'}
+        name: xy_panel_1
         properties: {height: 188}
         type: XYPanel
-        layout_properties: {grid_position: 'DLMGXJ,FPXUXS', full_width_row: true}
-        components:
-        - name: image_1
-          properties: {source: _/theme/wallet.jpg, display_mode: zoom_to_fill, visible: true, height: 205.39993286132812, horizontal_align: right}
-          type: Image
-          layout_properties: {x: 0, y: 0, width: 1552.40002441406}
-        - name: headline_1
-          properties: {role: headline, align: center, text: Oxyvive Wallet, bold: true, foreground: 'theme:Black', font_size: 39, italic: true, underline: false}
-          type: Label
-          layout_properties: {x: 101.36249237135053, y: 114.58749389648438, width: 405.7875061035156}
-      - name: spacer_3
+      - layout_properties: {grid_position: 'KLFSVS,IVQQBR'}
+        name: spacer_3
         properties: {height: 32}
         type: Spacer
-        layout_properties: {grid_position: 'KLFSVS,IVQQBR'}
-      - name: column_panel_1
-        properties: {col_widths: '{"NEPZSW":5,"MRMPOU":5,"ARFYSJ":50}', background: '#fbc1c1', role: card, foreground: ''}
-        type: ColumnPanel
-        layout_properties: {grid_position: 'LRKETY,JQNXLM'}
-        components:
-        - name: label_1
-          properties: {text: Balance, bold: true, background: '', foreground: 'theme:Primary 700', font_size: 20}
+      - components:
+        - layout_properties: {grid_position: 'KFPYPN,CYRFWY'}
+          name: label_1
+          properties: {background: '', bold: true, font_size: 20, foreground: 'theme:Primary 700', text: Balance}
           type: Label
-          layout_properties: {grid_position: 'KFPYPN,CYRFWY'}
-        - name: label_4
-          properties: {bold: true, visible: true, text: '0', font_size: 43}
-          type: Label
+        - data_bindings:
+          - {code: 'self.item[''wallet_balance'']', property: tag, writeback: false}
           layout_properties: {grid_position: 'HDVFAE,LIBFEY'}
-          data_bindings:
-          - {property: tag, code: 'self.item[''wallet_balance'']', writeback: false}
-        - name: label_2
+          name: label_4
+          properties: {bold: true, font_size: 43, text: '0', visible: true}
+          type: Label
+        - layout_properties: {grid_position: 'BOZIBU,NBYHDT'}
+          name: label_2
           properties: {text: Topup Wallet}
           type: Label
-          layout_properties: {grid_position: 'BOZIBU,NBYHDT'}
-        - name: text_box_2
-          properties: {role: dense, bold: true, align: left, type: number, underline: false, hide_text: false, border: '', italic: true, enabled: true}
-          type: TextBox
+        - data_bindings:
+          - {code: 'self.item['''']', property: border, writeback: false}
           layout_properties: {grid_position: 'UZQIDW,KCSYHF'}
-          data_bindings:
-          - {property: border, code: 'self.item['''']', writeback: false}
-        - name: label_3
-          properties: {text: Recommended, font_size: 10, bold: true}
+          name: text_box_2
+          properties: {align: left, bold: true, border: '', enabled: true, hide_text: false, italic: true, role: dense, type: number, underline: false}
+          type: TextBox
+        - layout_properties: {grid_position: 'APXJDY,XRBRQL'}
+          name: label_3
+          properties: {bold: true, font_size: 10, text: Recommended}
           type: Label
-          layout_properties: {grid_position: 'APXJDY,XRBRQL'}
-        - name: button_1
-          properties: {text: '1000', align: left, bold: true, role: raised, background: 'theme:Gray 200'}
-          type: Button
+        - event_bindings: {click: button_1_click}
           layout_properties: {grid_position: 'WUXCLE,NEPZSW'}
-          event_bindings: {click: button_1_click}
-        - name: button_2
-          properties: {text: '3000', align: left, bold: true, role: raised, background: 'theme:Gray 200'}
+          name: button_1
+          properties: {align: left, background: 'theme:Gray 200', bold: true, role: raised, text: '1000'}
           type: Button
+        - event_bindings: {click: button_2_click}
           layout_properties: {grid_position: 'WUXCLE,MRMPOU'}
-          event_bindings: {click: button_2_click}
-        - name: button_3
-          properties: {text: '5000', align: left, bold: true, role: raised, background: 'theme:Gray 200'}
+          name: button_2
+          properties: {align: left, background: 'theme:Gray 200', bold: true, role: raised, text: '3000'}
           type: Button
+        - event_bindings: {click: button_3_click}
           layout_properties: {grid_position: 'WUXCLE,ARFYSJ'}
-          event_bindings: {click: button_3_click}
-        - name: spacer_1
+          name: button_3
+          properties: {align: left, background: 'theme:Gray 200', bold: true, role: raised, text: '5000'}
+          type: Button
+        - layout_properties: {grid_position: 'JOQTMC,JKFRUB'}
+          name: spacer_1
           properties: {height: 32}
           type: Spacer
-          layout_properties: {grid_position: 'JOQTMC,JKFRUB'}
-        - name: button_4
-          properties: {text: Proceed to Topup, background: red, foreground: 'theme:White', bold: true, role: raised}
-          type: Button
+        - event_bindings: {click: button_4_click, show: button_4_show}
           layout_properties: {grid_position: 'IBAQOT,RBBQFA'}
-          event_bindings: {show: button_4_show, click: button_4_click}
-      - name: spacer_2
+          name: button_4
+          properties: {background: red, bold: true, foreground: 'theme:White', role: raised, text: Proceed to Topup}
+          type: Button
+        layout_properties: {grid_position: 'LRKETY,JQNXLM'}
+        name: column_panel_1
+        properties: {background: '#fbc1c1', col_widths: '{"NEPZSW":5,"MRMPOU":5,"ARFYSJ":50}', foreground: '', role: card}
+        type: ColumnPanel
+      - layout_properties: {grid_position: 'GRZJTA,MHKZRA'}
+        name: spacer_2
         properties: {height: 32}
         type: Spacer
-        layout_properties: {grid_position: 'GRZJTA,MHKZRA'}
-- type: FlowPanel
+      layout_properties: {expand: true}
+      name: content_panel_copy
+      properties: {col_widths: '{}'}
+      type: ColumnPanel
+    layout_properties: {full_width_row: true, grid_position: 'JGUUYS,CXMZLG'}
+    name: navbar_links_copy
+    properties: {}
+    type: FlowPanel
+  layout_properties: {slot: default}
+  name: content_panel
   properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
   name: navbar_links
-  layout_properties: {slot: nav-right}
+  properties: {}
+  type: FlowPanel
+container:
+  properties: {background: '', border: '', foreground: '', html: '', role: null, tooltip: '', visible: true}
+  type: HtmlTemplate
+is_package: true

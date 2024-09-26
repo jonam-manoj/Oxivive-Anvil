@@ -1,98 +1,98 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true, role: null, html: ''}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: xy_panel_1
+- components:
+  - components:
+    - layout_properties: {width: 74.0875015258789, x: 0, y: 0}
+      name: image_1
+      properties: {display_mode: zoom_to_fill, height: 90, horizontal_align: left, source: _/theme/shot.png}
+      type: Image
+    - layout_properties: {width: 466, x: 84.08750991895795, y: 26.55000190809369}
+      name: label_1_copy
+      properties: {bold: true, font_size: 20, foreground: red, spacing_above: large, text: OXIVIVE}
+      type: Label
+    layout_properties: {full_width_row: true, grid_position: 'IKDSZM,CNMFBE'}
+    name: xy_panel_1
     properties: {height: 67.60000610351562}
     type: XYPanel
-    layout_properties: {grid_position: 'IKDSZM,CNMFBE', full_width_row: true}
-    components:
-    - name: image_1
-      properties: {source: _/theme/shot.png, horizontal_align: left, height: 90, display_mode: zoom_to_fill}
-      type: Image
-      layout_properties: {x: 0, y: 0, width: 74.0875015258789}
-    - name: label_1_copy
-      properties: {text: OXIVIVE, bold: true, font_size: 20, foreground: red, spacing_above: large}
-      type: Label
-      layout_properties: {x: 84.08750991895795, y: 26.55000190809369, width: 466}
-  - name: label_3
-    properties: {align: center, text: Book a Slot, bold: true, foreground: 'theme:Primary 700', font_size: 20}
+  - layout_properties: {full_width_row: true, grid_position: 'OLTNFF,VBFVNY'}
+    name: label_3
+    properties: {align: center, bold: true, font_size: 20, foreground: 'theme:Primary 700', text: Book a Slot}
     type: Label
-    layout_properties: {grid_position: 'OLTNFF,VBFVNY', full_width_row: true}
-  - name: card_1
-    properties: {role: card, foreground: '', background: 'theme:Primary 700'}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'PCZVMJ,PNJUWC'}
-    components:
-    - name: button_1
-      properties: {text: button_1, border: '', foreground: '', role: raised, visible: true, background: 'theme:Gray 200', enabled: true}
-      type: Button
-      layout_properties: {grid_position: 'YUKIRJ,CBBTYA'}
+  - components:
+    - data_bindings: []
       event_bindings: {click: button_1_click}
-      data_bindings: []
-    - name: button_2
-      properties: {text: button_2, background: 'theme:Gray 200', role: raised}
+      layout_properties: {grid_position: 'YUKIRJ,CBBTYA'}
+      name: button_1
+      properties: {background: 'theme:Gray 200', border: '', enabled: true, foreground: '', role: raised, text: button_1, visible: true}
       type: Button
+    - event_bindings: {click: button_2_click}
       layout_properties: {grid_position: 'YUKIRJ,SRQNLC'}
-      event_bindings: {click: button_2_click}
-    - name: button_3
-      properties: {text: button_3, background: 'theme:Gray 200', role: raised}
+      name: button_2
+      properties: {background: 'theme:Gray 200', role: raised, text: button_2}
       type: Button
+    - event_bindings: {click: button_3_click}
       layout_properties: {grid_position: 'YUKIRJ,THIFOK'}
-      event_bindings: {click: button_3_click}
-    - name: button_4
-      properties: {text: button_4, background: 'theme:Gray 200', role: raised}
+      name: button_3
+      properties: {background: 'theme:Gray 200', role: raised, text: button_3}
       type: Button
+    - event_bindings: {click: button_4_click}
       layout_properties: {grid_position: 'YUKIRJ,XVYUPT'}
-      event_bindings: {click: button_4_click}
-  - name: label_1
-    properties: {align: center, text: Choose Time Slot, foreground: 'theme:Primary 700', bold: true, font_size: 15, underline: true}
-    type: Label
-    layout_properties: {grid_position: 'MFBRGU,FFRAQB', full_width_row: true}
-    data_bindings:
-    - {property: underline, code: 'self.item[''1'']', writeback: false}
-  - name: card_2
-    properties: {role: card}
+      name: button_4
+      properties: {background: 'theme:Gray 200', role: raised, text: button_4}
+      type: Button
+    layout_properties: {grid_position: 'PCZVMJ,PNJUWC'}
+    name: card_1
+    properties: {background: 'theme:Primary 700', foreground: '', role: card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'DYHIWD,IPDWMD'}
-    components:
-    - name: button_5
+  - data_bindings:
+    - {code: 'self.item[''1'']', property: underline, writeback: false}
+    layout_properties: {full_width_row: true, grid_position: 'MFBRGU,FFRAQB'}
+    name: label_1
+    properties: {align: center, bold: true, font_size: 15, foreground: 'theme:Primary 700', text: Choose Time Slot, underline: true}
+    type: Label
+  - components:
+    - event_bindings: {click: button_5_click}
+      layout_properties: {grid_position: 'EPMDZF,FYPKDP'}
+      name: button_5
       properties: {text: button_5, visible: false}
       type: Button
-      layout_properties: {grid_position: 'EPMDZF,FYPKDP'}
-      event_bindings: {click: button_5_click}
-    - name: button_8
+    - layout_properties: {grid_position: 'EPMDZF,FYPKDP HWOJST,KIBCRU'}
+      name: button_8
       properties: {text: button_8, visible: false}
       type: Button
-      layout_properties: {grid_position: 'EPMDZF,FYPKDP HWOJST,KIBCRU'}
-    - name: button_6
+    - layout_properties: {grid_position: 'EPMDZF,BXHGCP'}
+      name: button_6
       properties: {text: button_6, visible: false}
       type: Button
-      layout_properties: {grid_position: 'EPMDZF,BXHGCP'}
-    - name: button_9
+    - layout_properties: {grid_position: 'EPMDZF,BXHGCP YEVNUG,EIONSO'}
+      name: button_9
       properties: {text: button_9, visible: false}
       type: Button
-      layout_properties: {grid_position: 'EPMDZF,BXHGCP YEVNUG,EIONSO'}
-    - name: button_7
+    - layout_properties: {grid_position: 'EPMDZF,WOLLQR AKPIHO,INTOLH'}
+      name: button_7
       properties: {text: button_7, visible: false}
       type: Button
-      layout_properties: {grid_position: 'EPMDZF,WOLLQR AKPIHO,INTOLH'}
-    - name: button_10
+    - layout_properties: {grid_position: 'EPMDZF,WOLLQR LQLSFS,ABSTLO'}
+      name: button_10
       properties: {text: button_10, visible: false}
       type: Button
-      layout_properties: {grid_position: 'EPMDZF,WOLLQR LQLSFS,ABSTLO'}
-  - name: spacer_1
+    layout_properties: {grid_position: 'DYHIWD,IPDWMD'}
+    name: card_2
+    properties: {role: card}
+    type: ColumnPanel
+  - layout_properties: {grid_position: 'NLJTXR,JPDJUI'}
+    name: spacer_1
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'NLJTXR,JPDJUI'}
-  - name: primary_color_1
-    properties: {text: Pay Now, role: primary-color, visible: false, background: 'theme:Primary 700', bold: true}
+  - event_bindings: {click: primary_color_1_click}
+    layout_properties: {full_width_row: true, grid_position: 'CAHHTO,KXOSUX', row_background: ''}
+    name: primary_color_1
+    properties: {background: 'theme:Primary 700', bold: true, role: primary-color, text: Pay Now, visible: false}
     type: Button
-    layout_properties: {grid_position: 'CAHHTO,KXOSUX', full_width_row: true, row_background: ''}
-    event_bindings: {click: primary_color_1_click}
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {background: '', border: '', foreground: '', html: '', role: null, tooltip: '', visible: true}
+  type: HtmlTemplate
+is_package: true

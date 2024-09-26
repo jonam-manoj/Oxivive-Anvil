@@ -1,149 +1,149 @@
-container:
-  type: ColumnPanel
-  properties: {background: red}
 components:
-- name: image_1
-  properties: {source: _/theme/shot.png, horizontal_align: center, height: 118.19998168945312, display_mode: shrink_to_fit}
+- layout_properties: {grid_position: 'WVDCSV,WVELDN'}
+  name: image_1
+  properties: {display_mode: shrink_to_fit, height: 118.19998168945312, horizontal_align: center, source: _/theme/shot.png}
   type: Image
-  layout_properties: {grid_position: 'WVDCSV,WVELDN'}
-- name: flow_panel_1
+- components:
+  - event_bindings: {click: link_4_click}
+    layout_properties: {}
+    name: link_4
+    properties: {align: right, background: '', bold: true, foreground: white, text: '  Login  ', underline: false}
+    type: Link
+  - layout_properties: {width: 42.39996337890625}
+    name: spacer_10
+    properties: {height: 32}
+    type: Spacer
+  - event_bindings: {click: link_5_click}
+    layout_properties: {}
+    name: link_5
+    properties: {background: '#b11616', bold: true, foreground: white, text: '  Register  ', underline: false}
+    type: Link
+  layout_properties: {grid_position: 'AKSOQU,LTVDEO'}
+  name: flow_panel_1
   properties: {align: center}
   type: FlowPanel
-  layout_properties: {grid_position: 'AKSOQU,LTVDEO'}
-  components:
-  - name: link_4
-    properties: {align: right, text: '  Login  ', background: '', foreground: white, bold: true, underline: false}
-    type: Link
-    event_bindings: {click: link_4_click}
-    layout_properties: {}
-  - name: spacer_10
+- components:
+  - layout_properties: {grid_position: 'VVEHNF,UGTTMO'}
+    name: spacer_9
     properties: {height: 32}
     type: Spacer
-    layout_properties: {width: 42.39996337890625}
-  - name: link_5
-    properties: {text: '  Register  ', foreground: white, bold: true, underline: false, background: '#b11616'}
-    type: Link
-    event_bindings: {click: link_5_click}
-    layout_properties: {}
-- name: card_1_copy
-  properties: {role: card, col_widths: '{"DJYSIT":35,"PFBYKP":30,"QKDRAQ":50,"LFKMBP":15,"PMYITI":15,"APYNJB":55,"BNVOBL":25,"JAZTMD":10,"TPHGMB":25}'}
-  type: ColumnPanel
-  layout_properties: {grid_position: 'NVVDWU,LQGUAE'}
-  components:
-  - name: spacer_9
-    properties: {height: 32}
-    type: Spacer
-    layout_properties: {grid_position: 'VVEHNF,UGTTMO'}
-  - name: link_2_copy
-    properties: {icon: 'fa:arrow-left', role: text, bold: false, spacing_above: small, font_size: 15, text: Back}
-    type: Link
+  - event_bindings: {click: link_2_copy_click}
     layout_properties: {grid_position: 'BRBJFU,PFBYKP MQIRHC,FXCVBE'}
-    event_bindings: {click: link_2_copy_click}
-  - name: image_2_copy
-    properties: {source: _/theme/Untitled design (3).jpg, height: 651.7999877929688, display_mode: zoom_to_fill}
+    name: link_2_copy
+    properties: {bold: false, font_size: 15, icon: 'fa:arrow-left', role: text, spacing_above: small, text: Back}
+    type: Link
+  - layout_properties: {grid_position: 'BRBJFU,PFBYKP OUFHER,VEEZIV'}
+    name: image_2_copy
+    properties: {display_mode: zoom_to_fill, height: 651.7999877929688, source: _/theme/Untitled design (3).jpg}
     type: Image
-    layout_properties: {grid_position: 'BRBJFU,PFBYKP OUFHER,VEEZIV'}
-  - name: label_4_copy
-    properties: {text: 'REGISTER HERE :)', align: center, font_size: 22, bold: true, foreground: '#40486d'}
+  - layout_properties: {grid_position: 'BRBJFU,DJYSIT EWSNRQ,APYNJB'}
+    name: label_4_copy
+    properties: {align: center, bold: true, font_size: 22, foreground: '#40486d', text: 'REGISTER HERE :)'}
     type: Label
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT EWSNRQ,APYNJB'}
-  - name: label_5_copy
-    properties: {text: To keep connected with us  please register here with your personal info..., italic: true, font_size: 17, align: center}
+  - layout_properties: {grid_position: 'BRBJFU,DJYSIT NVBBIZ,JMHVMF'}
+    name: label_5_copy
+    properties: {align: center, font_size: 17, italic: true, text: To keep connected with us  please register here with your personal info...}
     type: Label
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT NVBBIZ,JMHVMF'}
-  - name: spacer_2_copy
+  - layout_properties: {grid_position: 'BRBJFU,DJYSIT MKEBTO,QRCRRG'}
+    name: spacer_2_copy
     properties: {height: 17.399993896484375}
     type: Spacer
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT MKEBTO,QRCRRG'}
-  - name: spacer_6
+  - layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,PMYITI'}
+    name: spacer_6
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,PMYITI'}
-  - name: text_box_1
-    properties: {border: 1px solid black, placeholder: '  Full name', italic: false}
-    type: TextBox
+  - event_bindings: {focus: text_box_1_focus, lost_focus: text_box_1_lost_focus, pressed_enter: text_box_1_pressed_enter}
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ JUEZXZ,PZKOWK'}
-    event_bindings: {pressed_enter: text_box_1_pressed_enter, focus: text_box_1_focus, lost_focus: text_box_1_lost_focus}
-  - name: text_box_2
-    properties: {type: email, border: 1px solid black, placeholder: '  Email', italic: false}
+    name: text_box_1
+    properties: {border: 1px solid black, italic: false, placeholder: '  Full name'}
     type: TextBox
+  - event_bindings: {focus: text_box_2_focus, lost_focus: text_box_2_lost_focus}
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ YEMZJJ,IMUJXC'}
-    event_bindings: {focus: text_box_2_focus, lost_focus: text_box_2_lost_focus}
-  - name: text_box_3
-    properties: {visible: true, hide_text: true, border: 1px solid black, placeholder: '  Password', italic: false}
+    name: text_box_2
+    properties: {border: 1px solid black, italic: false, placeholder: '  Email', type: email}
     type: TextBox
+  - event_bindings: {focus: text_box_3_focus, lost_focus: text_box_3_lost_focus}
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ YTPVTV,CXONKD'}
-    event_bindings: {focus: text_box_3_focus, lost_focus: text_box_3_lost_focus}
-  - name: text_box_4
-    properties: {type: number, border: 1px solid black, placeholder: '  Mobile number', italic: false}
+    name: text_box_3
+    properties: {border: 1px solid black, hide_text: true, italic: false, placeholder: '  Password', visible: true}
     type: TextBox
+  - event_bindings: {focus: text_box_4_focus, lost_focus: text_box_4_lost_focus}
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ SAWKVY,UFAFNS'}
-    event_bindings: {focus: text_box_4_focus, lost_focus: text_box_4_lost_focus}
-  - name: text_box_5
-    properties: {type: number, border: 1px solid black, placeholder: '  Pincode', italic: false}
+    name: text_box_4
+    properties: {border: 1px solid black, italic: false, placeholder: '  Mobile number', type: number}
     type: TextBox
+  - event_bindings: {focus: text_box_5_focus, lost_focus: text_box_5_lost_focus}
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ WVHJPX,JXMHTH'}
-    event_bindings: {focus: text_box_5_focus, lost_focus: text_box_5_lost_focus}
-  - name: pan_text_box
-    properties: {placeholder: '  PAN number', border: 1px solid black, italic: false}
+    name: text_box_5
+    properties: {border: 1px solid black, italic: false, placeholder: '  Pincode', type: number}
     type: TextBox
+  - event_bindings: {change: servicers_address_text_box_change, focus: servicers_address_text_box_focus, lost_focus: servicers_address_text_box_lost_focus}
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ VHCIIU,GOUYZT'}
-    event_bindings: {change: servicers_address_text_box_change, focus: servicers_address_text_box_focus, lost_focus: servicers_address_text_box_lost_focus}
-  - name: spacer_3
+    name: pan_text_box
+    properties: {border: 1px solid black, italic: false, placeholder: '  PAN number'}
+    type: TextBox
+  - layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ GILJIK,XVRIGX'}
+    name: spacer_3
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ GILJIK,XVRIGX'}
-  - name: primary_color_1
-    properties: {text: Signup, role: primary-color, background: red, foreground: white, bold: true, align: full}
-    type: Button
+  - event_bindings: {click: primary_color_1_click}
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ EGUCTA,IZPPNH'}
-    event_bindings: {click: primary_color_1_click}
-  - name: spacer_4
+    name: primary_color_1
+    properties: {align: full, background: red, bold: true, foreground: white, role: primary-color, text: Signup}
+    type: Button
+  - layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,LFKMBP'}
+    name: spacer_4
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,LFKMBP'}
-  - name: link_1_copy
-    properties: {text: 'Forgot password ?', underline: true, align: center}
-    type: Link
+  - components: []
     layout_properties: {grid_position: 'BRBJFU,DJYSIT ZJGOTR,BBVVAJ'}
-    components: []
-  - name: link_2
-    properties: {align: center, text: 'Service provider? Register Here', underline: true, font_size: 13}
+    name: link_1_copy
+    properties: {align: center, text: 'Forgot password ?', underline: true}
     type: Link
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT EYDUHK,KJZFQG'}
-    event_bindings: {click: link_2_click}
-  - name: label_6_copy
-    properties: {text: 'or login using :', align: center, bold: true, foreground: '#40486d'}
+  - event_bindings: {click: link_2_click}
+    layout_properties: {grid_position: 'BRBJFU,DJYSIT UHZIOM,ZPLSIA'}
+    name: link_2
+    properties: {align: center, font_size: 13, text: 'Service provider? Register Here', underline: true}
+    type: Link
+  - layout_properties: {grid_position: 'BRBJFU,DJYSIT LKRVDG,BLGHAU'}
+    name: label_6_copy
+    properties: {align: center, bold: true, foreground: '#40486d', text: 'or login using :'}
     type: Label
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT LKRVDG,BLGHAU'}
-  - name: spacer_1_copy
+  - layout_properties: {grid_position: 'BRBJFU,DJYSIT YOLLPR,XLPCLH'}
+    name: spacer_1_copy
     properties: {height: 0.79998779296875}
     type: Spacer
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT YOLLPR,XLPCLH'}
-  - name: link_9_copy
-    properties: {icon: 'fa:google-plus', foreground: '#ea4848', font_size: 30, align: right}
-    type: Link
+  - event_bindings: {click: link_9_click}
     layout_properties: {grid_position: 'BRBJFU,DJYSIT UPDDEX,BNVOBL'}
-    event_bindings: {click: link_9_click}
-  - name: link_8_copy
-    properties: {icon: 'fa:facebook', foreground: '#5870d0', font_size: 30, align: center}
+    name: link_9_copy
+    properties: {align: right, font_size: 30, foreground: '#ea4848', icon: 'fa:google-plus'}
     type: Link
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT UPDDEX,JAZTMD'}
-  - name: link_3_copy
-    properties: {icon: 'fa:linkedin-square', foreground: '#3589c3', font_size: 30}
+  - layout_properties: {grid_position: 'BRBJFU,DJYSIT UPDDEX,JAZTMD'}
+    name: link_8_copy
+    properties: {align: center, font_size: 30, foreground: '#5870d0', icon: 'fa:facebook'}
     type: Link
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT UPDDEX,TPHGMB'}
-  - name: xy_panel_2_copy
+  - layout_properties: {grid_position: 'BRBJFU,DJYSIT UPDDEX,TPHGMB'}
+    name: link_3_copy
+    properties: {font_size: 30, foreground: '#3589c3', icon: 'fa:linkedin-square'}
+    type: Link
+  - components: []
+    layout_properties: {grid_position: 'BRBJFU,DJYSIT BQPRDV,BOLXRO'}
+    name: xy_panel_2_copy
     properties: {height: 78.20001220703125}
     type: XYPanel
-    layout_properties: {grid_position: 'BRBJFU,DJYSIT BQPRDV,BOLXRO'}
-    components: []
-  - name: spacer_8
+  - layout_properties: {grid_position: 'GUBTTH,UIEPLR'}
+    name: spacer_8
     properties: {height: 32}
     type: Spacer
-    layout_properties: {grid_position: 'GUBTTH,UIEPLR'}
-- name: spacer_1
+  layout_properties: {grid_position: 'NVVDWU,LQGUAE'}
+  name: card_1_copy
+  properties: {col_widths: '{"DJYSIT":35,"PFBYKP":30,"QKDRAQ":50,"LFKMBP":15,"PMYITI":15,"APYNJB":55,"BNVOBL":25,"JAZTMD":10,"TPHGMB":25}', role: card}
+  type: ColumnPanel
+- layout_properties: {grid_position: 'FJDTTX,AZLQLJ'}
+  name: spacer_1
   properties: {height: 65.79998779296875}
   type: Spacer
-  layout_properties: {grid_position: 'FJDTTX,AZLQLJ'}
+container:
+  properties: {background: red}
+  type: ColumnPanel
 is_package: true

@@ -1,50 +1,50 @@
-container: {type: ColumnPanel}
 components:
-- name: flow_panel_1
-  properties: {align: center}
-  type: FlowPanel
-  layout_properties: {grid_position: 'MJIMKH,RFZLTZ', full_width_row: true}
-  components:
-  - name: xy_panel_1
-    properties: {height: 100}
-    type: XYPanel
-    layout_properties: {width: 193.98700000000002}
-    components:
-    - name: image_1
+- components:
+  - components:
+    - layout_properties: {width: 97.38748779296876, x: 8.050000000745058, y: 8.100001145154238}
+      name: image_1
       properties: {height: 85.19996643066406, source: _/theme/shot.png}
       type: Image
-      layout_properties: {x: 8.050000000745058, y: 8.100001145154238, width: 97.38748779296876}
-    - name: label_1
-      properties: {text: OXIVIVE, font_size: 15, foreground: 'theme:Primary 700'}
+    - layout_properties: {width: 60.78750228881836, x: 96.93750076368451, y: 32.18750076368451}
+      name: label_1
+      properties: {font_size: 15, foreground: 'theme:Primary 700', text: OXIVIVE}
       type: Label
-      layout_properties: {x: 96.93750076368451, y: 32.18750076368451, width: 60.78750228881836}
-  - name: spacer_1
+    layout_properties: {width: 193.98700000000002}
+    name: xy_panel_1
+    properties: {height: 100}
+    type: XYPanel
+  - layout_properties: {width: 352.20001220703125}
+    name: spacer_1
     properties: {height: 103.39999389648438}
     type: Spacer
-    layout_properties: {width: 352.20001220703125}
-  - name: link_1
-    properties: {text: Home, bold: true}
+  - layout_properties: {}
+    name: link_1
+    properties: {bold: true, text: Home}
     type: Link
-    layout_properties: {}
-  - name: link_3
-    properties: {text: Notification, bold: true}
+  - layout_properties: {}
+    name: link_3
+    properties: {bold: true, text: Notification}
     type: Link
-    layout_properties: {}
-  - name: link_2
-    properties: {text: Report, bold: true}
+  - layout_properties: {}
+    name: link_2
+    properties: {bold: true, text: Report}
     type: Link
-    layout_properties: {}
-  - name: link_4
-    properties: {text: Support, bold: true}
+  - layout_properties: {}
+    name: link_4
+    properties: {bold: true, text: Support}
     type: Link
+  - components: []
     layout_properties: {}
-  - name: link_5
-    properties: {text: Add Services, bold: true}
+    name: link_5
+    properties: {bold: true, text: Add Services}
     type: Link
-    layout_properties: {}
-    components: []
-  - name: button_1
-    properties: {text: logout, background: 'theme:Primary 700', foreground: 'theme:White'}
+  - layout_properties: {}
+    name: button_1
+    properties: {background: 'theme:Primary 700', foreground: 'theme:White', text: logout}
     type: Button
-    layout_properties: {}
+  layout_properties: {full_width_row: true, grid_position: 'MJIMKH,RFZLTZ'}
+  name: flow_panel_1
+  properties: {align: center}
+  type: FlowPanel
+container: {type: ColumnPanel}
 is_package: true

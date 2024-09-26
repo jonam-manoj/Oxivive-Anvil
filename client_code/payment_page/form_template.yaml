@@ -1,82 +1,82 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true, role: null, html: ''}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: xy_panel_1_copy
+- components:
+  - components:
+    - layout_properties: {width: 74.0875015258789, x: 0, y: 0}
+      name: image_1_copy
+      properties: {display_mode: zoom_to_fill, height: 90, horizontal_align: left, source: _/theme/shot.png}
+      type: Image
+    - layout_properties: {width: 124.5999755859375, x: 84.08750991895795, y: 26.55000190809369}
+      name: label_1_copy
+      properties: {bold: true, font_size: 20, foreground: red, spacing_above: large, text: OXIVIVE}
+      type: Label
+    layout_properties: {full_width_row: true, grid_position: 'KHOITU,KMIIHJ'}
+    name: xy_panel_1_copy
     properties: {height: 73.80000305175781}
     type: XYPanel
-    layout_properties: {grid_position: 'KHOITU,KMIIHJ', full_width_row: true}
-    components:
-    - name: image_1_copy
-      properties: {source: _/theme/shot.png, horizontal_align: left, height: 90, display_mode: zoom_to_fill}
-      type: Image
-      layout_properties: {x: 0, y: 0, width: 74.0875015258789}
-    - name: label_1_copy
-      properties: {text: OXIVIVE, bold: true, font_size: 20, foreground: red, spacing_above: large}
-      type: Label
-      layout_properties: {x: 84.08750991895795, y: 26.55000190809369, width: 124.5999755859375}
-  - name: headline_1
-    properties: {role: headline, bold: false, align: center, spacing_above: small, background: '', icon: '', underline: false, font: '', icon_align: left, foreground: '', spacing_below: small, visible: true, border: '', italic: false, font_size: null, tooltip: '', text: Payment Method, margin: null}
+  - layout_properties: {grid_position: 'NYFNEH,MEVDLS'}
+    name: headline_1
+    properties: {align: center, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, margin: null, role: headline, spacing_above: small, spacing_below: small, text: Payment Method, tooltip: '', underline: false, visible: true}
     type: Label
-    layout_properties: {grid_position: 'NYFNEH,MEVDLS'}
-  - name: column_panel_4
-    properties: {role: card, background: 'theme:Gray 200', foreground: 'theme:Black'}
+  - components:
+    - layout_properties: {grid_position: 'KFZIIW,ZPSTUP'}
+      name: label_2
+      properties: {bold: true, italic: true, text: 'User name :'}
+      type: Label
+    - layout_properties: {grid_position: 'JFYEUE,KQZHNE'}
+      name: label_3
+      properties: {bold: true, italic: true, text: 'Date :'}
+      type: Label
+    - layout_properties: {grid_position: 'WRTDIJ,WCIRDW'}
+      name: label_4
+      properties: {bold: true, italic: true, text: 'Slot time :'}
+      type: Label
+    - layout_properties: {grid_position: 'CCNYXX,GBJBVB'}
+      name: label_5
+      properties: {bold: true, italic: true, text: 'Amount :'}
+      type: Label
+    layout_properties: {full_width_row: false, grid_position: 'RVDTWF,EZJDEC', row_background: ''}
+    name: column_panel_4
+    properties: {background: 'theme:Gray 200', foreground: 'theme:Black', role: card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'RVDTWF,EZJDEC', row_background: '', full_width_row: false}
-    components:
-    - name: label_2
-      properties: {text: 'User name :', bold: true, italic: true}
-      type: Label
-      layout_properties: {grid_position: 'KFZIIW,ZPSTUP'}
-    - name: label_3
-      properties: {text: 'Date :', italic: true, bold: true}
-      type: Label
-      layout_properties: {grid_position: 'JFYEUE,KQZHNE'}
-    - name: label_4
-      properties: {text: 'Slot time :', bold: true, italic: true}
-      type: Label
-      layout_properties: {grid_position: 'WRTDIJ,WCIRDW'}
-    - name: label_5
-      properties: {text: 'Amount :', bold: true, italic: true}
-      type: Label
-      layout_properties: {grid_position: 'CCNYXX,GBJBVB'}
-  - name: label_1
-    properties: {text: Choose  Payment method below, bold: true, italic: false}
+  - layout_properties: {grid_position: 'KQBWMX,CMHTNN'}
+    name: label_1
+    properties: {bold: true, italic: false, text: Choose  Payment method below}
     type: Label
-    layout_properties: {grid_position: 'KQBWMX,CMHTNN'}
-  - name: column_panel_1
-    properties: {role: card}
-    type: ColumnPanel
-    layout_properties: {grid_position: 'IBMODA,WHBODK'}
-    components:
-    - name: radio_button_1
+  - components:
+    - layout_properties: {grid_position: 'HBPNBC,FBCPGE'}
+      name: radio_button_1
       properties: {text: radio_button_1}
       type: RadioButton
-      layout_properties: {grid_position: 'HBPNBC,FBCPGE'}
-    - name: radio_button_2
+    - layout_properties: {grid_position: 'ROWOVX,UEEUXI'}
+      name: radio_button_2
       properties: {text: radio_button_2}
       type: RadioButton
-      layout_properties: {grid_position: 'ROWOVX,UEEUXI'}
-    - name: radio_button_3
+    - layout_properties: {grid_position: 'TZBZXF,CCPWZZ'}
+      name: radio_button_3
       properties: {text: radio_button_3}
       type: RadioButton
-      layout_properties: {grid_position: 'TZBZXF,CCPWZZ'}
-    - name: spacer_1
+    - layout_properties: {grid_position: 'EDILYC,RASABY'}
+      name: spacer_1
       properties: {height: 60}
       type: Spacer
-      layout_properties: {grid_position: 'EDILYC,RASABY'}
-  - name: column_panel_3
+    layout_properties: {grid_position: 'IBMODA,WHBODK'}
+    name: column_panel_1
     properties: {role: card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'IBMODA,JYOISU'}
-    components:
-    - name: spacer_3
+  - components:
+    - layout_properties: {grid_position: 'LHJJXK,ZIZYZK'}
+      name: spacer_3
       properties: {height: 201.79998779296875}
       type: Spacer
-      layout_properties: {grid_position: 'LHJJXK,ZIZYZK'}
+    layout_properties: {grid_position: 'IBMODA,JYOISU'}
+    name: column_panel_3
+    properties: {role: card}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {background: '', border: '', foreground: '', html: '', role: null, tooltip: '', visible: true}
+  type: HtmlTemplate
+is_package: true
