@@ -398,6 +398,11 @@ db_schema:
       type: string
     server: full
     title: oxiwheels
+  super_admin:
+    client: none
+    columns: []
+    server: full
+    title: Super_admin
 dependencies: []
 name: 'production_Oxivive  '
 package_name: production_Oxivive__
