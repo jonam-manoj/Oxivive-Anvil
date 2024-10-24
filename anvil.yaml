@@ -417,6 +417,6 @@ services:
 - client_config: {}
   server_config: {custom_smtp: true}
   source: /runtime/services/anvil/email.yml
-startup: {module: home, type: form}
+startup: {module: slot_book, type: form}
 startup_form: null
 uplink_visible: true
