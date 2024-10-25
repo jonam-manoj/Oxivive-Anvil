@@ -67,7 +67,7 @@ components:
     type: Spacer
   - components:
     - event_bindings: {focus: text_box_2_focus, lost_focus: text_box_2_lost_focus}
-      layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ KXJADS,YSSYUG', width: 322.208, x: 0, y: 0}
+      layout_properties: {grid_position: 'BRBJFU,DJYSIT ZOTWNQ,QKDRAQ KXJADS,YSSYUG', width: 246.52737402343752, x: 0, y: 0}
       name: text_box_2
       properties: {border: 1px solid black, hide_text: true, italic: false, placeholder: '  Password'}
       type: TextBox
